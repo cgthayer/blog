@@ -1,6 +1,6 @@
 baseURL = 'https://blog.learntinkershare.ai/'
 languageCode = 'en-us'
-title = 'AI Dev Blog'
+title = 'Learn Tinker Share Blog'
 theme = 'PaperMod'
 
 [params]
