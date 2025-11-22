@@ -1,18 +1,11 @@
 ---
-title: "Welcome to AI Dev Blog"
-date: 2025-11-22T19:05:00Z
-draft: false
-tags: ["welcome", "ai", "llm"]
-categories: ["General"]
+title: Welcome
+date: 2025-11-22T11:53:10-08:00
+draft: true
+tags: []
+categories: []
 ---
+# Welcome
 
-Welcome to the AI Dev Blog! This blog is designed for experienced software engineers who are starting to engage with AI and LLM programming.
+This is a blog to practice my blog writing. It's in Hugo, with editing in Obsidian.
 
-## What to Expect
-
-- Deep dives into AI and LLM concepts
-- Practical tutorials and code examples
-- Best practices for AI development
-- Real-world use cases and patterns
-
-Stay tuned for more content!

@@ -1,0 +1,403 @@
+{
+  "main": {
+    "id": "5ac82e7af2a4eadc",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a1d8bf1d40f25dd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f4d0293d2a66942",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diary/2025-11-month-log.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-11-month-log"
+            }
+          },
+          {
+            "id": "2ec66dfc86c6008d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/writing-project.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "writing-project"
+            }
+          },
+          {
+            "id": "8a37fb25e339ab0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "003-AI-evals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "003-AI-evals"
+            }
+          },
+          {
+            "id": "13dee37ed542cc2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "002-AI-tracing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "002-AI-tracing"
+            }
+          },
+          {
+            "id": "1870683c9c9d36ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-AI-First-Agent.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "001-AI-First-Agent"
+            }
+          },
+          {
+            "id": "27e3c8c47fbb28e5",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/content-writing-process.excalidraw.md"
+              },
+              "icon": "lucide-ghost",
+              "title": "excalidraw"
+            }
+          },
+          {
+            "id": "987cc0f28757c063",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "articles/AI-prompt-manager-article.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI-prompt-manager-article"
+            }
+          },
+          {
+            "id": "dce30ac37b6f4610",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/traverso-myngl-project.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "traverso-myngl-project"
+            }
+          },
+          {
+            "id": "525b9a305166f503",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/long-form-article-template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "long-form-article-template"
+            }
+          },
+          {
+            "id": "d08528450ed08891",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/welcome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "welcome"
+            }
+          }
+        ],
+        "currentTab": 9
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "33df9f66a78a64f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "f445addda95ab068",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9daa462c110364a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "24515e12099ebc79",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "\"queue of\" article",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "065b1685c00c5625",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "0bbdd08507cf1bb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diary/2025-year-plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-year-plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "c0ac7310825cefe6",
+    "type": "split",
+    "children": [
+      {
+        "id": "34cf7c746fe328b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5e42c0d36216d0f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2025-07-month-log.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025-07-month-log"
+            }
+          },
+          {
+            "id": "74a1b55ff015f040",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2025-07-month-log.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025-07-month-log"
+            }
+          },
+          {
+            "id": "c2f8c0eaa3810562",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-history-view"
+            }
+          },
+          {
+            "id": "ae33d1bd557f075f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
+          },
+          {
+            "id": "cbc1edad2138d495",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/AI-community-project.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI-community-project"
+            }
+          },
+          {
+            "id": "4d33e2d6e362822e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Excalidraw/myngl-high-level.excalidraw.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of myngl-high-level.excalidraw"
+            }
+          },
+          {
+            "id": "e4f542abc1292e38",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 209.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "command-palette:Open command palette": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "bases:Create new base": false,
+      "workspaces:Manage workspace layouts": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "omnisearch:Omnisearch": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "d08528450ed08891",
+  "lastOpenFiles": [
+    "003-AI-evals.md",
+    "projects/writing-project.md",
+    "002-AI-tracing.md",
+    "001-AI-First-Agent.md",
+    "diary/2025-11-month-log.md",
+    "templates/long-form-article-template.md",
+    "projects/traverso-myngl-project.md",
+    "Excalidraw/content-writing-process.excalidraw.md",
+    "articles/AI-prompt-manager-article.md",
+    "diary/writing-ideas.md",
+    "diary/AI-anti-fragile-ai-prompt-problems.md",
+    "3rd-party/claude/content-blog-comparison-note.md",
+    "startups/prompt-manager-startup.md",
+    "notes/AI-modern-stack-note.md",
+    "projects/tinker-project-idea-list-project.md",
+    "3rd-party/agentic-context-engineering-evolving.pdf",
+    "projects/ux-design-learning-project.md",
+    "Excalidraw/writing-process.excalidraw.md",
+    "3rd.md",
+    "projects/AI-prompt-manager-project.md",
+    "scott-plenful-recruiter.md",
+    "AI-that-works-notes.md",
+    "traverso-design-ux-ui-ideas-nina-charles.md",
+    "AI-optimism-dark-forest-note.md",
+    "diary/2025-10-month-log.md",
+    "notes/project-well-journey-note.md",
+    "orgs-cells-squads-ai-note.md",
+    "traverso-design-ux-ui-ideas-nina-charles.png",
+    "Pasted Image 20251113150605_112.png",
+    "numbered_garden_images/PXL_20251004_215939202.jpg",
+    "numbered_garden_images/PXL_20251004_215908096.jpg",
+    "numbered_garden_images/PXL_20251004_215806697.jpg",
+    "numbered_garden_images/PXL_20251004_215758885.jpg",
+    "numbered_garden_images/PXL_20251004_215753912.jpg",
+    "numbered_garden_images/PXL_20251004_215654302.jpg",
+    "numbered_garden_images/PXL_20251004_215637351.jpg",
+    "00-HOME.canvas",
+    "Untitled.base",
+    "2025-11-month-log.md.f547767c4d8678c9b81703469aec6db8.tmp",
+    "2025-11-month-log.md.65c7f4a59870d97a0cc31f0d10bc7b2c.tmp",
+    "Excalidraw/myngl-high-level.excalidraw.png",
+    "3rd-party/a2as-framework-1.0.pdf",
+    "3rd-party/Unconfirmed 918943.crdownload",
+    "3rd-party/startup-empire-quiz-business-roadmap-charles-thayer.pdf",
+    "numbered_garden_images/add_numbers_to_images.py",
+    "numbered_garden_images",
+    "diary/job-hunt-scores.csv",
+    "Untitled.canvas"
+  ]
+}

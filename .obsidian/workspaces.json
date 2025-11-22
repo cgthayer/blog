@@ -1,0 +1,346 @@
+{
+  "workspaces": {
+    "AI beachheads and startups": {
+      "main": {
+        "id": "5ac82e7af2a4eadc",
+        "type": "split",
+        "children": [
+          {
+            "id": "6643df731601f316",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "bcb392991a20c144",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "home-canvas.canvas",
+                    "viewState": {
+                      "x": -50,
+                      "y": -403.5,
+                      "zoom": 0
+                    }
+                  }
+                }
+              },
+              {
+                "id": "4c241210640c8cef",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "diary/00-README-2024-whats-next.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "29dd6e07c2c6b86b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/firehose-for-AI-startup-idea.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "eddade915bab9bda",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/gitops-grafana.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "8df100f6fbd0bd4c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/mastodon-startup-idea.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "0a073a2cf32b6356",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/no-code-startup-ideas.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "ded0d08bd9ecdf2a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/nycom-bizplan.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "158aa66ba4b16ab5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/nycom-launch-plan-old.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "9231685f940c5040",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/obsidian startup idea.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "ba5ad4e9eb76c6c1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/rss-recommender-idea.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "b1263aad6fea6887",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/startup-cloud-idea.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "6eaba9ef4adbd77d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/workflow-ideas.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "e973ba65539d0aec",
+                "type": "leaf",
+                "state": {
+                  "type": "image",
+                  "state": {
+                    "file": "projects/bike-rack-plans.jpg"
+                  }
+                }
+              },
+              {
+                "id": "f43399cf8d5dcd9e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "startups/bike-rack-startup.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "33df9f66a78a64f0",
+        "type": "split",
+        "children": [
+          {
+            "id": "f445addda95ab068",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f9daa462c110364a",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "24515e12099ebc79",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "david",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "065b1685c00c5625",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 327.51103591918945
+      },
+      "right": {
+        "id": "c0ac7310825cefe6",
+        "type": "split",
+        "children": [
+          {
+            "id": "34cf7c746fe328b5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d5e42c0d36216d0f",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "diary/00-README-2024-whats-next.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "f75c7036b623e102",
+                "type": "leaf",
+                "state": {
+                  "type": "git-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c2f8c0eaa3810562",
+                "type": "leaf",
+                "state": {
+                  "type": "git-history-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "904dab13efdc3f90",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "diary/00-README-2024-whats-next.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "a9b102b0b5493770",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a96e960b65f30b6c",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "diary/00-README-2024-whats-next.md"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "ed110c7d2704357e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "905d2f31f0c55bd3",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 470.5,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "graph:Open graph view": false,
+          "switcher:Open quick switcher": true,
+          "canvas:Create new canvas": false,
+          "daily-notes:Open today's daily note": false,
+          "templates:Insert template": false,
+          "command-palette:Open command palette": false,
+          "obsidian-excalidraw-plugin:Create new drawing": false,
+          "workspaces:Manage workspace layouts": false
+        }
+      },
+      "active": "4c241210640c8cef",
+      "mtime": "2024-05-11T14:26:01-07:00"
+    }
+  },
+  "active": "AI beachheads and startups"
+}

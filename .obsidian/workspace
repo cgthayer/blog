@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "35c2b59d9ced313a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c22c8ba3f541c304",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        },
+        "group": "592cb331ab996b6c"
+      },
+      {
+        "id": "2cc58f7f1826d143",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/fantastic-four.md",
+            "mode": "preview",
+            "source": false
+          }
+        },
+        "group": "592cb331ab996b6c"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "82cfcf4274f652bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4dde40f45f14b40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd3faf9beb715d00",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "959b1776accedbbd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0420d9849e5c71ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "c515fc893e43a544",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3fdda07b7cf4c8b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "c22c8ba3f541c304",
+  "lastOpenFiles": [
+    "notes/fantastic-four.md",
+    "notes/open-messaging.md",
+    "notes/identity.md",
+    "notes/grpc-toolkits.md",
+    "notes/grpc-misc.md",
+    "diary.md",
+    "notes/family-album.md",
+    "notes/brain-vs-internet.md",
+    "articles/README.md",
+    "README.md"
+  ]
+}

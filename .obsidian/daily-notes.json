@@ -1,0 +1,5 @@
+{
+  "format": "YYYY-MM-DD",
+  "folder": "diary",
+  "template": "templates/daily-log"
+}

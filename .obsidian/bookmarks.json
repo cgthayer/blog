@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1715458059021,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "diary/00-README-2024-whats-next-viti.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/firehose-for-AI-startup-idea.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/gitops-grafana.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/mastodon-startup-idea.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/no-code-startup.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/nycom-bizplan.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/nycom-launch-plan-old.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/obsidian-startup-idea.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/rss-recommender-startup.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/startup-cloud-idea.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/workflow-ideas.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "projects/bike-rack-plans.jpg"
+        },
+        {
+          "type": "file",
+          "ctime": 1715458030578,
+          "path": "startups/bike-rack-startup.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1715642853736,
+          "path": "notes/AI-study.md"
+        }
+      ],
+      "title": "AI beachhead startup"
+    },
+    {
+      "type": "group",
+      "ctime": 1723048512060,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "diary/startup-friends-people.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "notes/hacker-ethics-values-power-money-tech-unix.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "notes/AI-tools.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "articles/excalidraw-in-5-10-15/excalidraw-intro-in-5-10-15.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "projects/startup-idea-eval-process.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "Excalidraw/startup-process.excalidraw.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "diary/setup-laptop-thinkpad-carbon-x1-graphite.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "startups/cto-startup-audience.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "startups/content-creators-startup-audience.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "startups/site-assist-startup-idea.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "startups/firehose-beachhead-crawl.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "diary/2024-07-19-market-storming.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1723048534863,
+          "path": "diary/00-README-2024-whats-next-viti.md"
+        }
+      ],
+      "title": "work"
+    }
+  ]
+}
