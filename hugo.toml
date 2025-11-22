@@ -1,0 +1,12 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'AI Dev Blog'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
