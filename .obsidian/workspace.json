@@ -349,6 +349,8 @@
   },
   "active": "d08528450ed08891",
   "lastOpenFiles": [
+    "public/posts/welcome/index.html",
+    "public/posts/welcome",
     "003-AI-evals.md",
     "projects/writing-project.md",
     "002-AI-tracing.md",
@@ -375,7 +377,6 @@
     "AI-optimism-dark-forest-note.md",
     "diary/2025-10-month-log.md",
     "notes/project-well-journey-note.md",
-    "orgs-cells-squads-ai-note.md",
     "traverso-design-ux-ui-ideas-nina-charles.png",
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",
@@ -395,7 +396,6 @@
     "3rd-party/startup-empire-quiz-business-roadmap-charles-thayer.pdf",
     "numbered_garden_images/add_numbers_to_images.py",
     "numbered_garden_images",
-    "diary/job-hunt-scores.csv",
     "Untitled.canvas"
   ]
 }
