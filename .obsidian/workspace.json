@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-12-09.md",
+                "file": "2025-12-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-12-09"
+              "title": "2025-12-12"
             }
           },
           {
@@ -74,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -275,14 +275,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c2a108fdfe4370c6",
+  "active": "23c32926f0dc69a5",
   "lastOpenFiles": [
-    "JT-stories.md",
-    "content/posts/welcome.md",
-    "2025-12-12.md",
-    "graphdb-thoughts.excalidraw.md",
-    "evals-overview.excalidraw.md",
     "2025-12-09.md",
+    "graphdb-thoughts.excalidraw.md",
+    "content/posts/welcome.md",
+    "JT-stories.md",
+    "2025-12-12.md",
+    "evals-overview.excalidraw.md",
     "README.md",
     "archetypes/default.md",
     "themes/PaperMod/README.md",
