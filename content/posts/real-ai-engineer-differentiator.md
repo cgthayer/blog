@@ -1,14 +1,12 @@
+---
+title: What Separates the Real AI SW Engineers
+date: 2026-01-09T13:34:01-08:00
+draft: true
+tags: []
+categories: []
+---
 
-PM
-- What did I _learn_ today? TIL ...
-- What was _interesting_?
-- What might people _not know_?
-- What is _useful_ to others?
-- What was fun today?
-
-# What Separates the Real AI SW Engineers
-
-tldr; evals or benchmarking for quality.
+**tldr**; evals or benchmarking for quality.
 
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system with real users over time. That key differentiator is "evals", but not specifically traditional ML evals. It's really as simple as whether you have an automated way to test and score the quality of your systems.
 

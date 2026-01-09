@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "real-ai-engineer-differentiator.md",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,9 +27,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "real-ai-engineer-differentiator.md",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "real-ai-engineer-differentiator"
@@ -251,10 +251,12 @@
   },
   "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
-    "evals-overview.excalidraw.md",
     "content/posts/welcome.md",
+    "content/posts/real-ai-engineer-differentiator.md",
+    "public/posts/real-ai-engineer-differentiator/index.html",
+    "public/posts/real-ai-engineer-differentiator",
+    "evals-overview.excalidraw.md",
     "welcome.md",
-    "real-ai-engineer-differentiator.md",
     "content/posts/play-with-embeddings.md",
     "public/images/graphdb-thoughts.excalidraw.png",
     "public/images",
@@ -286,7 +288,6 @@
     "notes/AI-modern-stack-note.md",
     "projects/tinker-project-idea-list-project.md",
     "3rd-party/agentic-context-engineering-evolving.pdf",
-    "projects/ux-design-learning-project.md",
     "traverso-design-ux-ui-ideas-nina-charles.png",
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",
@@ -296,8 +297,6 @@
     "numbered_garden_images/PXL_20251004_215753912.jpg",
     "numbered_garden_images/PXL_20251004_215654302.jpg",
     "00-HOME.canvas",
-    "Untitled.base",
-    "2025-11-month-log.md.f547767c4d8678c9b81703469aec6db8.tmp",
     "Untitled.canvas"
   ]
 }
