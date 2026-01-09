@@ -5,7 +5,8 @@ draft: false
 tags: []
 categories: []
 ---
-# Welcome
+This is a personal blog for Charles Thayer (see also https://thayer.b2si.com). I practice and draft writing here. It's in Hugo, with editing in Obsidian.
+### About Me
+I'm a software engineer, and sometimes founder. I like to tinkerer, build, think about thinking, and generally play with The Internet and related technologies.
 
-This is a blog to practice my blog writing. It's in Hugo, with editing in Obsidian.
-
+**Welcome!** 🌞☕𝛗
