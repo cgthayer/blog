@@ -118,16 +118,15 @@ The most powerful and robust feature here is that we can handle almost any input
 
 Of course, a combination of the two concepts would be needed in a real system since "interests" isn't the same as "semantic meaning". Here we controlled the sentence, but if you put in "I hate to walk" it turns out that sentence scores 0.7697 from "I like to walk" because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.
 
-My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with but never finished.
+My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there's always more to explore.
 
-What's your experience on these topics?  Feel free to ask questions in the comments, or let me know what other topics you'd like to know about. We always monitor them for awhile after publishing.
+What's your experience on these topics?  Feel free to ask questions in the comments, or let me know what other topics you'd like to know about. I always monitor them for awhile after publishing.
 
 ---
 ### End Notes: 
 
 - Production quality is all about the details, so you should always test and benchmark. A vectorDB search is fast, but if you need accuracy and control then the right approach may be building a graph and calculating these weights yourself (doing several queries to get answers).
 - At the time of writing, Weaviate was the only vectorDB I found that directly supports graphDB features.
-- we used a couple models, so beware that the embedding vectors between them are not compatible. e.g. never compare vectors from a word model against a sentence model.
+- We used a couple models, so beware that the embedding vectors between them are not compatible. e.g. never compare vectors from a word model against a sentence model.
 
 Thanks Richard King for the fencing examples  ;-)
-
