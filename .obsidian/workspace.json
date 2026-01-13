@@ -25,14 +25,12 @@
             "id": "16ae8dc8ef399f34",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "content/posts/real-ai-engineer-differentiator.md",
-                "mode": "source",
-                "source": true
+                "file": "evals-overview.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "real-ai-engineer-differentiator"
+              "icon": "excalidraw-icon",
+              "title": "evals-overview.excalidraw"
             }
           },
           {
@@ -61,8 +59,7 @@
               "title": "graphdb-thoughts.excalidraw"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -264,14 +261,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "aa820007970c3e84",
+  "active": "d08528450ed08891",
   "lastOpenFiles": [
+    "evals-overview.excalidraw.md",
     "content/posts/real-ai-engineer-differentiator.md",
     "2026-01-12.md",
     "content/posts/welcome.md",
     "public/posts/real-ai-engineer-differentiator/index.html",
     "public/posts/real-ai-engineer-differentiator",
-    "evals-overview.excalidraw.md",
     "welcome.md",
     "content/posts/play-with-embeddings.md",
     "public/images/graphdb-thoughts.excalidraw.png",
