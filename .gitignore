@@ -22,3 +22,6 @@ Thumbs.db
 
 # Obsidian
 # .obsidian/
+
+# Claude
+.claude/

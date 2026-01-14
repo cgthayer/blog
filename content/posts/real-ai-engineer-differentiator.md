@@ -20,14 +20,14 @@ When the team is first writing the application and trying to reach that crucial 
 
 * **Prompt Churn**: You keep changing the prompt to "make it work" but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of ***whack-a-mole*** where fixing one problem reverts progress on others.
 * **Error Amplification**: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of ***telephone***, where the output gets worse and less predictable as the chain gets longer.
-* **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because your afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a ***windbag*** who starts talking and everyone eventually gets up and leaves as they ramble on.
+* **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because you're afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a ***windbag*** who starts talking and everyone eventually gets up and leaves as they ramble on.
 
 ![ai-pitfalls-dev](ai-pitfalls-dev.png)
 
 
 How Tests Help:
 
-* Tests give you a set of inputs that you can re-evaluate when the prompt changes to ensure you're old fixes aren't regressing. Every bug fix then becomes durable.
+* Tests give you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren't regressing. Every bug fix then becomes durable.
 * Tests that look at the final output of an agentic pipeline will quickly show you if errors are amplifying. One prompt may degrade a little but you'll see the actual downstream effects.
 * Tests give you a way to verify that condensing the prompt isn't hurting you. You'll finally be confident when you try to reduce tokens, saving you latency and cost.
   
@@ -36,8 +36,8 @@ How Tests Help:
 You finally get a working system in front of real users, and start getting real feedback.
 
 * **Change Fear**: You want to fix something a user has called out, or handle a new case, but you're afraid to make a change (see prompt churn). It's the ***domino effect*** --too fragile to touch.
-* **Focus**: Typically you had a theory about what's valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn't considered. Like they say "The map is NOT the territory". Here you're wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You'll may do better not to try to ***"eat the elephant"***.
-* **Timeliness**: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. You're product is in danger of being "past your ***sell-by-date***".
+* **Focus**: Typically you had a theory about what's valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn't considered. Like they say "The map is NOT the territory". Here you're wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You may do better not to try to ***"eat the elephant"***.
+* **Timeliness**: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to add a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. Your product is in danger of being "past your ***sell-by-date***".
 * **Cost Control**: Now that you have real customers you're shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don't know if that's safe. Maybe you could use a cheaper or OSS model, but again you don't know if that's safe. This is the difference between having a profitable business and being out of business. Your new plane is ***outta-runway*** ---you probably move forward burning through investor money to prove your product-market-fit.
 * **Tooling**: You likely have tool-calling (tool-use) and maybe MCPs but since you didn't develop these, you discover their short comings as you go. Now you realize your `WebFetchTool` only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.
 
@@ -50,9 +50,9 @@ You've ironed out a lot of issues by this stage and you're finally going GA with
 
 Then **Context-Debt**: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech debt where you have a nagging demon on your shoulder that you don't have time to banish. The data build up has lots of negative side effects, and it's time for some serious context engineering:
 
-* **Latency Hit**: . In turn, this slows down answer latency and TTFT (time to first token), but your like a cooking frog. It's growing linearly with time, so you don't notice you're boiling, until your CEO realizes too late that it's caused a big customer to churn.
+* **Latency Hit**: . In turn, this slows down answer latency and TTFT (time to first token), but you're like a cooking frog. It's growing linearly with time, so you don't notice you're boiling, until your CEO realizes too late that it's caused a big customer to churn.
 * **Context Costs**: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most. 
-* **Context Quality Cliff**: For the same reason, this context build-up, the long context windows cause the LLM to loose track of what it's doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.
+* **Context Quality Cliff**: For the same reason, this context build-up, the long context windows cause the LLM to lose track of what it's doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.
 
 You want and need lots of things at this point. But let's just take one critical step first.
 
