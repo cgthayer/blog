@@ -4,6 +4,7 @@ date: 2026-01-09T13:34:01-08:00
 draft: true
 tags: []
 categories: []
+featureimage: "/images/ai-pitfalls-dev.png"
 ---
 
 **tldr**; evals or benchmarking for quality -> q-and-b-tests, q-tests, 

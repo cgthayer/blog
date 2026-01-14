@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Learn Tinker Share Blog</title>
     <link>https://blog.learntinkershare.ai/posts/</link>
     <description>Recent content in Posts on Learn Tinker Share Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jan 2026 13:34:01 -0800</lastBuildDate>
-    <atom:link href="https://blog.learntinkershare.ai/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Charles Thayer</copyright>
+    <lastBuildDate>Fri, 09 Jan 2026 13:34:01 -0800</lastBuildDate><atom:link href="https://blog.learntinkershare.ai/posts/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>What Separates the Real AI SW Engineers</title>
       <link>https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/</link>
       <pubDate>Fri, 09 Jan 2026 13:34:01 -0800</pubDate>
+      
       <guid>https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;tldr&lt;/strong&gt;; evals or benchmarking for quality -&amp;gt; q-and-b-tests, q-tests,&lt;/p&gt;
-&lt;p&gt;Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. It&amp;rsquo;s really as simple as whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;
-&lt;p&gt;A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;tldr&lt;/strong&gt;; evals or benchmarking for quality -&amp;gt; q-and-b-tests, q-tests,&lt;/p&gt;&#xA;&lt;p&gt;Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. It&amp;rsquo;s really as simple as whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;&#xA;&lt;p&gt;A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs</title>
       <link>https://blog.learntinkershare.ai/posts/play-with-embeddings/</link>
       <pubDate>Fri, 12 Dec 2025 11:53:10 -0800</pubDate>
+      
       <guid>https://blog.learntinkershare.ai/posts/play-with-embeddings/</guid>
-      <description>&lt;h1 id=&#34;from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34;&gt;From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships&lt;/h1&gt;
-&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors&lt;/p&gt;
-&lt;p&gt;I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&amp;rsquo;re looking for people to go on a walk with, it&amp;rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&amp;rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).&lt;/p&gt;</description>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships&#xA;    &lt;div id=&#34;from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors&lt;/p&gt;&#xA;&lt;p&gt;I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&amp;rsquo;re looking for people to go on a walk with, it&amp;rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&amp;rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Welcome</title>
       <link>https://blog.learntinkershare.ai/posts/welcome/</link>
       <pubDate>Sat, 22 Nov 2025 11:53:10 -0800</pubDate>
+      
       <guid>https://blog.learntinkershare.ai/posts/welcome/</guid>
-      <description>&lt;p&gt;This is a personal blog for Charles Thayer (see also &lt;a href=&#34;https://thayer.b2si.com&#34;&gt;https://thayer.b2si.com&lt;/a&gt;). I practice and draft writing here. It&amp;rsquo;s in Hugo, with editing in Obsidian.&lt;/p&gt;
-&lt;h3 id=&#34;about-me&#34;&gt;About Me&lt;/h3&gt;
-&lt;p&gt;I&amp;rsquo;m a software engineer, and sometimes founder. I like to tinkerer, build, think about thinking, and generally play with The Internet and related technologies.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Welcome!&lt;/strong&gt; 🌞☕𝛗&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a personal blog for Charles Thayer (see also &lt;a href=&#34;https://thayer.b2si.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://thayer.b2si.com&lt;/a&gt;). I practice and draft writing here. It&amp;rsquo;s in Hugo, with editing in Obsidian.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;About Me&#xA;    &lt;div id=&#34;about-me&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#about-me&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a software engineer, and sometimes founder. I like to tinkerer, build, think about thinking, and generally play with The Internet and related technologies.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Welcome!&lt;/strong&gt; 🌞☕𝛗&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

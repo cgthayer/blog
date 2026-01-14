@@ -1,0 +1,17 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Learn Tinker Share Blog"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "A blog about AI engineering, development, and best practices"
+  mainSections = ["posts"]
+
+[params.author]
+  name = "Charles Thayer"
+  headline = "AI Engineer & Developer"
+  bio = "Software engineer exploring AI, development, and best practices"

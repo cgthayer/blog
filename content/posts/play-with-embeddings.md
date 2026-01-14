@@ -5,6 +5,7 @@ draft: false
 tags: []
 categories: []
 createddate: 2025-12-12
+featureimage: "/images/graphdb-thoughts.excalidraw.png"
 ---
 
 # From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships

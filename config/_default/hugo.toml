@@ -1,0 +1,23 @@
+baseURL = 'https://blog.learntinkershare.ai/'
+languageCode = 'en-us'
+title = 'Learn Tinker Share Blog'
+theme = 'blowfish'
+
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+  defaultTheme = "auto"
+  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
