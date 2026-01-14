@@ -6,7 +6,7 @@ tags: []
 categories: []
 ---
 
-**tldr**; evals or benchmarking for quality.
+**tldr**; evals or benchmarking for quality -> q-and-b-tests, q-tests, 
 
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is "evals", but not specifically traditional ML evals. It's really as simple as whether you have an automated way to test and score the ***quality*** of your systems.
 
@@ -14,23 +14,33 @@ A year ago, I was working on several projects, and one needed a much higher degr
 
 If you don't have measures and metrics, a myriad of problems come up at every phase of development:
 
-**Problems with Developing**
+## Problems with Developing
 
 When the team is first writing the application and trying to reach that crucial step of getting the minimum feature set functioning:
 
 * **Prompt Churn**: You keep changing the prompt to "make it work" but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of ***whack-a-mole*** where fixing one problem reverts progress on others.
 * **Error Amplification**: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of ***telephone***, where the output gets worse and less predictable as the chain gets longer.
 * **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because your afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a ***windbag*** who starts talking and everyone eventually gets up and leaves as they ramble on.
+
+![ai-pitfalls-dev](ai-pitfalls-dev.png)
+
+
+How Tests Help:
+
+* Tests give you a set of inputs that you can re-evaluate when the prompt changes to ensure you're old fixes aren't regressing. Every bug fix then becomes durable.
+* Tests that look at the final output of an agentic pipeline will quickly show you if errors are amplifying. One prompt may degrade a little but you'll see the actual downstream effects.
+* Tests give you a way to verify that condensing the prompt isn't hurting you. You'll finally be confident when you try to reduce tokens, saving you latency and cost.
   
 **Problems with Beta Testing**
 
 You finally get a working system in front of real users, and start getting real feedback.
 
-* **Change Fear**: You want to fix something a user has called out, or handle a new case, but you're afraid to make a change (see prompt churn). The ***domino effect***.
+* **Change Fear**: You want to fix something a user has called out, or handle a new case, but you're afraid to make a change (see prompt churn). It's the ***domino effect*** --too fragile to touch.
 * **Focus**: Typically you had a theory about what's valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn't considered. Like they say "The map is NOT the territory". Here you're wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You'll may do better not to try to ***"eat the elephant"***.
-* **Timeliness**: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that is growing. Now you realize you need want to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. You're product is in danger of being ***"past your sell-by-date"***.
+* **Timeliness**: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. You're product is in danger of being "past your ***sell-by-date***".
 * **Cost Control**: Now that you have real customers you're shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don't know if that's safe. Maybe you could use a cheaper or OSS model, but again you don't know if that's safe. This is the difference between having a profitable business and being out of business. Your new plane is ***outta-runway*** ---you probably move forward burning through investor money to prove your product-market-fit.
 * **Tooling**: You likely have tool-calling (tool-use) and maybe MCPs but since you didn't develop these, you discover their short comings as you go. Now you realize your `WebFetchTool` only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.
+
 
 **Problems with Production**
 
@@ -48,11 +58,9 @@ You want and need lots of things at this point. But let's just take one critical
 
 What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.
 
+Let me step back, and talk about some of your high-level options and terminology.
 
-
-Let me step back, and talk about some of your high-level options and terminology:
-
-## Types of Test for AI Systems
+## Types of Tests for AI Systems
 
 (This is sidebar)
 
@@ -71,7 +79,8 @@ Similarly, we have Offline vs Online where the offline is happening on a develop
 
 This covers a lot of ground, but I need to mention one more:
 
-Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard call **LLM-as-a-user**. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
+Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard called **LLM-as-a-user**, persona tests, multi-turn conversation tests, etc. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
+
 
 ## Code
 
@@ -82,3 +91,9 @@ llm-jury - a set of perspectives
 
 
 test2
+
+------
+
+References and Resources:
+- [LangFuse Evaluating Multi-Turn Conversations](https://langfuse.com/guides/cookbook/example_evaluating_multi_turn_conversations)
+- 

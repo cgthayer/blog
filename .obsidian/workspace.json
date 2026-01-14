@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2025-07-month-log.md",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-07-month-log"
+              "title": "Backlinks for real-ai-engineer-differentiator"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2025-07-month-log.md",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-07-month-log"
+              "title": "Outgoing links from real-ai-engineer-differentiator"
             }
           },
           {
@@ -166,8 +166,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -215,7 +215,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -236,12 +236,52 @@
       "omnisearch:Omnisearch": false
     }
   },
+  "floating": {
+    "id": "f0ff546c67b1dd8c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "c918d6a64f391806",
+        "type": "window",
+        "children": [
+          {
+            "id": "6472b122d79891a2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "837910624a46a747",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Excalidraw/ai-pitfalls.excalidraw.md"
+                  },
+                  "icon": "excalidraw-icon",
+                  "title": "ai-pitfalls.excalidraw"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2087,
+        "y": 331,
+        "width": 1461,
+        "height": 1773,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
+    "Excalidraw/ai-pitfalls.excalidraw.md",
+    "Excalidraw/ai-pitfalls-dev.png",
+    "content/posts/real-ai-engineer-differentiator.md",
     "evals-overview.excalidraw.md",
     "2026-01-12.md",
+    "Excalidraw",
     "graphdb-thoughts.excalidraw.md",
-    "content/posts/real-ai-engineer-differentiator.md",
     "content/posts/welcome.md",
     "public/posts/real-ai-engineer-differentiator/index.html",
     "public/posts/real-ai-engineer-differentiator",
@@ -273,17 +313,12 @@
     "diary/AI-anti-fragile-ai-prompt-problems.md",
     "3rd-party/claude/content-blog-comparison-note.md",
     "startups/prompt-manager-startup.md",
-    "notes/AI-modern-stack-note.md",
-    "projects/tinker-project-idea-list-project.md",
-    "3rd-party/agentic-context-engineering-evolving.pdf",
     "traverso-design-ux-ui-ideas-nina-charles.png",
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",
     "numbered_garden_images/PXL_20251004_215908096.jpg",
     "numbered_garden_images/PXL_20251004_215806697.jpg",
     "numbered_garden_images/PXL_20251004_215758885.jpg",
-    "numbered_garden_images/PXL_20251004_215753912.jpg",
-    "numbered_garden_images/PXL_20251004_215654302.jpg",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]
