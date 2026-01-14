@@ -48,6 +48,8 @@ You want and need lots of things at this point. But let's just take one critical
 
 What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.
 
+
+
 Let me step back, and talk about some of your high-level options and terminology:
 
 ## Types of Test for AI Systems
@@ -70,4 +72,15 @@ Similarly, we have Offline vs Online where the offline is happening on a develop
 This covers a lot of ground, but I need to mention one more:
 
 Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard call **LLM-as-a-user**. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
+
+## Code
+
+A prompt
+A test - generic good bad
+llm-judge - a prompt, then a rubric
+llm-jury - a set of perspectives
+
+
+
+
 
