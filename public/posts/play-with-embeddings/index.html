@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs | Learn Tinker Share Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
+Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors
+I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
+<meta name="author" content="">
+<link rel="canonical" href="https://blog.learntinkershare.ai/posts/play-with-embeddings/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.learntinkershare.ai/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.learntinkershare.ai/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.learntinkershare.ai/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.learntinkershare.ai/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.learntinkershare.ai/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.learntinkershare.ai/posts/play-with-embeddings/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://blog.learntinkershare.ai/posts/play-with-embeddings/">
+  <meta property="og:site_name" content="Learn Tinker Share Blog">
+  <meta property="og:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
+  <meta property="og:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors
+I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-12T11:53:10-08:00">
+    <meta property="article:modified_time" content="2025-12-12T11:53:10-08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
+<meta name="twitter:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
+Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors
+I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.learntinkershare.ai/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs",
+      "item": "https://blog.learntinkershare.ai/posts/play-with-embeddings/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs",
+  "name": "Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs",
+  "description": "From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors\nI was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you\u0026rsquo;re looking for people to go on a walk with, it\u0026rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There\u0026rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors\nI was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).\nOne approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there’s an 80% chance I’ll like walking (even though I didn’t say so), and if I like hiking perhaps there’s a 90% chance I’ll like walking. Plus, in the other direction, if I like walking I’m also 90% likely to like hiking.\nIMG-SOURCE But wait, if I like hiking, am I likely to like running? There’s no arrow between those, and our graph implies there’s a relationship there, but we don’t know that we can safely infer such things. Plus, should we be conservative and say it’s 80% likely or should we be optimistic and say 90%, or average the two at 85%? We might even be more conservative and “walk the graph” and multiply .8 * .9 to get 72% likelihood (See picture 3 and 4). Plus, we know that this isn’t purely bidirectional, so someone who said they like “outdoor activities” might also like walking 70% of the time, but someone who likes walking may be 91% likely to like “outdoor activities”…\nFor fun here’s some naive code. We can imagine inferring a few hops, reviewing dijkstra’s algo, etc.\ngraph = { (\"running\", \"walking\"): 0.80, (\"walking\", \"running\"): 0.80, (\"hiking\", \"walking\"): 0.90, (\"walking\", \"hiking\"): 0.90, } def score(a, b): if (a, b) in graph: return \"direct\", f\"{graph[(a, b)]:.4f}\" shared = [x for x in [\"running\", \"hiking\", \"walking\"] if (a, x) in graph] if shared: return \"one-hop\", f\"{graph[(a, shared[0])] * graph[(shared[0], b)]:.4f}\" return \"no path\", 0 print(\"running → walking:\", score(\"running\", \"walking\")) print(\"hiking → walking:\", score(\"hiking\", \"walking\")) print(\"running → hiking:\", score(\"running\", \"hiking\")) running → walking: ('direct', '0.8000') hiking → walking: ('direct', '0.9000') running → hiking: ('one-hop', '0.7200') Of course, it’s great if we can enumerate the nodes we need in the graph, but often there are too many terms we might not know. Consider that someone may say “I like running” or “I’m a runner” or “I go for runs” and simply searching for “running” as an interest will miss 2 terms out of three of these. Stemming and other tricks might help but they’re brittle. We always come across data we didn’t expect, e.g. we might read “I was a sprinter on the track team” or “I like sprinting” and miss that they have an interest in “running”.\nA newer way to look at this problem is to leverage ML. LLMs are great at exactly this kind of problem. For an application we may not want to use a full prompt and LLM API call, but luckily we can use embeddings and vectorDBs to help. Let’s quickly look at the word embeddings for walk, run, hike and see what we get in terms of cosine distances:\nimport chromadb from chromadb.utils import embedding_functions import numpy as np def main(): embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction( model_name=\"average_word_embeddings_glove.6B.300d\" # Word-optimized model ) data = [\"walk\", \"run\", \"hike\"] embeddings = embedding_fn(data) print(f\"Embedding vector eg: sz={len(embeddings[0])}, looks like: {embeddings[0][:5]}...\") print(\"Pairwise cosine similarities (0-1, 1.0=same):\") for i in range(len(data)): for j in range(i + 1, len(data)): sim = cosine_similarity(embeddings[i], embeddings[j]) print(f\"* {data[i]:\u003e6} \u003c-\u003e {data[j]:\u003c6}: {sim:.4f}\") def cosine_similarity(vec1, vec2): dot_product = np.dot(vec1, vec2) norm_product = np.linalg.norm(vec1) * np.linalg.norm(vec2) return dot_product / norm_product if __name__ == \"__main__\": main() Embedding vector eg: sz=300, looks like: [-0.014619 -0.17277 -0.11171 0.31864 -0.52504 ]... Pairwise cosine similarities (0-1, 1.0=same): * walk \u003c-\u003e run : 0.4750 * walk \u003c-\u003e hike : 0.3058 * run \u003c-\u003e hike : 0.2077 Interesting:. This model finds walk and run to be the most similar, walk and hike the next, and hike and run the least similar\nToday, we have embeddings, which give us a nice calculation of “conceptual distance”. What this means is we can get these “relationship” numbers “for free” without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that’s probably good enough for a lot of use cases.\nThere’s a caveat here, which is to say that words without context can be dangerous. I worked in web search and we used to say “Fencing can be a sport, the stuff that borders your house, or what you do with stolen goods”. So, depending on your embedding model, you may want to calculate from full sentences such as “I like the activity walking” and “I like the activity running” as opposed to using the bare words.\nA quick change to the more popular Sentence model “all-MiniLLM-L6-v2”:\nembedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction( model_name=\"all-MiniLM-L6-v2\" # Sentence transformer model ) data = [\"I like to walk\", \"I like to run\", \"I like to hike\"] embeddings = embedding_fn(data[:3]) Embedding vector eg: sz=384, looks like: [-0.06094085 -0.05805941 0.03494389 0.09246249 0.0638584 ]... Pairwise cosine similarities (0-1, 1.0=same): * I like to walk \u003c-\u003e I like to run: 0.6254 * I like to walk \u003c-\u003e I like to hike: 0.7236 * I like to run \u003c-\u003e I like to hike: 0.5118 Interesting. This model has a different perspective, which could be the model or the context of interests and preferences (or both).\nThe most powerful and robust feature here is that we can handle almost any input without the need to pre-calculate our graph and weights. If we have an enumeration of categories of people’s favorite activities, and we see an event category that’s new to us, we can make an educated guess about how to map them, or use the embedding as input to our ranking. Meaning, if we put event descriptions into our vectorDB, then search for “I like to walk”, then a hiking event should score well.\nOf course, a combination of the two concepts would be needed in a real system since “interests” isn’t the same as “semantic meaning”. Here we controlled the sentence, but if you put in “I hate to walk” it turns out that sentence scores 0.7697 from “I like to walk” because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.\nMy friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there’s always more to explore.\nWhat’s your experience on these topics? Feel free to ask questions in the comments, or let me know what other topics you’d like to know about. I always monitor them for awhile after publishing.\nEnd Notes: Production quality is all about the details, so you should always test and benchmark. A vectorDB search is fast, but if you need accuracy and control then the right approach may be building a graph and calculating these weights yourself (doing several queries to get answers). At the time of writing, Weaviate was the only vectorDB I found that directly supports graphDB features. We used a couple models, so beware that the embedding vectors between them are not compatible. e.g. never compare vectors from a word model against a sentence model. Thanks Richard King for the fencing examples ;-)\n",
+  "wordCount" : "1334",
+  "inLanguage": "en",
+  "datePublished": "2025-12-12T11:53:10-08:00",
+  "dateModified": "2025-12-12T11:53:10-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.learntinkershare.ai/posts/play-with-embeddings/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Learn Tinker Share Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.learntinkershare.ai/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.learntinkershare.ai/" accesskey="h" title="Learn Tinker Share Blog (Alt + H)">Learn Tinker Share Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs
+    </h1>
+    <div class="post-meta"><span title='2025-12-12 11:53:10 -0800 PST'>December 12, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships">From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships<a hidden class="anchor" aria-hidden="true" href="#from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships">#</a></h1>
+<p>Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors</p>
+<p>I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).</p>
+<p>One approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there&rsquo;s an 80% chance I&rsquo;ll like walking (even though I didn&rsquo;t say so), and if I like hiking perhaps there&rsquo;s a 90% chance I&rsquo;ll like walking. Plus, in the other direction, if I like walking I&rsquo;m also 90% likely to like hiking.</p>
+<p><a href="graphdb-thoughts.excalidraw.md">IMG-SOURCE</a>
+<img alt="Diagram 1" loading="lazy" src="/images/graphdb-thoughts.excalidraw.png"></p>
+<p>But wait, if I like hiking, am I likely to like running? There&rsquo;s no arrow between those, and our graph implies there&rsquo;s a relationship there, but we don&rsquo;t know that we can safely infer such things. Plus, should we be conservative and say it&rsquo;s 80% likely or should we be optimistic and say 90%, or average the two at 85%? We might even be more conservative and &ldquo;walk the graph&rdquo; and multiply .8 * .9 to get 72% likelihood (See picture 3 and 4). Plus, we know that this isn&rsquo;t purely bidirectional, so someone who said they like &ldquo;outdoor activities&rdquo; might also like walking 70% of the time, but someone who likes walking may be 91% likely to like &ldquo;outdoor activities&rdquo;&hellip;</p>
+<p>For fun here&rsquo;s some naive code. We can imagine inferring a few hops, reviewing dijkstra&rsquo;s algo, etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;running&#34;</span>, <span style="color:#e6db74">&#34;walking&#34;</span>): <span style="color:#ae81ff">0.80</span>, (<span style="color:#e6db74">&#34;walking&#34;</span>, <span style="color:#e6db74">&#34;running&#34;</span>): <span style="color:#ae81ff">0.80</span>,
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;hiking&#34;</span>, <span style="color:#e6db74">&#34;walking&#34;</span>): <span style="color:#ae81ff">0.90</span>, (<span style="color:#e6db74">&#34;walking&#34;</span>, <span style="color:#e6db74">&#34;hiking&#34;</span>): <span style="color:#ae81ff">0.90</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">score</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (a, b) <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;direct&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>graph[(a, b)]<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    shared <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#34;running&#34;</span>, <span style="color:#e6db74">&#34;hiking&#34;</span>, <span style="color:#e6db74">&#34;walking&#34;</span>] <span style="color:#66d9ef">if</span> (a, x) <span style="color:#f92672">in</span> graph]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> shared:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;one-hop&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>graph[(a, shared[<span style="color:#ae81ff">0</span>])] <span style="color:#f92672">*</span> graph[(shared[<span style="color:#ae81ff">0</span>], b)]<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;no path&#34;</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;running → walking:&#34;</span>, score(<span style="color:#e6db74">&#34;running&#34;</span>, <span style="color:#e6db74">&#34;walking&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;hiking → walking:&#34;</span>, score(<span style="color:#e6db74">&#34;hiking&#34;</span>, <span style="color:#e6db74">&#34;walking&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;running → hiking:&#34;</span>, score(<span style="color:#e6db74">&#34;running&#34;</span>, <span style="color:#e6db74">&#34;hiking&#34;</span>))
+</span></span></code></pre></div><pre tabindex="0"><code>running → walking: (&#39;direct&#39;, &#39;0.8000&#39;)
+hiking → walking: (&#39;direct&#39;, &#39;0.9000&#39;)
+running → hiking: (&#39;one-hop&#39;, &#39;0.7200&#39;)
+</code></pre><p>Of course, it&rsquo;s great if we can enumerate the nodes we need in the graph, but often there are too many terms we might not know. Consider that someone may say &ldquo;I like running&rdquo; or &ldquo;I&rsquo;m a runner&rdquo; or &ldquo;I go for runs&rdquo; and simply searching for &ldquo;running&rdquo; as an interest will miss 2 terms out of three of these. Stemming and other tricks might help but they&rsquo;re brittle. We always come across data we didn&rsquo;t expect, e.g. we might read &ldquo;I was a sprinter on the track team&rdquo; or &ldquo;I like sprinting&rdquo; and miss that they have an interest in &ldquo;running&rdquo;.</p>
+<p>A newer way to look at this problem is to leverage ML. LLMs are great at exactly this kind of problem. For an application we may not want to use a full prompt and LLM API call, but luckily we can use embeddings and vectorDBs to help. Let&rsquo;s quickly look at the word embeddings for walk, run, hike and see what we get in terms of cosine distances:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> chromadb
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> chromadb.utils <span style="color:#f92672">import</span> embedding_functions
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    embedding_fn <span style="color:#f92672">=</span> embedding_functions<span style="color:#f92672">.</span>SentenceTransformerEmbeddingFunction(
+</span></span><span style="display:flex;"><span>        model_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;average_word_embeddings_glove.6B.300d&#34;</span>  <span style="color:#75715e"># Word-optimized model</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;walk&#34;</span>, <span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;hike&#34;</span>]
+</span></span><span style="display:flex;"><span>    embeddings <span style="color:#f92672">=</span> embedding_fn(data)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Embedding vector eg: sz=</span><span style="color:#e6db74">{</span>len(embeddings[<span style="color:#ae81ff">0</span>])<span style="color:#e6db74">}</span><span style="color:#e6db74">, looks like: </span><span style="color:#e6db74">{</span>embeddings[<span style="color:#ae81ff">0</span>][:<span style="color:#ae81ff">5</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Pairwise cosine similarities (0-1, 1.0=same):&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(data)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, len(data)):
+</span></span><span style="display:flex;"><span>            sim <span style="color:#f92672">=</span> cosine_similarity(embeddings[i], embeddings[j])
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;* </span><span style="color:#e6db74">{</span>data[i]<span style="color:#e6db74">:</span><span style="color:#e6db74">&gt;6</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> &lt;-&gt; </span><span style="color:#e6db74">{</span>data[j]<span style="color:#e6db74">:</span><span style="color:#e6db74">&lt;6</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>sim<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cosine_similarity</span>(vec1, vec2):
+</span></span><span style="display:flex;"><span>    dot_product <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>dot(vec1, vec2)
+</span></span><span style="display:flex;"><span>    norm_product <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(vec1) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(vec2)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> dot_product <span style="color:#f92672">/</span> norm_product
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><pre tabindex="0"><code>Embedding vector eg: sz=300, looks like: [-0.014619 -0.17277  -0.11171   0.31864  -0.52504 ]...
+Pairwise cosine similarities (0-1, 1.0=same):
+*   walk &lt;-&gt; run   : 0.4750
+*   walk &lt;-&gt; hike  : 0.3058
+*    run &lt;-&gt; hike  : 0.2077
+</code></pre><p>Interesting:. This model finds <code>walk</code> and <code>run</code> to be the most similar, <code>walk</code> and <code>hike</code> the next, and <code>hike</code> and <code>run</code> the least similar</p>
+<p>Today, we have embeddings, which give us a nice calculation of &ldquo;conceptual distance&rdquo;. What this means is we can get these &ldquo;relationship&rdquo; numbers &ldquo;for free&rdquo; without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that&rsquo;s probably good enough for a lot of use cases.</p>
+<p>There&rsquo;s a caveat here, which is to say that words without context can be dangerous. I worked in web search and we used to say &ldquo;Fencing can be a sport, the stuff that borders your house, or what you do with stolen goods&rdquo;. So, depending on your embedding model, you may want to calculate from full sentences such as &ldquo;I like the activity walking&rdquo; and &ldquo;I like the activity running&rdquo; as opposed to using the bare words.</p>
+<p>A quick change to the more popular Sentence model &ldquo;all-MiniLLM-L6-v2&rdquo;:</p>
+<pre tabindex="0"><code>    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name=&#34;all-MiniLM-L6-v2&#34;  # Sentence transformer model
+    )
+    data = [&#34;I like to walk&#34;, &#34;I like to run&#34;, &#34;I like to hike&#34;]
+    embeddings = embedding_fn(data[:3])
+</code></pre><pre tabindex="0"><code>Embedding vector eg: sz=384, looks like: [-0.06094085 -0.05805941  0.03494389  0.09246249  0.0638584 ]...
+Pairwise cosine similarities (0-1, 1.0=same):
+* I like to walk &lt;-&gt; I like to run: 0.6254
+* I like to walk &lt;-&gt; I like to hike: 0.7236
+* I like to run &lt;-&gt; I like to hike: 0.5118
+</code></pre><p>Interesting. This model has a different perspective, which could be the model <strong>or</strong> the context of interests and preferences (or both).</p>
+<p>The most powerful and robust feature here is that we can handle almost any input without the need to pre-calculate our graph and weights. If we have an enumeration of categories of people&rsquo;s favorite activities, and we see an event category that&rsquo;s new to us, we can make an educated guess about how to map them, or use the embedding as input to our ranking. Meaning, if we put event descriptions into our vectorDB, then search for &ldquo;I like to walk&rdquo;, then a hiking event should score well.</p>
+<p>Of course, a combination of the two concepts would be needed in a real system since &ldquo;interests&rdquo; isn&rsquo;t the same as &ldquo;semantic meaning&rdquo;. Here we controlled the sentence, but if you put in &ldquo;I hate to walk&rdquo; it turns out that sentence scores 0.7697 from &ldquo;I like to walk&rdquo; because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.</p>
+<p>My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there&rsquo;s always more to explore.</p>
+<p>What&rsquo;s your experience on these topics?  Feel free to ask questions in the comments, or let me know what other topics you&rsquo;d like to know about. I always monitor them for awhile after publishing.</p>
+<hr>
+<h3 id="end-notes">End Notes:<a hidden class="anchor" aria-hidden="true" href="#end-notes">#</a></h3>
+<ul>
+<li>Production quality is all about the details, so you should always test and benchmark. A vectorDB search is fast, but if you need accuracy and control then the right approach may be building a graph and calculating these weights yourself (doing several queries to get answers).</li>
+<li>At the time of writing, Weaviate was the only vectorDB I found that directly supports graphDB features.</li>
+<li>We used a couple models, so beware that the embedding vectors between them are not compatible. e.g. never compare vectors from a word model against a sentence model.</li>
+</ul>
+<p>Thanks Richard King for the fencing examples  ;-)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://blog.learntinkershare.ai/">Learn Tinker Share Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

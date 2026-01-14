@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What Separates the Real AI SW Engineers | Learn Tinker Share Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="tldr; evals or benchmarking for quality.
+Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. It&rsquo;s really as simple as whether you have an automated way to test and score the quality of your systems.
+A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
+<meta name="author" content="">
+<link rel="canonical" href="https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.learntinkershare.ai/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.learntinkershare.ai/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.learntinkershare.ai/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.learntinkershare.ai/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.learntinkershare.ai/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/">
+  <meta property="og:site_name" content="Learn Tinker Share Blog">
+  <meta property="og:title" content="What Separates the Real AI SW Engineers">
+  <meta property="og:description" content="tldr; evals or benchmarking for quality.
+Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.
+A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-09T13:34:01-08:00">
+    <meta property="article:modified_time" content="2026-01-09T13:34:01-08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Separates the Real AI SW Engineers">
+<meta name="twitter:description" content="tldr; evals or benchmarking for quality.
+Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. It&rsquo;s really as simple as whether you have an automated way to test and score the quality of your systems.
+A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.learntinkershare.ai/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What Separates the Real AI SW Engineers",
+      "item": "https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Separates the Real AI SW Engineers",
+  "name": "What Separates the Real AI SW Engineers",
+  "description": "tldr; evals or benchmarking for quality.\nThose of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is \u0026ldquo;evals\u0026rdquo;, but not specifically traditional ML evals. It\u0026rsquo;s really as simple as whether you have an automated way to test and score the quality of your systems.\nA year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "tldr; evals or benchmarking for quality.\nThose of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.\nA year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.\nIf you don’t have measures and metrics, a myriad of problems come up at every phase of development:\nProblems with Developing\nWhen the team is first writing the application and trying to reach that crucial step of getting the minimum feature set functioning:\nPrompt Churn: You keep changing the prompt to “make it work” but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of whack-a-mole where fixing one problem reverts progress on others. Error Amplification: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of telephone, where the output gets worse and less predictable as the chain gets longer. Prompt Bloat: In an attempt to handle different inputs the prompt keeps growing because your afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you’ll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a windbag who starts talking and everyone eventually gets up and leaves as they ramble on. Problems with Beta Testing\nYou finally get a working system in front of real users, and start getting real feedback.\nChange Fear: You want to fix something a user has called out, or handle a new case, but you’re afraid to make a change (see prompt churn). The domino effect. Focus: Typically you had a theory about what’s valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn’t considered. Like they say “The map is NOT the territory”. Here you’re wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You’ll may do better not to try to “eat the elephant”. Timeliness: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that is growing. Now you realize you need want to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. You’re product is in danger of being “past your sell-by-date”. Cost Control: Now that you have real customers you’re shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don’t know if that’s safe. Maybe you could use a cheaper or OSS model, but again you don’t know if that’s safe. This is the difference between having a profitable business and being out of business. Your new plane is outta-runway —you probably move forward burning through investor money to prove your product-market-fit. Tooling: You likely have tool-calling (tool-use) and maybe MCPs but since you didn’t develop these, you discover their short comings as you go. Now you realize your WebFetchTool only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income. Problems with Production\nYou’ve ironed out a lot of issues by this stage and you’re finally going GA with a full launch. Now it’s hard to respond to folks individually and understand how all your users are doing.\nFlying Blind: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of churn. You find you’re digging into your trace spans to figure out how little problems are causing error amplification. Then Context-Debt: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech debt where you have a nagging demon on your shoulder that you don’t have time to banish. The data build up has lots of negative side effects, and it’s time for some serious context engineering:\nLatency Hit: . In turn, this slows down answer latency and TTFT (time to first token), but your like a cooking frog. It’s growing linearly with time, so you don’t notice you’re boiling, until your CEO realizes too late that it’s caused a big customer to churn. Context Costs: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most. Context Quality Cliff: For the same reason, this context build-up, the long context windows cause the LLM to loose track of what it’s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases. You want and need lots of things at this point. But let’s just take one critical step first.\nWhat you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we’ll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.\nLet me step back, and talk about some of your high-level options and terminology:\nTypes of Test for AI Systems (This is sidebar)\nAt a simple level, evals are how we test AI systems, but the term evals covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there’s online vs offline, then there’s human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there’s RAG which looks more like search bench-marking with it’s accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.\nDiagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results. Similarly, we have Offline vs Online where the offline is happening on a developers bench (laptop or staging) and online is live in real-time with users or close to it.\nHuman Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you’ve been training. You have golden, ground truth, expected results –both positive and negative feedback. If not binary, you may have many labels, like is this imgae “pizza” or “hotdog”, so this is when the work is generally supervised. Automated Offline: This is the next level, where you write a prompt to judge the output. You probably still do all the other things, but with the LLM-judge your trying to extend the human reviewers for leverage. This can also extend the inputs by generating synthetic random data and also judging that. Ideally you have occasional human supervision (like RLHF) but you’re probably finding cases that go back into your golden data set. Human Online: Here is where you have live feedback. When you get to this stage you have probably grown to the point where the scale has overwhelmed the humans. You’ve placed buttons on the UI for thumbs up / thumbs down feedback, maybe even provided a way for users to write about their reasoning, expectations, and intentions. This is the parallel to filing an AI “bug report” for review –maybe even automated flagging. Automated Online: The is the automated equivalent. You may have a judge that looks are a sampling of conversations to detect unusual cases for further review. At this point, you have logging and traces (spans). Information, like high latency or cost automatically flag cases for review, without the user calling out poor performance. This covers a lot of ground, but I need to mention one more:\nConversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I’m aware of is what I call Bot-Tests, and I’ve heard call LLM-as-a-user. Here you set up an agent to converse as if it’s a user with enough background on how you’d like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn’t know what the illness is, then gradually exhibit more and more symptoms.\nCode A prompt A test - generic good bad llm-judge - a prompt, then a rubric llm-jury - a set of perspectives\n",
+  "wordCount" : "1733",
+  "inLanguage": "en",
+  "datePublished": "2026-01-09T13:34:01-08:00",
+  "dateModified": "2026-01-09T13:34:01-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Learn Tinker Share Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.learntinkershare.ai/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.learntinkershare.ai/" accesskey="h" title="Learn Tinker Share Blog (Alt + H)">Learn Tinker Share Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What Separates the Real AI SW Engineers
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2026-01-09 13:34:01 -0800 PST'>January 9, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>tldr</strong>; evals or benchmarking for quality.</p>
+<p>Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. It&rsquo;s really as simple as whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
+<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.</p>
+<p>If you don&rsquo;t have measures and metrics, a myriad of problems come up at every phase of development:</p>
+<p><strong>Problems with Developing</strong></p>
+<p>When the team is first writing the application and trying to reach that crucial step of getting the minimum feature set functioning:</p>
+<ul>
+<li><strong>Prompt Churn</strong>: You keep changing the prompt to &ldquo;make it work&rdquo; but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of <em><strong>whack-a-mole</strong></em> where fixing one problem reverts progress on others.</li>
+<li><strong>Error Amplification</strong>: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of <em><strong>telephone</strong></em>, where the output gets worse and less predictable as the chain gets longer.</li>
+<li><strong>Prompt Bloat</strong>: In an attempt to handle different inputs the prompt keeps growing because your afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you&rsquo;ll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a <em><strong>windbag</strong></em> who starts talking and everyone eventually gets up and leaves as they ramble on.</li>
+</ul>
+<p><strong>Problems with Beta Testing</strong></p>
+<p>You finally get a working system in front of real users, and start getting real feedback.</p>
+<ul>
+<li><strong>Change Fear</strong>: You want to fix something a user has called out, or handle a new case, but you&rsquo;re afraid to make a change (see prompt churn). The <em><strong>domino effect</strong></em>.</li>
+<li><strong>Focus</strong>: Typically you had a theory about what&rsquo;s valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn&rsquo;t considered. Like they say &ldquo;The map is NOT the territory&rdquo;. Here you&rsquo;re wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You&rsquo;ll may do better not to try to <em><strong>&ldquo;eat the elephant&rdquo;</strong></em>.</li>
+<li><strong>Timeliness</strong>: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that is growing. Now you realize you need want to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. You&rsquo;re product is in danger of being <em><strong>&ldquo;past your sell-by-date&rdquo;</strong></em>.</li>
+<li><strong>Cost Control</strong>: Now that you have real customers you&rsquo;re shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don&rsquo;t know if that&rsquo;s safe. Maybe you could use a cheaper or OSS model, but again you don&rsquo;t know if that&rsquo;s safe. This is the difference between having a profitable business and being out of business. Your new plane is <em><strong>outta-runway</strong></em> &mdash;you probably move forward burning through investor money to prove your product-market-fit.</li>
+<li><strong>Tooling</strong>: You likely have tool-calling (tool-use) and maybe MCPs but since you didn&rsquo;t develop these, you discover their short comings as you go. Now you realize your <code>WebFetchTool</code> only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.</li>
+</ul>
+<p><strong>Problems with Production</strong></p>
+<p>You&rsquo;ve ironed out a lot of issues by this stage and you&rsquo;re finally going GA with a full launch. Now it&rsquo;s hard to respond to folks individually and understand how all your users are doing.</p>
+<ul>
+<li><strong>Flying Blind</strong>: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of churn. You find you&rsquo;re digging into your trace spans to figure out how little problems are causing error amplification.</li>
+</ul>
+<p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech debt where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
+<ul>
+<li><strong>Latency Hit</strong>: . In turn, this slows down answer latency and TTFT (time to first token), but your like a cooking frog. It&rsquo;s growing linearly with time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to churn.</li>
+<li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most.</li>
+<li><strong>Context Quality Cliff</strong>: For the same reason, this context build-up, the long context windows cause the LLM to loose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
+</ul>
+<p>You want and need lots of things at this point. But let&rsquo;s just take one critical step first.</p>
+<p>What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.</p>
+<p>Let me step back, and talk about some of your high-level options and terminology:</p>
+<h2 id="types-of-test-for-ai-systems">Types of Test for AI Systems<a hidden class="anchor" aria-hidden="true" href="#types-of-test-for-ai-systems">#</a></h2>
+<p>(This is sidebar)</p>
+<p>At a simple level, evals are how we test AI systems, but the term evals covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there&rsquo;s online vs offline, then there&rsquo;s human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there&rsquo;s RAG which looks more like search bench-marking with it&rsquo;s accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.</p>
+<p><img alt="evals-overview.excalidraw|800" loading="lazy" src="evals-overview.excalidraw.md"></p>
+<p>Diagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results.
+Similarly, we have Offline vs Online where the offline is happening on a developers bench (laptop or staging) and online is live in real-time with users or close to it.</p>
+<ol>
+<li>Human Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you&rsquo;ve been training. You have golden, ground truth, expected results &ndash;both positive and negative feedback. If not binary, you may have many labels, like is this imgae &ldquo;pizza&rdquo; or &ldquo;hotdog&rdquo;, so this is when the work is generally supervised.</li>
+<li>Automated Offline: This is the next level, where you write a prompt to judge the output. You probably still do all the other things, but with the LLM-judge your trying to extend the human reviewers for leverage. This can also extend the inputs by generating synthetic random data and also judging that. Ideally you have occasional human supervision (like RLHF) but you&rsquo;re probably finding cases that go back into your golden data set.</li>
+<li>Human Online: Here is where you have live feedback. When you get to this stage you have probably grown to the point where the scale has overwhelmed the humans. You&rsquo;ve placed buttons on the UI for thumbs up / thumbs down feedback, maybe even provided a way for users to write about their reasoning, expectations, and intentions. This is the parallel to filing an AI &ldquo;bug report&rdquo; for review &ndash;maybe even automated flagging.</li>
+<li>Automated Online: The is the automated equivalent. You may have a judge that looks are a sampling of conversations to detect unusual cases for further review. At this point, you have logging and traces (spans). Information, like high latency or cost automatically flag cases for review, without the user calling out poor performance.</li>
+</ol>
+<p>This covers a lot of ground, but I need to mention one more:</p>
+<p>Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I&rsquo;m aware of is what I call Bot-Tests, and I&rsquo;ve heard call <strong>LLM-as-a-user</strong>. Here you set up an agent to converse as if it&rsquo;s a user with enough background on how you&rsquo;d like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn&rsquo;t know what the illness is, then gradually exhibit more and more symptoms.</p>
+<h2 id="code">Code<a hidden class="anchor" aria-hidden="true" href="#code">#</a></h2>
+<p>A prompt
+A test - generic good bad
+llm-judge - a prompt, then a rubric
+llm-jury - a set of perspectives</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://blog.learntinkershare.ai/">Learn Tinker Share Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
