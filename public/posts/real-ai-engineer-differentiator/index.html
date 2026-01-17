@@ -39,7 +39,7 @@
   <meta property="og:url" content="https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
   <meta property="og:title" content="What Separates the Real AI SW Engineers">
-  <meta property="og:description" content="tldr; evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
+  <meta property="og:description" content="tl;dr evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.
 A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
   <meta property="og:locale" content="en">
@@ -51,7 +51,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="What Separates the Real AI SW Engineers">
-  <meta name="twitter:description" content="tldr; evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
+  <meta name="twitter:description" content="tl;dr evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.
 A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
 
@@ -225,7 +225,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1850"
+    "wordCount": "1909"
   }]
   </script>
 
@@ -444,7 +444,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1850 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1909 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
     
 
     
@@ -550,6 +550,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
     <nav id="TableOfContents">
   <ul>
     <li><a href="#problems-with-developing">Problems with Developing</a></li>
+    <li><a href="#how-to-unscrew-yourself">How to Unscrew Yourself</a></li>
     <li><a href="#types-of-tests-for-ai-systems">Types of Tests for AI Systems</a></li>
     <li><a href="#code">Code</a></li>
   </ul>
@@ -566,6 +567,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
     <nav id="TableOfContents">
   <ul>
     <li><a href="#problems-with-developing">Problems with Developing</a></li>
+    <li><a href="#how-to-unscrew-yourself">How to Unscrew Yourself</a></li>
     <li><a href="#types-of-tests-for-ai-systems">Types of Tests for AI Systems</a></li>
     <li><a href="#code">Code</a></li>
   </ul>
@@ -684,7 +686,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
         
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>tldr</strong>; evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,</p>
+          <p><strong>tl;dr</strong> evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,</p>
 <p>Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. It&rsquo;s really as simple as whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
 <p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.</p>
 <p>If you don&rsquo;t have measures and metrics, a myriad of problems come up at every phase of development:</p>
@@ -702,7 +704,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
 <ul>
 <li><strong>Prompt Churn</strong>: You keep changing the prompt to &ldquo;make it work&rdquo; but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of <em><strong>whack-a-mole</strong></em> where fixing one problem reverts progress on others.</li>
 <li><strong>Error Amplification</strong>: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of <em><strong>telephone</strong></em>, where the output gets worse and less predictable as the chain gets longer.</li>
-<li><strong>Prompt Bloat</strong>: In an attempt to handle different inputs the prompt keeps growing because you&rsquo;re afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you&rsquo;ll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a <em><strong>windbag</strong></em> who starts talking and everyone eventually gets up and leaves as they ramble on.</li>
+<li><strong>Prompt Bloat</strong>: In an attempt to handle different inputs the prompt keeps growing because you&rsquo;re afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you&rsquo;ll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done (<strong>context-rot</strong>).</li>
 </ul>
 <p><figure><img
     class="my-0 rounded-md"
@@ -741,6 +743,18 @@ A year ago, I was working on several projects, and one needed a much higher degr
 </ul>
 <p>You want and need lots of things at this point. But let&rsquo;s just take one critical step first.</p>
 <p>What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.</p>
+
+<h2 class="relative group">How to Unscrew Yourself
+    <div id="how-to-unscrew-yourself" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-to-unscrew-yourself" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>ML Evals are a scary thing. If you try out some of the tools you&rsquo;ll find them a bit daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a csv with a pile of inputs to try out or just a spreadsheet of inputs and outputs.</p>
+<hr>
 <p>Let me step back, and talk about some of your high-level options and terminology.</p>
 
 <h2 class="relative group">Types of Tests for AI Systems

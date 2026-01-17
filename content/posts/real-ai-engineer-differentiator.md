@@ -7,7 +7,7 @@ categories: []
 featureimage: "/images/ai-pitfalls-dev.png"
 ---
 
-**tldr**; evals or benchmarking for quality -> q-and-b-tests, q-tests, 
+**tl;dr** evals or benchmarking for quality -> q-and-b-tests, q-tests, 
 
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is "evals", but not specifically traditional ML evals. It's really as simple as whether you have an automated way to test and score the ***quality*** of your systems.
 
@@ -21,7 +21,7 @@ When the team is first writing the application and trying to reach that crucial 
 
 * **Prompt Churn**: You keep changing the prompt to "make it work" but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of ***whack-a-mole*** where fixing one problem reverts progress on others.
 * **Error Amplification**: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of ***telephone***, where the output gets worse and less predictable as the chain gets longer.
-* **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because you're afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done. This is like a ***windbag*** who starts talking and everyone eventually gets up and leaves as they ramble on.
+* **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because you're afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done (**context-rot**).
 
 ![ai-pitfalls-dev](ai-pitfalls-dev.png)
 
@@ -58,6 +58,13 @@ Then **Context-Debt**: As real user data builds up, which is great, it creates m
 You want and need lots of things at this point. But let's just take one critical step first.
 
 What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.
+
+## How to Unscrew Yourself
+
+ML Evals are a scary thing. If you try out some of the tools you'll find them a bit daunting. But there's an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that's okay too, you may even have a csv with a pile of inputs to try out or just a spreadsheet of inputs and outputs.
+
+
+----
 
 Let me step back, and talk about some of your high-level options and terminology.
 

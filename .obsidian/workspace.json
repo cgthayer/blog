@@ -236,50 +236,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "floating": {
-    "id": "f0ff546c67b1dd8c",
-    "type": "floating",
-    "children": [
-      {
-        "id": "c918d6a64f391806",
-        "type": "window",
-        "children": [
-          {
-            "id": "6472b122d79891a2",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "837910624a46a747",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "Excalidraw/ai-pitfalls.excalidraw.md"
-                  },
-                  "icon": "excalidraw-icon",
-                  "title": "ai-pitfalls.excalidraw"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 896,
-        "y": 331,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "ca5147c5ff92a456",
+  "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
-    "Excalidraw/ai-pitfalls.excalidraw.md",
+    "2026-01-12.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "Excalidraw/ai-pitfalls.excalidraw.md",
     "Excalidraw/ai-pitfalls-dev.png",
     "evals-overview.excalidraw.md",
-    "2026-01-12.md",
     "Excalidraw",
     "graphdb-thoughts.excalidraw.md",
     "content/posts/welcome.md",
