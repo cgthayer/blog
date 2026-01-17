@@ -264,20 +264,20 @@
           }
         ],
         "direction": "vertical",
-        "x": 2087,
+        "x": 896,
         "y": 331,
-        "width": 1461,
-        "height": 1773,
+        "width": 1024,
+        "height": 800,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "16ae8dc8ef399f34",
+  "active": "ca5147c5ff92a456",
   "lastOpenFiles": [
     "Excalidraw/ai-pitfalls.excalidraw.md",
-    "Excalidraw/ai-pitfalls-dev.png",
     "content/posts/real-ai-engineer-differentiator.md",
+    "Excalidraw/ai-pitfalls-dev.png",
     "evals-overview.excalidraw.md",
     "2026-01-12.md",
     "Excalidraw",
