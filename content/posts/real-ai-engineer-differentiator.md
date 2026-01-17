@@ -64,6 +64,7 @@ What you need is testing. And I call this Evals, to distinguish from unittests a
 ML Evals are a scary thing. If you try out some of the tools you'll find them a bit daunting. But there's an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that's okay too, you may even have a csv with a pile of inputs to try out or just a spreadsheet of inputs and outputs.
 
 
+
 ----
 
 Let me step back, and talk about some of your high-level options and terminology.
