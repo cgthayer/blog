@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/real-ai-engineer-differentiator.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -238,8 +238,10 @@
   },
   "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
-    "2026-01-12.md",
+    "Clippings/What I’m up to….md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "Clippings",
+    "2026-01-12.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
     "Excalidraw/ai-pitfalls-dev.png",
     "evals-overview.excalidraw.md",
@@ -262,7 +264,6 @@
     "archetypes/default.md",
     "themes/PaperMod/README.md",
     "public/posts/welcome/index.html",
-    "public/posts/welcome",
     "003-AI-evals.md",
     "projects/writing-project.md",
     "002-AI-tracing.md",
