@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   display: flex !important;
   gap: 1rem;
+  align-items: start !important;
 }
 
 .article-link--simple:first-child {
@@ -91,13 +92,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Ensure thumbnail displays - flexible container for both portrait and landscape */
+/* Override theme's .thumbnail { width: 300px; min-height: 180px; } */
 .article-link--simple .thumbnail {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   overflow: visible !important;
   position: static !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  max-width: 150px !important;
+  max-height: 100px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-right: 1rem !important;
 }
 
 .article-link--simple .thumbnail img {
