@@ -9,7 +9,7 @@ featureimage: /images/ai-pitfalls-dev.png
 
 ## Types of Tests for AI Systems
 
-At a simple level, evals are how we test AI systems, but the term evals covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there's online vs offline, then there's human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there's RAG which looks more like search bench-marking with it's accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.
+At a simple level, evals are how we test AI systems, but the term "evals" covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there's online vs offline, then there's human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there's RAG which looks more like search bench-marking with it's accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.
 
 ![evals-overview.excalidraw|800](evals-overview.excalidraw.md)
 
@@ -24,7 +24,7 @@ Similarly, we have Offline vs Online where the offline is happening on a develop
 
 This covers a lot of ground, but I need to mention one more:
 
-Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard called **LLM-as-a-user**, persona tests, multi-turn conversation tests, etc. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
+**Conversations** (Chats): these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard called **LLM-as-a-user**, persona tests, multi-turn conversation tests, etc. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
 
 
 ## Code

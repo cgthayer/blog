@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:36545/</loc>
+    <loc>https://blog.learntinkershare.ai/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:36545/posts/</loc>
+    <loc>https://blog.learntinkershare.ai/posts/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:36545/posts/real-ai-engineer-differentiator/</loc>
+    <loc>https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:36545/posts/play-with-embeddings/</loc>
+    <loc>https://blog.learntinkershare.ai/posts/play-with-embeddings/</loc>
     <lastmod>2025-12-12T11:53:10-08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:36545/posts/welcome/</loc>
+    <loc>https://blog.learntinkershare.ai/posts/welcome/</loc>
     <lastmod>2025-11-22T11:53:10-08:00</lastmod>
   </url>
 </urlset>
