@@ -255,13 +255,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d9eb382688cd1e57",
+  "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
+    "content/posts/real-ai-engineer-differentiator.md",
+    "public/css/main.bundle.min.0bc862ada776f7a007732625df4c10731e088bcb26a4a3cc794a47e0b08549266211a15a16e5d08b67f3808c561c0d5b9d56bd31661836e6b9638e4483e5583f.css",
     "content/posts/ai-testing-overview.md",
     "public/css/main.bundle.min.2aab45828f036ec8017f39acf7989659c0acf7e853d7643c829fbf3b687754e4ee3c97f378eef6b4e85177be5eaddd53a0cc004fa5a3fbfba320393675ac89fa.css",
     "public/css/main.bundle.min.a9b9acd8a69ded2a29bf8297f27d000e6d634e8e97d2a86afebc479d34fab385b1c9122fe02797d882fc8905ef239ce66e42ba5db32184bc59066b9a639fdead.css",
     "public/css/main.bundle.min.b54d28949d3c0da95101a93d72b8754f955567d12e2bd50aea4dd08bd8ff5c525cb2605b13a3ba5de26b1a3a4ee8d2df69aef88273d7776a8e472d48ec1015a0.css",
-    "content/posts/real-ai-engineer-differentiator.md",
     "public/css/main.bundle.min.db6bb53b6a63022a5549da21f544564e402cd17598a12248a6bc7601120ce84cf6add215d7c3c6602edfbb0ae98cc125df028c41cf5ceab55e3f80d5bd5d8d9a.css",
     "public/images/ai-test-types.png",
     "Excalidraw/ai-test-types.excalidraw.md",
@@ -278,7 +279,6 @@
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "content/posts/welcome.md",
     "public/posts/real-ai-engineer-differentiator/index.html",
-    "public/posts/real-ai-engineer-differentiator",
     "welcome.md",
     "content/posts/play-with-embeddings.md",
     "public/images/graphdb-thoughts.excalidraw.png",
