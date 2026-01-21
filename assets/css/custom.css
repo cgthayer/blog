@@ -50,15 +50,25 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0 !important;
 }
 
-/* Thumbnail styling for list pages */
+/* Thumbnail styling for list pages - natural size with orientation-based limits */
 .article-link--simple img {
-  max-width: 120px;
-  max-height: 120px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100px;
+  max-height: none;
+  object-fit: contain !important;
   border-radius: 4px;
   flex-shrink: 0;
+  inset: auto !important;
+}
+
+/* Landscape images: limit height, let width scale naturally */
+@supports (aspect-ratio: 1) {
+  .article-link--simple img {
+    max-width: none;
+    max-height: 80px;
+  }
 }
 
 .article-list h2 {
@@ -81,9 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Ensure thumbnail displays - flexible container for both portrait and landscape */
 .article-link--simple .thumbnail {
-  min-width: 80px;
-  max-width: 120px;
-  max-height: 120px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -91,8 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-link--simple .thumbnail img {
-  max-width: 100%;
-  max-height: 120px;
   width: auto;
   height: auto;
   object-fit: contain;
