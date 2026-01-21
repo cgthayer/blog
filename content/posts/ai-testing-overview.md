@@ -11,7 +11,7 @@ featureimage: /images/ai-pitfalls-dev.png
 
 At a simple level, evals are how we test AI systems, but the term "evals" covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there's online vs offline, then there's human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there's RAG which looks more like search bench-marking with it's accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.
 
-![evals-overview.excalidraw|800](evals-overview.excalidraw.md)
+![ai-test-types|800](ai-test-types.png)
 
 
 Diagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results.

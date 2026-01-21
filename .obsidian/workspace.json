@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ai-testing-overview.md",
+                "file": "content/posts/ai-testing-overview.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "ai-testing-overview"
@@ -49,7 +49,7 @@
               "state": {
                 "file": "content/posts/real-ai-engineer-differentiator.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "real-ai-engineer-differentiator"
@@ -126,7 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 301.5
   },
   "right": {
     "id": "c0ac7310825cefe6",
@@ -255,18 +255,23 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d9eb382688cd1e57",
+  "active": "f9daa462c110364a",
   "lastOpenFiles": [
-    "ai-testing-overview.md",
+    "public/images/ai-test-types.png",
+    "content/posts/ai-testing-overview.md",
+    "Excalidraw/ai-test-types.excalidraw.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "public/images/ai-test-types.excalidraw.png",
+    "static/images/ai-test-types.png",
+    "Excalidraw/ai-pitfalls.excalidraw.md",
+    "public/posts/ai-testing-overview/index.html",
+    "public/posts/ai-testing-overview",
     "2026-01-12.md",
-    "evals-overview.excalidraw.md",
     "Clippings/What I’m up to….md",
     "Clippings",
-    "Excalidraw/ai-pitfalls.excalidraw.md",
     "Excalidraw/ai-pitfalls-dev.png",
     "Excalidraw",
-    "graphdb-thoughts.excalidraw.md",
+    "Excalidraw/graphdb-thoughts.excalidraw.md",
     "content/posts/welcome.md",
     "public/posts/real-ai-engineer-differentiator/index.html",
     "public/posts/real-ai-engineer-differentiator",
@@ -278,12 +283,10 @@
     "static",
     "static/images/graphdb-thoughts.excalidraw.png",
     "public/posts/play-with-embeddings/index.html",
-    "public/posts/play-with-embeddings",
     "JT-stories.md",
     "README.md",
     "archetypes/default.md",
     "themes/PaperMod/README.md",
-    "public/posts/welcome/index.html",
     "003-AI-evals.md",
     "projects/writing-project.md",
     "002-AI-tracing.md",
@@ -295,13 +298,11 @@
     "articles/AI-prompt-manager-article.md",
     "diary/writing-ideas.md",
     "diary/AI-anti-fragile-ai-prompt-problems.md",
-    "3rd-party/claude/content-blog-comparison-note.md",
     "traverso-design-ux-ui-ideas-nina-charles.png",
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",
     "numbered_garden_images/PXL_20251004_215908096.jpg",
     "numbered_garden_images/PXL_20251004_215806697.jpg",
-    "numbered_garden_images/PXL_20251004_215758885.jpg",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]
