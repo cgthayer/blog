@@ -55,20 +55,12 @@ h1, h2, h3, h4, h5, h6 {
   position: static !important;
   width: auto !important;
   height: auto !important;
-  max-width: 100px;
-  max-height: none;
+  max-width: 150px !important;
+  max-height: 100px !important;
   object-fit: contain !important;
   border-radius: 4px;
   flex-shrink: 0;
   inset: auto !important;
-}
-
-/* Landscape images: limit height, let width scale naturally */
-@supports (aspect-ratio: 1) {
-  .article-link--simple img {
-    max-width: none;
-    max-height: 80px;
-  }
 }
 
 .article-list h2 {
