@@ -49,7 +49,8 @@
               "title": "ai-testing-overview"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "202f8abc9cf1d369",
@@ -269,10 +270,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "16ae8dc8ef399f34",
+  "active": "ab60dc49fcf94b9e",
   "lastOpenFiles": [
-    "ai-testing-overview.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "ai-testing-overview.md",
     "evals-overview.excalidraw.md",
     "Clippings/What I’m up to….md",
     "Clippings",
