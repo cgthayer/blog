@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/real-ai-engineer-differentiator.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -33,6 +33,40 @@
               },
               "icon": "lucide-file",
               "title": "2026-01-12"
+            }
+          },
+          {
+            "id": "ab60dc49fcf94b9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ai-testing-overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ai-testing-overview"
+            }
+          }
+        ]
+      },
+      {
+        "id": "202f8abc9cf1d369",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9eb382688cd1e57",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/real-ai-engineer-differentiator.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "real-ai-engineer-differentiator"
             }
           }
         ]
@@ -106,8 +140,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c0ac7310825cefe6",
@@ -238,13 +271,14 @@
   },
   "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
-    "Clippings/What I’m up to….md",
+    "ai-testing-overview.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "evals-overview.excalidraw.md",
+    "Clippings/What I’m up to….md",
     "Clippings",
     "2026-01-12.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
     "Excalidraw/ai-pitfalls-dev.png",
-    "evals-overview.excalidraw.md",
     "Excalidraw",
     "graphdb-thoughts.excalidraw.md",
     "content/posts/welcome.md",
@@ -276,7 +310,6 @@
     "diary/writing-ideas.md",
     "diary/AI-anti-fragile-ai-prompt-problems.md",
     "3rd-party/claude/content-blog-comparison-note.md",
-    "startups/prompt-manager-startup.md",
     "traverso-design-ux-ui-ideas-nina-charles.png",
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",

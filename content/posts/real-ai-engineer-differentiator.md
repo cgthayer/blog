@@ -7,7 +7,7 @@ categories: []
 featureimage: "/images/ai-pitfalls-dev.png"
 ---
 
-**tl;dr** evals or benchmarking for quality -> q-and-b-tests, q-tests, 
+**tl;dr** agentic evals testing  is how you make prod bullet-proof.
 
 Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is "evals", but not specifically traditional ML evals. It's really as simple as whether you have an automated way to test and score the ***quality*** of your systems.
 
@@ -15,7 +15,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
 
 If you don't have measures and metrics, a myriad of problems come up at every phase of development:
 
-## Problems with Developing
+## Problems you hit in Dev
 
 When the team is first writing the application and trying to reach that crucial step of getting the minimum feature set functioning:
 
@@ -26,83 +26,64 @@ When the team is first writing the application and trying to reach that crucial 
 ![ai-pitfalls-dev](ai-pitfalls-dev.png)
 
 
-How Tests Help:
-
-* Tests give you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren't regressing. Every bug fix then becomes durable.
-* Tests that look at the final output of an agentic pipeline will quickly show you if errors are amplifying. One prompt may degrade a little but you'll see the actual downstream effects.
-* Tests give you a way to verify that condensing the prompt isn't hurting you. You'll finally be confident when you try to reduce tokens, saving you latency and cost.
+**How Agentic Evals Help:**
+* Prompt Churn: Agentic evals testing gives you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren't regressing. Every bug fix then becomes durable. You can see when you cause a test case to regress.
+* Error Amplification: You can tell when your agentic pipeline gets worse, and you can dig into which prompt degraded and it's downstream effect.
+* Prompt Bloat: now you have a way to verify if trimming the prompt hurts your score, so you can be confident your update is safe.
   
-**Problems with Beta Testing**
+## Problems with Beta Testing
 
 You finally get a working system in front of real users, and start getting real feedback.
 
 * **Change Fear**: You want to fix something a user has called out, or handle a new case, but you're afraid to make a change (see prompt churn). It's the ***domino effect*** --too fragile to touch.
-* **Focus**: Typically you had a theory about what's valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn't considered. Like they say "The map is NOT the territory". Here you're wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You may do better not to try to ***"eat the elephant"***.
+* **Focus**: Typically you had a theory about what's valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn't considered. Like they say "The map is NOT the territory". Here you're wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into separate prompts or agents.
 * **Timeliness**: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to add a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. Your product is in danger of being "past your ***sell-by-date***".
 * **Cost Control**: Now that you have real customers you're shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don't know if that's safe. Maybe you could use a cheaper or OSS model, but again you don't know if that's safe. This is the difference between having a profitable business and being out of business. Your new plane is ***outta-runway*** ---you probably move forward burning through investor money to prove your product-market-fit.
 * **Tooling**: You likely have tool-calling (tool-use) and maybe MCPs but since you didn't develop these, you discover their short comings as you go. Now you realize your `WebFetchTool` only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.
 
+**How Agentic Evals Help:**
+- Change Fear: Handling new cases, you're sure you haven't hurt old cases.
+- Focus: Splitting a prompt in two becomes safe.
+- Timeliness: Testing with a new model is easy, so you can safely upgrade to one the latest frontier model.
+- Cost Control: You have tests to let you try out cheaper models, or understand where they fall down and need better prompts.
+- Tooling: You will naturally catch shifts in tool calls that impact your quality, as well as having a way to try different tools safely.
 
-**Problems with Production**
+## Problems in Production
 
 You've ironed out a lot of issues by this stage and you're finally going GA with a full launch. Now it's hard to respond to folks individually and understand how all your users are doing.
 
-* **Flying Blind**: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of churn. You find you're digging into your trace spans to figure out how little problems are causing error amplification.
+* **Flying Blind**: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of user churn. You find you're digging into your trace spans to figure out how little problems are causing error amplification.
 
-Then **Context-Debt**: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech debt where you have a nagging demon on your shoulder that you don't have time to banish. The data build up has lots of negative side effects, and it's time for some serious context engineering:
+Then **Context-Debt**: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech-debt, where you have a nagging demon on your shoulder that you don't have time to banish. The data build up has lots of negative side effects, and it's time for some serious context engineering:
 
 * **Latency Hit**: . In turn, this slows down answer latency and TTFT (time to first token), but you're like a cooking frog. It's growing linearly with time, so you don't notice you're boiling, until your CEO realizes too late that it's caused a big customer to churn.
 * **Context Costs**: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most. 
-* **Context Quality Cliff**: For the same reason, this context build-up, the long context windows cause the LLM to lose track of what it's doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.
+* **Context Rot**: For the same reason (this context build-up), the context windows filling up cause the LLM to lose track of what it's doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.
 
-You want and need lots of things at this point. But let's just take one critical step first.
+**How Agentic Evals Help:**
+- Latency Hit: In addition to quality scores, measuring timing is something you get easily. Now you can detect latency changes and make smart trade-offs.
+- Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem.
+- Context Costs: The same is true for tokens (and input and output length); they're all easy to track with agentic evals.
 
-What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.
+## From Newbie to Prod-Ready
 
-## How to Unscrew Yourself
+When building a project or managing one in production, you want a lot of safety nets. But let's just take one this critical step first.
 
-ML Evals are a scary thing. If you try out some of the tools you'll find them a bit daunting. But there's an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that's okay too, you may even have a csv with a pile of inputs to try out or just a spreadsheet of inputs and outputs.
+What you need is testing. I call this *agentic evals* (or Agentic Evaluations Testing), to distinguish from unittests and end-to-end tests. But agentic evals really come from ML evals (evaluations) used for testing models, which generally have much larger training and test sets. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). 
 
+This is in contrast to "ML Evals" which are a big scary thing, when you come from simply writing an agent. If you try out some of the tools you'll find them daunting. But there's an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that's okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.
 
+What you build
+- A way to score your output.
+- A set of inputs to test, and optionally outputs
+- A fast and simple way to run these like a benchmark.
 
-----
+Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury.
 
-Let me step back, and talk about some of your high-level options and terminology.
+Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the whole team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.
 
-## Types of Tests for AI Systems
+Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you'll tie this into CI/CD so that PRs which cause any regressions are nicely called out.
 
-(This is sidebar)
+Code: TODO
 
-At a simple level, evals are how we test AI systems, but the term evals covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there's online vs offline, then there's human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there's RAG which looks more like search bench-marking with it's accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.
-
-![evals-overview.excalidraw|800](evals-overview.excalidraw.md)
-
-
-Diagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results.
-Similarly, we have Offline vs Online where the offline is happening on a developers bench (laptop or staging) and online is live in real-time with users or close to it.
-
-1. Human Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you've been training. You have golden, ground truth, expected results --both positive and negative feedback. If not binary, you may have many labels, like is this imgae "pizza" or "hotdog", so this is when the work is generally supervised.
-2. Automated Offline: This is the next level, where you write a prompt to judge the output. You probably still do all the other things, but with the LLM-judge your trying to extend the human reviewers for leverage. This can also extend the inputs by generating synthetic random data and also judging that. Ideally you have occasional human supervision (like RLHF) but you're probably finding cases that go back into your golden data set.
-3. Human Online: Here is where you have live feedback. When you get to this stage you have probably grown to the point where the scale has overwhelmed the humans. You've placed buttons on the UI for thumbs up / thumbs down feedback, maybe even provided a way for users to write about their reasoning, expectations, and intentions. This is the parallel to filing an AI "bug report" for review --maybe even automated flagging.
-4. Automated Online: The is the automated equivalent. You may have a judge that looks are a sampling of conversations to detect unusual cases for further review. At this point, you have logging and traces (spans). Information, like high latency or cost automatically flag cases for review, without the user calling out poor performance.
-
-This covers a lot of ground, but I need to mention one more:
-
-Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I'm aware of is what I call Bot-Tests, and I've heard called **LLM-as-a-user**, persona tests, multi-turn conversation tests, etc. Here you set up an agent to converse as if it's a user with enough background on how you'd like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn't know what the illness is, then gradually exhibit more and more symptoms.
-
-
-## Code
-
-A prompt
-A test - generic good bad
-llm-judge - a prompt, then a rubric
-llm-jury - a set of perspectives
-
-
-test2
-
-------
-
-References and Resources:
-- [LangFuse Evaluating Multi-Turn Conversations](https://langfuse.com/guides/cookbook/example_evaluating_multi_turn_conversations)
-- 
+[ai-testing-overview](ai-testing-overview.md)

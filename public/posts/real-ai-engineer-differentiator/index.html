@@ -39,9 +39,8 @@
   <meta property="og:url" content="https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
   <meta property="og:title" content="What Separates the Real AI SW Engineers">
-  <meta property="og:description" content="tl;dr evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
-Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.
-A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
+  <meta property="og:description" content="tl;dr agentic evals testing is how you make prod bullet-proof.
+Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -51,9 +50,8 @@ A year ago, I was working on several projects, and one needed a much higher degr
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="What Separates the Real AI SW Engineers">
-  <meta name="twitter:description" content="tl;dr evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,
-Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.
-A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.">
+  <meta name="twitter:description" content="tl;dr agentic evals testing is how you make prod bullet-proof.
+Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is “evals”, but not specifically traditional ML evals. It’s really as simple as whether you have an automated way to test and score the quality of your systems.">
 
   
   
@@ -225,7 +223,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1909"
+    "wordCount": "1662"
   }]
   </script>
 
@@ -444,7 +442,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1909 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1662 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
     
 
     
@@ -549,10 +547,10 @@ A year ago, I was working on several projects, and one needed a much higher degr
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#problems-with-developing">Problems with Developing</a></li>
-    <li><a href="#how-to-unscrew-yourself">How to Unscrew Yourself</a></li>
-    <li><a href="#types-of-tests-for-ai-systems">Types of Tests for AI Systems</a></li>
-    <li><a href="#code">Code</a></li>
+    <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
+    <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
+    <li><a href="#problems-in-production">Problems in Production</a></li>
+    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
   </ul>
 </nav>
   </div>
@@ -566,10 +564,10 @@ A year ago, I was working on several projects, and one needed a much higher degr
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#problems-with-developing">Problems with Developing</a></li>
-    <li><a href="#how-to-unscrew-yourself">How to Unscrew Yourself</a></li>
-    <li><a href="#types-of-tests-for-ai-systems">Types of Tests for AI Systems</a></li>
-    <li><a href="#code">Code</a></li>
+    <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
+    <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
+    <li><a href="#problems-in-production">Problems in Production</a></li>
+    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
   </ul>
 </nav>
   </div>
@@ -686,17 +684,17 @@ A year ago, I was working on several projects, and one needed a much higher degr
         
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>tl;dr</strong> evals or benchmarking for quality -&gt; q-and-b-tests, q-tests,</p>
+          <p><strong>tl;dr</strong> agentic evals testing  is how you make prod bullet-proof.</p>
 <p>Those of us who write AI applications that use LLMs fall into two categories, usually based on whether you have run a production system, with real users, over time. That key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. It&rsquo;s really as simple as whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
 <p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really impressed me was how important having some sort of benchmark is, for making a high quality system.</p>
 <p>If you don&rsquo;t have measures and metrics, a myriad of problems come up at every phase of development:</p>
 
-<h2 class="relative group">Problems with Developing
-    <div id="problems-with-developing" class="anchor"></div>
+<h2 class="relative group">Problems you hit in Dev
+    <div id="problems-you-hit-in-dev" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-with-developing" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-you-hit-in-dev" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -715,99 +713,88 @@ A year ago, I was working on several projects, and one needed a much higher degr
     src="ai-pitfalls-dev.png"
     ></figure>
 </p>
-<p>How Tests Help:</p>
+<p><strong>How Agentic Evals Help:</strong></p>
 <ul>
-<li>Tests give you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren&rsquo;t regressing. Every bug fix then becomes durable.</li>
-<li>Tests that look at the final output of an agentic pipeline will quickly show you if errors are amplifying. One prompt may degrade a little but you&rsquo;ll see the actual downstream effects.</li>
-<li>Tests give you a way to verify that condensing the prompt isn&rsquo;t hurting you. You&rsquo;ll finally be confident when you try to reduce tokens, saving you latency and cost.</li>
+<li>Prompt Churn: Agentic evals testing gives you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren&rsquo;t regressing. Every bug fix then becomes durable. You can see when you cause a test case to regress.</li>
+<li>Error Amplification: You can tell when your agentic pipeline gets worse, and you can dig into which prompt degraded and it&rsquo;s downstream effect.</li>
+<li>Prompt Bloat: now you have a way to verify if trimming the prompt hurts your score, so you can be confident your update is safe.</li>
 </ul>
-<p><strong>Problems with Beta Testing</strong></p>
+
+<h2 class="relative group">Problems with Beta Testing
+    <div id="problems-with-beta-testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-with-beta-testing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>You finally get a working system in front of real users, and start getting real feedback.</p>
 <ul>
 <li><strong>Change Fear</strong>: You want to fix something a user has called out, or handle a new case, but you&rsquo;re afraid to make a change (see prompt churn). It&rsquo;s the <em><strong>domino effect</strong></em> &ndash;too fragile to touch.</li>
-<li><strong>Focus</strong>: Typically you had a theory about what&rsquo;s valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn&rsquo;t considered. Like they say &ldquo;The map is NOT the territory&rdquo;. Here you&rsquo;re wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into two prompts or agents. You may do better not to try to <em><strong>&ldquo;eat the elephant&rdquo;</strong></em>.</li>
+<li><strong>Focus</strong>: Typically you had a theory about what&rsquo;s valuable to your users, but putting in front of people causes a natural shift in that thinking, plus you learn about a lot of problems you hadn&rsquo;t considered. Like they say &ldquo;The map is NOT the territory&rdquo;. Here you&rsquo;re wondering if you can safely update the prompt to handle the new use cases in one agent, or if you need to split the work up into separate prompts or agents.</li>
 <li><strong>Timeliness</strong>: Because the development process takes time, the context may shift as well. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to add a web tool to get up-to-date news, or you need to switch to the latest greatest foundation model. Neither of which feels safe. Your product is in danger of being &ldquo;past your <em><strong>sell-by-date</strong></em>&rdquo;.</li>
 <li><strong>Cost Control</strong>: Now that you have real customers you&rsquo;re shocked at how much of your budget and much tokens are costing you. You wish you could decrease the context size of your prompts but you don&rsquo;t know if that&rsquo;s safe. Maybe you could use a cheaper or OSS model, but again you don&rsquo;t know if that&rsquo;s safe. This is the difference between having a profitable business and being out of business. Your new plane is <em><strong>outta-runway</strong></em> &mdash;you probably move forward burning through investor money to prove your product-market-fit.</li>
 <li><strong>Tooling</strong>: You likely have tool-calling (tool-use) and maybe MCPs but since you didn&rsquo;t develop these, you discover their short comings as you go. Now you realize your <code>WebFetchTool</code> only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.</li>
 </ul>
-<p><strong>Problems with Production</strong></p>
+<p><strong>How Agentic Evals Help:</strong></p>
+<ul>
+<li>Change Fear: Handling new cases, you&rsquo;re sure you haven&rsquo;t hurt old cases.</li>
+<li>Focus: Splitting a prompt in two becomes safe.</li>
+<li>Timeliness: Testing with a new model is easy, so you can safely upgrade to one the latest frontier model.</li>
+<li>Cost Control: You have tests to let you try out cheaper models, or understand where they fall down and need better prompts.</li>
+<li>Tooling: You will naturally catch shifts in tool calls that impact your quality, as well as having a way to try different tools safely.</li>
+</ul>
+
+<h2 class="relative group">Problems in Production
+    <div id="problems-in-production" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-in-production" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>You&rsquo;ve ironed out a lot of issues by this stage and you&rsquo;re finally going GA with a full launch. Now it&rsquo;s hard to respond to folks individually and understand how all your users are doing.</p>
 <ul>
-<li><strong>Flying Blind</strong>: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of churn. You find you&rsquo;re digging into your trace spans to figure out how little problems are causing error amplification.</li>
+<li><strong>Flying Blind</strong>: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of user churn. You find you&rsquo;re digging into your trace spans to figure out how little problems are causing error amplification.</li>
 </ul>
-<p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech debt where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
+<p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech-debt, where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
 <ul>
 <li><strong>Latency Hit</strong>: . In turn, this slows down answer latency and TTFT (time to first token), but you&rsquo;re like a cooking frog. It&rsquo;s growing linearly with time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to churn.</li>
 <li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most.</li>
-<li><strong>Context Quality Cliff</strong>: For the same reason, this context build-up, the long context windows cause the LLM to lose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
+<li><strong>Context Rot</strong>: For the same reason (this context build-up), the context windows filling up cause the LLM to lose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
 </ul>
-<p>You want and need lots of things at this point. But let&rsquo;s just take one critical step first.</p>
-<p>What you need is testing. And I call this Evals, to distinguish from unittests and end-to-end tests. But evals really come from ML and larger training sets, like the ones for classifiers. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.). This might be a single prompt with a nice rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects, the LLM-jury.</p>
-
-<h2 class="relative group">How to Unscrew Yourself
-    <div id="how-to-unscrew-yourself" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-to-unscrew-yourself" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>ML Evals are a scary thing. If you try out some of the tools you&rsquo;ll find them a bit daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a csv with a pile of inputs to try out or just a spreadsheet of inputs and outputs.</p>
-<hr>
-<p>Let me step back, and talk about some of your high-level options and terminology.</p>
-
-<h2 class="relative group">Types of Tests for AI Systems
-    <div id="types-of-tests-for-ai-systems" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#types-of-tests-for-ai-systems" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>(This is sidebar)</p>
-<p>At a simple level, evals are how we test AI systems, but the term evals covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there&rsquo;s online vs offline, then there&rsquo;s human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there&rsquo;s RAG which looks more like search bench-marking with it&rsquo;s accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.</p>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="evals-overview.excalidraw|800"
-    src="evals-overview.excalidraw.md"
-    ></figure>
-</p>
-<p>Diagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results.
-Similarly, we have Offline vs Online where the offline is happening on a developers bench (laptop or staging) and online is live in real-time with users or close to it.</p>
-<ol>
-<li>Human Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you&rsquo;ve been training. You have golden, ground truth, expected results &ndash;both positive and negative feedback. If not binary, you may have many labels, like is this imgae &ldquo;pizza&rdquo; or &ldquo;hotdog&rdquo;, so this is when the work is generally supervised.</li>
-<li>Automated Offline: This is the next level, where you write a prompt to judge the output. You probably still do all the other things, but with the LLM-judge your trying to extend the human reviewers for leverage. This can also extend the inputs by generating synthetic random data and also judging that. Ideally you have occasional human supervision (like RLHF) but you&rsquo;re probably finding cases that go back into your golden data set.</li>
-<li>Human Online: Here is where you have live feedback. When you get to this stage you have probably grown to the point where the scale has overwhelmed the humans. You&rsquo;ve placed buttons on the UI for thumbs up / thumbs down feedback, maybe even provided a way for users to write about their reasoning, expectations, and intentions. This is the parallel to filing an AI &ldquo;bug report&rdquo; for review &ndash;maybe even automated flagging.</li>
-<li>Automated Online: The is the automated equivalent. You may have a judge that looks are a sampling of conversations to detect unusual cases for further review. At this point, you have logging and traces (spans). Information, like high latency or cost automatically flag cases for review, without the user calling out poor performance.</li>
-</ol>
-<p>This covers a lot of ground, but I need to mention one more:</p>
-<p>Conversations: these are hard to test and can follow many paths through an agent and tool calls. The best method I&rsquo;m aware of is what I call Bot-Tests, and I&rsquo;ve heard called <strong>LLM-as-a-user</strong>, persona tests, multi-turn conversation tests, etc. Here you set up an agent to converse as if it&rsquo;s a user with enough background on how you&rsquo;d like the conversation to evolve. A great example is in the medical context. Imagine you setup an agent to act as a patient with a specific illness, but to pretend it doesn&rsquo;t know what the illness is, then gradually exhibit more and more symptoms.</p>
-
-<h2 class="relative group">Code
-    <div id="code" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#code" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>A prompt
-A test - generic good bad
-llm-judge - a prompt, then a rubric
-llm-jury - a set of perspectives</p>
-<p>test2</p>
-<hr>
-<p>References and Resources:</p>
+<p><strong>How Agentic Evals Help:</strong></p>
 <ul>
-<li><a href="https://langfuse.com/guides/cookbook/example_evaluating_multi_turn_conversations"  target="_blank" rel="noreferrer">LangFuse Evaluating Multi-Turn Conversations</a></li>
-<li></li>
+<li>Latency Hit: In addition to quality scores, measuring timing is something you get easily. Now you can detect latency changes and make smart trade-offs.</li>
+<li>Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem.</li>
+<li>Context Costs: The same is true for tokens (and input and output length); they&rsquo;re all easy to track with agentic evals.</li>
 </ul>
+
+<h2 class="relative group">From Newbie to Prod-Ready
+    <div id="from-newbie-to-prod-ready" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#from-newbie-to-prod-ready" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>When building a project or managing one in production, you want a lot of safety nets. But let&rsquo;s just take one this critical step first.</p>
+<p>What you need is testing. I call this <em>agentic evals</em> (or Agentic Evaluations Testing), to distinguish from unittests and end-to-end tests. But agentic evals really come from ML evals (evaluations) used for testing models, which generally have much larger training and test sets. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.).</p>
+<p>This is in contrast to &ldquo;ML Evals&rdquo; which are a big scary thing, when you come from simply writing an agent. If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
+<p>What you build</p>
+<ul>
+<li>A way to score your output.</li>
+<li>A set of inputs to test, and optionally outputs</li>
+<li>A fast and simple way to run these like a benchmark.</li>
+</ul>
+<p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury.</p>
+<p>Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the whole team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
+<p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs which cause any regressions are nicely called out.</p>
+<p>Code: TODO</p>
+<p><a href="ai-testing-overview.md" >ai-testing-overview</a></p>
 
           
           
