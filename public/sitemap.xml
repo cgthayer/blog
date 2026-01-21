@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://blog.learntinkershare.ai/posts/ai-testing-overview/</loc>
-    <lastmod>2026-01-09T13:34:01-08:00</lastmod>
-  </url>
-  <url>
     <loc>https://blog.learntinkershare.ai/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
@@ -25,5 +21,9 @@
   <url>
     <loc>https://blog.learntinkershare.ai/posts/welcome/</loc>
     <lastmod>2025-11-22T11:53:10-08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.learntinkershare.ai/posts/ai-testing-overview/</loc>
+    <lastmod>2025-06-09T13:34:01-08:00</lastmod>
   </url>
 </urlset>

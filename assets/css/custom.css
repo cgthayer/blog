@@ -51,16 +51,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Thumbnail styling for list pages - natural size with orientation-based limits */
+.article-link--simple .thumbnail img,
+.article-link--simple img.absolute,
+.article-link--simple img.object-cover,
 .article-link--simple img {
   position: static !important;
   width: auto !important;
   height: auto !important;
   max-width: 150px !important;
   max-height: 100px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
   object-fit: contain !important;
   border-radius: 4px;
   flex-shrink: 0;
   inset: auto !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
 }
 
 .article-list h2 {
