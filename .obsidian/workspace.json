@@ -255,12 +255,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "f9daa462c110364a",
+  "active": "16ae8dc8ef399f34",
   "lastOpenFiles": [
-    "public/images/ai-test-types.png",
-    "content/posts/ai-testing-overview.md",
-    "Excalidraw/ai-test-types.excalidraw.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "content/posts/ai-testing-overview.md",
+    "public/css/main.bundle.min.db6bb53b6a63022a5549da21f544564e402cd17598a12248a6bc7601120ce84cf6add215d7c3c6602edfbb0ae98cc125df028c41cf5ceab55e3f80d5bd5d8d9a.css",
+    "public/images/ai-test-types.png",
+    "Excalidraw/ai-test-types.excalidraw.md",
     "public/images/ai-test-types.excalidraw.png",
     "static/images/ai-test-types.png",
     "Excalidraw/ai-pitfalls.excalidraw.md",
@@ -282,7 +283,6 @@
     "static/images",
     "static",
     "static/images/graphdb-thoughts.excalidraw.png",
-    "public/posts/play-with-embeddings/index.html",
     "JT-stories.md",
     "README.md",
     "archetypes/default.md",
@@ -302,7 +302,6 @@
     "Pasted Image 20251113150605_112.png",
     "numbered_garden_images/PXL_20251004_215939202.jpg",
     "numbered_garden_images/PXL_20251004_215908096.jpg",
-    "numbered_garden_images/PXL_20251004_215806697.jpg",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]

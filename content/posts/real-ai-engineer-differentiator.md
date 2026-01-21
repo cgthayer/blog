@@ -23,7 +23,7 @@ When the team is first writing the application and trying to reach that crucial 
 * **Error Amplification**: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of ***telephone***, where the output gets worse and less predictable as the chain gets longer.
 * **Prompt Bloat**: In an attempt to handle different inputs the prompt keeps growing because you're afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people are contributing. Ultimately, you'll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done (**context-rot**).
 
-![ai-pitfalls-dev](ai-pitfalls-dev.png)
+![ai-pitfalls-dev](/images/ai-pitfalls-dev.png)
 
 
 **How Agentic Evals Help:**

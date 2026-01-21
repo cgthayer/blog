@@ -52,9 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Thumbnail styling for list pages */
 .article-link--simple img {
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border-radius: 4px;
   flex-shrink: 0;
 }
@@ -77,17 +79,23 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important;
 }
 
-/* Ensure thumbnail displays */
+/* Ensure thumbnail displays - flexible container for both portrait and landscape */
 .article-link--simple .thumbnail {
-  width: 120px;
-  height: 80px;
+  min-width: 80px;
+  max-width: 120px;
+  max-height: 120px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .article-link--simple .thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Header styling */

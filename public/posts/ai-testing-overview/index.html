@@ -96,8 +96,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.d254104c52eb5f3bc4b9360ccecd9c7b4b9904ced17f4f1423930bcb661ee07c54d86583bf0cba3ed2ea57e336bcca2b4a3083c421084bf5f95dc4dcdeb2d61b.css"
-    integrity="sha512-0lQQTFLrXzvEuTYMzs2ce0uZBM7Rf08UI5MLy2Ye4HxU2GWDvwy6PtLqV&#43;M2vMorSjCDxCEIS/X5XcTc3rLWGw==">
+    href="/css/main.bundle.min.db6bb53b6a63022a5549da21f544564e402cd17598a12248a6bc7601120ce84cf6add215d7c3c6602edfbb0ae98cc125df028c41cf5ceab55e3f80d5bd5d8d9a.css"
+    integrity="sha512-22u1O2pjAipVSdoh9URWTkAs0XWYoSJIprx2ARIM6Ez2rdIV18PGYC7fuwrpjMEl3wKMQc9c6rVeP4DVvV2Nmg==">
 
   
   
@@ -694,14 +694,14 @@
     loading="lazy"
     decoding="async"
     fetchpriority="low"
-    alt="ai-test-types|800"
-    src="ai-test-types.png"
+    alt="ai-test-types"
+    src="/images/ai-test-types.png"
     ></figure>
 </p>
 <p>Diagram: What you see here is Human vs Automated on the horizontal axis, which naturally separates between the manual human curate work, and the more involved automations where serious time and data need to be employed to get the best results.
 Similarly, we have Offline vs Online where the offline is happening on a developers bench (laptop or staging) and online is live in real-time with users or close to it.</p>
 <ol>
-<li>Human Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you&rsquo;ve been training. You have golden, ground truth, expected results &ndash;both positive and negative feedback. If not binary, you may have many labels, like is this imgae &ldquo;pizza&rdquo; or &ldquo;hotdog&rdquo;, so this is when the work is generally supervised.</li>
+<li>Human Offline: here a developer is kicking off a benchmark or test run of some kind. In traditional ML you may be use test-evals the same way you would if testing a model you&rsquo;ve been training. You have golden, ground truth, expected results &ndash;both positive and negative feedback. If not binary, you may have many labels, like is this image &ldquo;pizza&rdquo; or &ldquo;hotdog&rdquo;, so this is when the work is generally supervised.</li>
 <li>Automated Offline: This is the next level, where you write a prompt to judge the output. You probably still do all the other things, but with the LLM-judge your trying to extend the human reviewers for leverage. This can also extend the inputs by generating synthetic random data and also judging that. Ideally you have occasional human supervision (like RLHF) but you&rsquo;re probably finding cases that go back into your golden data set.</li>
 <li>Human Online: Here is where you have live feedback. When you get to this stage you have probably grown to the point where the scale has overwhelmed the humans. You&rsquo;ve placed buttons on the UI for thumbs up / thumbs down feedback, maybe even provided a way for users to write about their reasoning, expectations, and intentions. This is the parallel to filing an AI &ldquo;bug report&rdquo; for review &ndash;maybe even automated flagging.</li>
 <li>Automated Online: The is the automated equivalent. You may have a judge that looks are a sampling of conversations to detect unusual cases for further review. At this point, you have logging and traces (spans). Information, like high latency or cost automatically flag cases for review, without the user calling out poor performance.</li>
