@@ -223,7 +223,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1714"
+    "wordCount": "1722"
   }]
   </script>
 
@@ -442,7 +442,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1714 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1722 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
     
 
     
@@ -761,14 +761,14 @@ Those of us who write AI applications fall into two categories,: the nervous and
 </ul>
 <p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech-debt, where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
 <ul>
-<li><strong>Latency Hit</strong>: . In turn, this slows down answer latency and TTFT (time to first token), but you&rsquo;re like a cooking frog. It&rsquo;s growing linearly with time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to churn.</li>
+<li><strong>Latency Hit</strong>: . In turn, this slows down answer latency and TTFT (time to first token). You&rsquo;re like a cooking frog, the slow down is getting gradually worse over time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to leave.</li>
 <li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most.</li>
 <li><strong>Context Rot</strong>: For the same reason (this context build-up), the context windows filling up cause the LLM to lose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
 </ul>
 <p><strong>How Agentic Evals Help:</strong></p>
 <ul>
 <li>Latency Hit: In addition to quality scores, measuring timing is something you get easily. Now you can detect latency changes and make smart trade-offs.</li>
-<li>Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem.</li>
+<li>Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem, for example.</li>
 <li>Context Costs: The same is true for tokens (and input and output length); they&rsquo;re all easy to track with agentic evals.</li>
 </ul>
 
@@ -781,10 +781,10 @@ Those of us who write AI applications fall into two categories,: the nervous and
     </span>
     
 </h2>
-<p>When building a project or managing one in production, you want a lot of safety nets. But let&rsquo;s just take one this critical step first.</p>
+<p>When building a project or managing one in production, you want a lot of safety nets. But let&rsquo;s take just this one critical step first.</p>
 <p>What you need is testing. I call this <em>agentic evals</em> (or Agentic Evaluations Testing), to distinguish from unittests and end-to-end tests. But agentic evals really come from ML evals (evaluations) used for testing models, which generally have much larger training and test sets. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.).</p>
-<p>This is in contrast to &ldquo;ML Evals&rdquo; which are a big scary thing, when you come from simply writing an agent. If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
-<p>What you build</p>
+<p>These agentic evals are lightweight compared to ML evals, which are a big scary thing (unless you&rsquo;re accustomed to ML research). If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
+<p>How to start and what to build:</p>
 <ul>
 <li>A way to score your output.</li>
 <li>A set of inputs to test, and optionally outputs</li>
@@ -793,7 +793,6 @@ Those of us who write AI applications fall into two categories,: the nervous and
 <p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury.</p>
 <p>Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the whole team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
 <p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs which cause any regressions are nicely called out.</p>
-<p><a href="/posts/ai-testing-overview/" >ai-testing-overview</a></p>
 
           
           
