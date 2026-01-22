@@ -83,3 +83,7 @@ Scoring: This could be code that checks a regex, but it often becomes a single p
 Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the whole team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.
 
 Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you'll tie this into CI/CD so that PRs which cause any regressions are nicely called out.
+
+## Quick Code
+
+Let's say you want to generate a list of events from some websites. Each is built very differently so you use an LLM to read and understand them, and extract some common information. 

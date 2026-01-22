@@ -223,7 +223,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1722"
+    "wordCount": "1758"
   }]
   </script>
 
@@ -442,7 +442,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1722 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1758 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
     
 
     
@@ -551,6 +551,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
     <li><a href="#problems-in-production">Problems in Production</a></li>
     <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#quick-code">Quick Code</a></li>
   </ul>
 </nav>
   </div>
@@ -568,6 +569,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
     <li><a href="#problems-in-production">Problems in Production</a></li>
     <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#quick-code">Quick Code</a></li>
   </ul>
 </nav>
   </div>
@@ -793,6 +795,17 @@ Those of us who write AI applications fall into two categories,: the nervous and
 <p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury.</p>
 <p>Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the whole team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
 <p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs which cause any regressions are nicely called out.</p>
+
+<h2 class="relative group">Quick Code
+    <div id="quick-code" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-code" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Let&rsquo;s say you want to generate a list of events from some websites. Each is built very differently so you use an LLM to read and understand them, and extract some common information.</p>
 
           
           
