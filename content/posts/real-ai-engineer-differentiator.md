@@ -94,6 +94,8 @@ When building a project or managing one in production, you want a lot of safety 
 
 These agentic evals are lightweight compared to ML evals, which are a big scary thing (unless you're accustomed to ML research). If you try out some of the tools you'll find them daunting. But there's an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that's okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.
 
+The key is just to start. Once you have something, every bug fix or PR can then check how the score is doing, and it will naturally evolve.
+
 *How to start and what to build*
 - A way to score your output.
 - A set of inputs to test, and optionally outputs
