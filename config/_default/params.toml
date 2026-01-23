@@ -22,7 +22,7 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "page"
-  showRecent = true
+  showRecent = false
   showRecentItems = 20
   showMoreLink = true
   showMoreLinkDest = "/posts"
