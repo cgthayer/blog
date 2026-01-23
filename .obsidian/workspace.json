@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "real-ai-engineer-differentiator"
             }
+          },
+          {
+            "id": "6331e3fc4a42fd9f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -221,7 +234,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d9eb382688cd1e57",
+  "active": "6331e3fc4a42fd9f",
   "lastOpenFiles": [
     "david-webb-writing-cleaned.md.ea2560c86b566f871907c1a383f908d0.tmp",
     "foo2.md",
