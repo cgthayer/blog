@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "real-ai-engineer-differentiator"
             }
-          },
-          {
-            "id": "6331e3fc4a42fd9f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.5"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,16 +221,18 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "6331e3fc4a42fd9f",
+  "active": "d9eb382688cd1e57",
   "lastOpenFiles": [
+    "content/posts/play-with-embeddings.md",
+    "content/posts/ai-testing-overview.md",
+    "content/posts/real-ai-engineer-differentiator.md",
+    "content/posts/welcome.md",
     "david-webb-writing-cleaned.md.ea2560c86b566f871907c1a383f908d0.tmp",
     "foo2.md",
     "foo.md",
     "david-webb-writing-cleaned.md",
     "david-webb-writing.md2",
     "david-webb-writing.md",
-    "content/posts/ai-testing-overview.md",
-    "content/posts/real-ai-engineer-differentiator.md",
     "public/css/main.bundle.min.57ec4e5713f6d1e247ae9ec184bedff32c89ae73ab6642f519266100c1f6f54ca548b0be556834595fc80ee226f7e56442b175c1a484df806707a8cbf7722b4f.css",
     "public/css/main.bundle.min.6a846e51c48726f79365468e66c1ca7b5c62a075e847bb8293e077726266f0921aacdbb3e86a570571f77c0aa344484d348271c4879179146fd7d343ae243e61.css",
     "public/css/main.bundle.min.0bc862ada776f7a007732625df4c10731e088bcb26a4a3cc794a47e0b08549266211a15a16e5d08b67f3808c561c0d5b9d56bd31661836e6b9638e4483e5583f.css",
@@ -257,14 +246,11 @@
     "static/images/ai-test-types.png",
     "Excalidraw/ai-pitfalls.excalidraw.md",
     "public/posts/ai-testing-overview/index.html",
-    "public/posts/ai-testing-overview",
     "2026-01-12.md",
     "Clippings/What I’m up to….md",
     "Excalidraw/ai-pitfalls-dev.png",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
-    "content/posts/welcome.md",
     "welcome.md",
-    "content/posts/play-with-embeddings.md",
     "public/images/graphdb-thoughts.excalidraw.png",
     "static/images/graphdb-thoughts.excalidraw.png",
     "JT-stories.md",

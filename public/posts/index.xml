@@ -15,7 +15,7 @@
       <pubDate>Fri, 09 Jan 2026 13:34:01 -0800</pubDate>
       
       <guid>https://blog.learntinkershare.ai/posts/real-ai-engineer-differentiator/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; become prod-ready and bullet-proof using agentic evals testing.&lt;/p&gt;&#xA;&lt;p&gt;Those of us who write AI applications fall into two categories,: the nervous and the prod-ready. It&amp;rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. Simply put, it&amp;rsquo;s whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; become prod-ready and bullet-proof using agentic evals testing.&lt;/p&gt;&#xA;&lt;p&gt;Those of us who write AI applications fall into two categories,: the nervous and the prod-ready. It&amp;rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. Simply put, it&amp;rsquo;s whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;</description>
       
     </item>
     
