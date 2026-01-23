@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="Learn Tinker Share Blog">
   <meta property="og:title" content="What Separates the Real AI SW Engineers">
   <meta property="og:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
-Those of us who write AI applications fall into two categories,: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
+Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -51,7 +51,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="What Separates the Real AI SW Engineers">
   <meta name="twitter:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
-Those of us who write AI applications fall into two categories,: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
+Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
 
   
   
@@ -223,7 +223,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2104"
+    "wordCount": "2059"
   }]
   </script>
 
@@ -442,7 +442,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2104 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2059 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
     
 
     
@@ -692,9 +692,9 @@ Those of us who write AI applications fall into two categories,: the nervous and
         
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>tl;dr</strong> become prod-ready and bullet-proof using agentic evals testing.</p>
-<p>Those of us who write AI applications fall into two categories,: the nervous and the prod-ready. It&rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. Simply put, it&rsquo;s whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
-<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. In fact, your agentic evals are more valuable IP than your prompts (or code), given the speed we&rsquo;re moving at.</p>
+          <p><strong>tl;dr</strong> become prod-ready and bullet-proof using <strong>agentic evals</strong> testing.</p>
+<p>Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It&rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. Simply put, it&rsquo;s whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
+<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.</p>
 
 <h2 class="relative group">Fundamentals
     <div id="fundamentals" class="anchor"></div>
@@ -705,15 +705,15 @@ Those of us who write AI applications fall into two categories,: the nervous and
     </span>
     
 </h2>
-<p>TDD: Test-Driven Development, at it&rsquo;s core, has a simple principle:</p>
+<p><strong>TDD</strong>: Test-Driven Development, at its core, has a simple principle:</p>
 <ul>
 <li>Write a test that fails, then code until it works.</li>
 </ul>
-<p>We still need this safety net, but with AI systems, the results are far less binary, so we often need a score or a full rubric to know when we&rsquo;ve reached our goals. Unittests that pass or fail is a start, but too brittle with AI work. Whether or not a project has agentic evals is a clear signal (like a code smell) about it&rsquo;s production readiness.</p>
+<p>We still need this safety net, but with AI systems, the results are far less binary, so we often need a score or a full rubric to know when we&rsquo;ve reached our goals. Unittests that pass or fail is a start, but too brittle with AI work. Whether or not a project has agentic evals is a clear signal (like a code smell) about its production readiness.</p>
 <p>When working on any system you need a way to answer &ldquo;Does it work?&rdquo; and with AI &ldquo;Does it work well?&rdquo;, so the <em><strong>definition of done</strong></em> has shifted a little.</p>
-<p>Evals: ML work and agent system development are different enough that the existing tools don&rsquo;t quite fit. ML evals are the common tool today to achieve quality testing, and they&rsquo;re a natural fit for those coming out of ML research and engineering. If you&rsquo;ve trained a classifer, model, or even a trivial neural net, you&rsquo;ve probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you&rsquo;re starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.</p>
+<p><strong>Evals</strong>: ML work and agent system development are different enough that the existing tools don&rsquo;t quite fit. ML evals are the common tool today to achieve quality testing, and they&rsquo;re a natural fit for those coming out of ML research and engineering. If you&rsquo;ve trained a classifier, model, or even a trivial neural net, you&rsquo;ve probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you&rsquo;re starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.</p>
 <p>So, I&rsquo;m calling out something between TDD unittests and ML evals. If they got married today, their kid would be agentic evals &ndash;some of each. They&rsquo;re the blend of &ldquo;Make it work&rdquo; and &ldquo;Make it right&rdquo; for AI. (thanks Kent Beck).</p>
-<p>When I say &ldquo;agentic evals&rdquo;, I&rsquo;m simply talking about these principles:</p>
+<p>When I say &ldquo;<em>agentic evals</em>&rdquo;, I&rsquo;m simply talking about these principles:</p>
 <ol>
 <li>A way to score your output.</li>
 <li>A set of inputs to test.</li>
@@ -804,8 +804,8 @@ Those of us who write AI applications fall into two categories,: the nervous and
 </ul>
 <p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech-debt, where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
 <ul>
-<li><strong>Latency Hit</strong>: . In turn, this slows down answer latency and TTFT (time to first token). You&rsquo;re like a cooking frog, the slow down is getting gradually worse over time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to leave.</li>
-<li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it effects the best and most loyal customers the most.</li>
+<li><strong>Latency Hit</strong>: In turn, this slows down answer latency and TTFT (time to first token). You&rsquo;re like a cooking frog, the slow down is getting gradually worse over time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to leave.</li>
+<li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it affects the best and most loyal customers the most.</li>
 <li><strong>Context Rot</strong>: For the same reason (this context build-up), the context windows filling up cause the LLM to lose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
 </ul>
 <p><strong>How Agentic Evals Help:</strong></p>
@@ -824,8 +824,7 @@ Those of us who write AI applications fall into two categories,: the nervous and
     </span>
     
 </h2>
-<p>When building a project or managing one in production, you want a lot of safety nets. But let&rsquo;s take just this one critical step first.</p>
-<p>What you need first is testing. I call this <em>agentic evals</em> (or Agentic Evaluations Testing), to distinguish from unittests and end-to-end tests. But agentic evals really come from ML evals (evaluations) used for testing models, which generally have much larger training and test sets. Instead, I mean something like benchmarks that produce a score, or a set of scores for both individual prompts (and agents) as well as multi-agent systems (workflows, pipelines, swarms, etc.).</p>
+<p>When building a project or managing one in production, you want a lot of safety nets. But take just this one critical step first.</p>
 <p>These agentic evals are lightweight compared to ML evals, which are a big scary thing (unless you&rsquo;re accustomed to ML research). If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
 <p><em>How to start and what to build</em></p>
 <ul>
@@ -834,9 +833,17 @@ Those of us who write AI applications fall into two categories,: the nervous and
 <li>A fast and simple way to run these, like a benchmark.</li>
 </ul>
 <p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury. To start, it may help to keep thinking binary and have the judge fail when there&rsquo;s some clearly bad output.</p>
-<p>Inputs: Although you may hard code these initially, often these grow into a either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the <em>whole</em> team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
+<p>Inputs: Although you may hard code these initially, often these grow into either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the <em>whole</em> team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
 <p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs that cause any regressions are nicely called out.</p>
+<p><em>Your First Agentic Eval</em></p>
+<ul>
+<li>5-10 inputs in a CSV file.</li>
+<li>A judge prompt that catches one problem.</li>
+<li>A script to run it.</li>
+</ul>
 <p>Lots more to say, but I&rsquo;ll stop here so you can let me know what you&rsquo;d like to talk about next.</p>
+<p>Thanks!</p>
+<p>Thanks: Kent Beck, Tomislav Čar</p>
 
           
           
