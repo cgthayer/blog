@@ -1,10 +1,10 @@
 ---
 title: What Separates the Real AI SW Engineers
 date: 2026-01-09T13:34:01-08:00
-draft: true
+draft: false
 tags: []
 categories: []
-featureimage: "/images/ai-pitfalls-dev.png"
+featureimage: /images/ai-pitfalls-dev.png
 ---
 
 **tl;dr** become prod-ready and bullet-proof using **agentic evals** testing.
