@@ -58,11 +58,8 @@ git commit -m "Build site $(date)"
 git push origin main
 ```
 
-Or simply run the deploy script:
+Or simply run the deploy script: `./deploy.sh`
 
-```bash
-./deploy.sh
-```
 
 **Note:** Hugo is configured with `publishDir = "docs"` so output goes directly to `/docs` folder.
 

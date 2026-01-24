@@ -124,7 +124,8 @@ git push
 
 # Clean up from private writing repo
 pushd ~/work/writing
-git commit -am "Published: my draft post"
+git add -A
+git commit -m "Published: my draft post"
 git push
 popd
 ```
