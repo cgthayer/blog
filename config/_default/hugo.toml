@@ -2,6 +2,7 @@ baseURL = 'https://thayer-blog.b2si.com/'
 languageCode = 'en-us'
 title = 'Learn Tinker Share Blog'
 theme = 'blowfish'
+publishDir = 'docs'
 
 enableRobotsTXT = true
 enableEmoji = true

@@ -2,9 +2,9 @@
 echo "Building site..."
 hugo --gc --minify
 
-echo "Deploying to gh-pages branch..."
-git add public -f
+echo "Deploying to main branch..."
+git add docs
 git commit -m "Build site $(date)"
-git subtree push --prefix public origin gh-pages
+git push origin main
 
 echo "Deployed! Site will be live at https://thayer-blog.b2si.com"
