@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -15,8 +15,8 @@
 
   
   
-    <title>AI SW Engineers: First Step to Prod-Ready is Tests &middot; Learn Tinker Share Blog</title>
-    <meta name="title" content="AI SW Engineers: First Step to Prod-Ready is Tests &middot; Learn Tinker Share Blog">
+    <title> &middot; Learn Tinker Share Blog</title>
+    <meta name="title" content=" &middot; Learn Tinker Share Blog">
   
 
   
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/">
+  <link rel="canonical" href="http://localhost:1313/drafts/001-ai-first-agent/">
   
 
   
@@ -36,22 +36,20 @@
   
 
   
-  <meta property="og:url" content="https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/">
+  <meta property="og:url" content="http://localhost:1313/drafts/001-ai-first-agent/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
-  <meta property="og:title" content="AI SW Engineers: First Step to Prod-Ready is Tests">
-  <meta property="og:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
-Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
+  <meta property="og:title" content="Learn Tinker Share Blog">
+  <meta property="og:description" content="Running an LLM agent may be a lot easier than you imagine. It boils down to 3 lines of code: create a model, create an agent, run the prompt. Here’s a trivial example:
+#!/usr/bin/env python3 # example.py # pip install smolagents[toolkit] # pip install smolagents[litellm] # put api keys in a .env file or environment vars import dotenv import os from smolagents import ToolCallingAgent, LiteLLMModel dotenv.load_dotenv() if __name__ == &#34;__main__&#34;: model = LiteLLMModel( model_id=&#34;anthropic/claude-3-7-sonnet-latest&#34;, temperature=0.0, api_key=os.environ[&#34;ANTHROPIC_API_KEY&#34;] ) agent = ToolCallingAgent(tools=[], model=model) result = agent.run(&#34;What are the days of the week as a JSON array?&#34;) print(&#34;GOT:&#34;, result) You can skip to the bottom and see that the fun happens at: agent.run(&#34;What are the days of the week as a JSON array?&#34;)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-09T13:34:01-08:00">
-    <meta property="article:modified_time" content="2026-01-09T13:34:01-08:00">
+    <meta property="article:section" content="drafts">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI SW Engineers: First Step to Prod-Ready is Tests">
-  <meta name="twitter:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
-Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
+  <meta name="twitter:title" content="Learn Tinker Share Blog">
+  <meta name="twitter:description" content="Running an LLM agent may be a lot easier than you imagine. It boils down to 3 lines of code: create a model, create an agent, run the prompt. Here’s a trivial example:
+#!/usr/bin/env python3 # example.py # pip install smolagents[toolkit] # pip install smolagents[litellm] # put api keys in a .env file or environment vars import dotenv import os from smolagents import ToolCallingAgent, LiteLLMModel dotenv.load_dotenv() if __name__ == &#34;__main__&#34;: model = LiteLLMModel( model_id=&#34;anthropic/claude-3-7-sonnet-latest&#34;, temperature=0.0, api_key=os.environ[&#34;ANTHROPIC_API_KEY&#34;] ) agent = ToolCallingAgent(tools=[], model=model) result = agent.run(&#34;What are the days of the week as a JSON array?&#34;) print(&#34;GOT:&#34;, result) You can skip to the bottom and see that the fun happens at: agent.run(&#34;What are the days of the week as a JSON array?&#34;)">
 
   
   
@@ -204,38 +202,32 @@ Those of us who write AI applications fall into two categories: the nervous and 
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Posts",
-    "name": "AI SW Engineers: First Step to Prod-Ready is Tests",
-    "headline": "AI SW Engineers: First Step to Prod-Ready is Tests",
+    "articleSection": "Drafts",
+    "name": "",
+    "headline": "",
     
     "inLanguage": "en",
-    "url" : "https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/",
+    "url" : "http://localhost:1313/drafts/001-ai-first-agent/",
     "author" : {
       "@type": "Person",
       "name": "Charles Thayer"
     },
-    "copyrightYear": "2026",
-    "dateCreated": "2026-01-09T13:34:01-08:00",
-    "datePublished": "2026-01-09T13:34:01-08:00",
     
-    "dateModified": "2026-01-09T13:34:01-08:00",
+    
+    
+    
+    
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2084"
+    "wordCount": "409"
   }]
   </script>
 
 
 
   
-  
-    
-
-
-
-
   
 
   
@@ -390,7 +382,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        AI SW Engineers: First Step to Prod-Ready is Tests
+        
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -442,7 +434,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2084 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>409 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -539,14 +531,13 @@ Those of us who write AI applications fall into two categories: the nervous and 
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#fundamentals">Fundamentals</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
-    <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
-    <li><a href="#problems-in-production">Problems in Production</a></li>
-    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#the-example">The Example</a></li>
+    <li><a href="#codeagent">CodeAgent</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#whats-happening">What&rsquo;s Happening</a></li>
+    <li><a href="#tasks-goals-chatting">Tasks, Goals, Chatting</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </div>
@@ -560,14 +551,13 @@ Those of us who write AI applications fall into two categories: the nervous and 
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#fundamentals">Fundamentals</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
-    <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
-    <li><a href="#problems-in-production">Problems in Production</a></li>
-    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#the-example">The Example</a></li>
+    <li><a href="#codeagent">CodeAgent</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#whats-happening">What&rsquo;s Happening</a></li>
+    <li><a href="#tasks-goals-chatting">Tasks, Goals, Chatting</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </div>
@@ -684,159 +674,146 @@ Those of us who write AI applications fall into two categories: the nervous and 
         
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>tl;dr</strong> become prod-ready and bullet-proof using <strong>agentic evals</strong> testing.</p>
-<p>Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It&rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. Simply put, it&rsquo;s whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
-<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.</p>
+          <p>Running an LLM agent may be a lot easier than you imagine. It boils down to 3 lines of code: create a model, create an agent, run the prompt. Here&rsquo;s a trivial example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># example.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pip install smolagents[toolkit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pip install smolagents[litellm]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># put api keys in a .env file or environment vars</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> dotenv
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> smolagents <span style="color:#f92672">import</span> ToolCallingAgent, LiteLLMModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dotenv<span style="color:#f92672">.</span>load_dotenv()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> LiteLLMModel(
+</span></span><span style="display:flex;"><span>        model_id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anthropic/claude-3-7-sonnet-latest&#34;</span>,
+</span></span><span style="display:flex;"><span>        temperature<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>        api_key<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;ANTHROPIC_API_KEY&#34;</span>]
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    agent <span style="color:#f92672">=</span> ToolCallingAgent(tools<span style="color:#f92672">=</span>[], model<span style="color:#f92672">=</span>model)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;What are the days of the week as a JSON array?&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;GOT:&#34;</span>, result)</span></span></code></pre></div></div>
+<p>You can skip to the bottom and see that the fun happens at:
+<code>agent.run(&quot;What are the days of the week as a JSON array?&quot;)</code></p>
+<p>The rest of it is to create an LLM (model) for your agent to use (which we&rsquo;ll explain that below). This calls a commercial LLM provider (Anthropic) which will need an api key to work.</p>
 
-<h2 class="relative group">Fundamentals
-    <div id="fundamentals" class="anchor"></div>
+<h2 class="relative group">Prerequisites
+    <div id="prerequisites" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fundamentals" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#prerequisites" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p><strong>TDD</strong>: Test-Driven Development, at its core, has a simple principle:</p>
+<p>Before this will work for you, this is written for python so you&rsquo;ll python, pip, and a couple libraries.</p>
+<p><a href="https://www.python.org/downloads/"  target="_blank" rel="noreferrer">Python3</a> and Pip3:</p>
 <ul>
-<li>Write a test that fails, then code until it works.</li>
+<li>Linux (ubuntu): <code>sudo apt install -y python3 python3-pip</code></li>
+<li>Mac: <code>brew install python</code></li>
+<li>If pip and pip3 are missing, try: <code>python3 -m ensurepip --upgrade</code></li>
 </ul>
-<p>We still need this safety net, but with AI systems, the results are far less binary, so we often need a score or a full rubric to know when we&rsquo;ve reached our goals. Unittests that pass or fail is a start, but too brittle with AI work. Whether or not a project has agentic evals is a clear signal (like a code smell) about its production readiness.</p>
-<p>When working on any system you need a way to answer &ldquo;Does it work?&rdquo; and with AI &ldquo;Does it work well?&rdquo;, so the <em><strong>definition of done</strong></em> has shifted a little.</p>
-<p><strong>Evals</strong>: ML work and agent system development are different enough that the existing tools don&rsquo;t quite fit. ML evals are the common tool today to achieve quality testing, and they&rsquo;re a natural fit for those coming out of ML research and engineering. If you&rsquo;ve trained a classifier, model, or even a trivial neural net, you&rsquo;ve probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you&rsquo;re starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.</p>
-<p>So, I&rsquo;m calling out something between TDD unittests and ML evals. If they got married today, their kid would be agentic evals &ndash;some of each. They&rsquo;re the blend of &ldquo;Make it work&rdquo; and &ldquo;Make it right&rdquo; for AI. (thanks Kent Beck).</p>
-<p>When I say &ldquo;<em>agentic evals</em>&rdquo;, I&rsquo;m simply talking about these principles:</p>
-<ol>
-<li>A way to score your output.</li>
-<li>A set of inputs to test.</li>
-<li>A fast and simple way to run this.</li>
-</ol>
-<p>Don&rsquo;t get me wrong, if you wrote ML evals using existing tools, you rock! and you&rsquo;re already ahead of the game. But if you&rsquo;re just starting out, you might find it easier to start with agentic evals.</p>
+<p>Python libraries:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pip3 install smolagents[toolkit]
+</span></span><span style="display:flex;"><span>pip3 install smolagents[litellm]</span></span></code></pre></div></div>
+<p>API Keys:</p>
+<ul>
+<li>Also, to use a commercial LLM provider (such as Anthropic or OpenAI) you&rsquo;ll need an API key, which goes in a <code>.env</code> or can be passed in an environment variable:
+<ul>
+<li>URL</li>
+<li>URL</li>
+</ul>
+</li>
+</ul>
 
-<h1 class="relative group">Problems at Every Stage
-    <div id="problems-at-every-stage" class="anchor"></div>
+<h2 class="relative group">The Example
+    <div id="the-example" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-at-every-stage" aria-label="Anchor">#</a>
-    </span>
-    
-</h1>
-<p>Let&rsquo;s go over some of my past failure. If you don&rsquo;t have measures and metrics, a myriad of problems come up at every phase of development:</p>
-
-<h2 class="relative group">Problems you hit in Dev
-    <div id="problems-you-hit-in-dev" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-you-hit-in-dev" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-example" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>When your team is first writing the application, and trying to reach that crucial step of getting the minimum feature set functioning:</p>
-<ul>
-<li><strong>Prompt Churn</strong>: You keep changing the prompt to &ldquo;make it work&rdquo; but with every prompt change you might improve the output for one input, but hurt other cases. This is a game of <em><strong>whack-a-mole</strong></em> where fixing one problem reverts progress on others.</li>
-<li><strong>Error Amplification</strong>: In a prompt change, a shift early in the pipeline causes downstream agents to different inputs, and with each step errors grow. This is like a game of <em><strong>telephone</strong></em>, where the output gets worse and less predictable as the chain gets longer.</li>
-<li><strong>Prompt Bloat</strong>: In an attempt to handle different inputs the prompt keeps growing because you&rsquo;re afraid to update the start of the prompt. You may even wind up with a prompt that contradicts itself if many people on your team are contributing. Ultimately, you&rsquo;ll even cause the context window to grow too large and the LLM will be unable to pay attention to all of it when trying to get something done (see context-rot below).</li>
-</ul>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="ai-pitfalls-dev"
-    src="/images/ai-pitfalls-dev.png"
-    ></figure>
-</p>
-<p><strong>How Agentic Evals Help:</strong></p>
-<ul>
-<li>Prompt Churn: Agentic evals testing gives you a set of inputs that you can re-evaluate when the prompt changes to ensure your old fixes aren&rsquo;t regressing. Every bug fix then becomes durable. You can see when you cause a test case to regress.</li>
-<li>Error Amplification: You can tell when your agentic pipeline gets worse, and you can dig into which prompt degraded and it&rsquo;s downstream effect.</li>
-<li>Prompt Bloat: now you have a way to verify if trimming the prompt hurts your score, so you can be confident your update is safe.</li>
-</ul>
+<p>So we gave an Anthropic example, but openAI also works.</p>
+<p>What&rsquo;s temperature (dad joke)</p>
 
-<h2 class="relative group">Problems with Beta Testing
-    <div id="problems-with-beta-testing" class="anchor"></div>
+<h2 class="relative group">CodeAgent
+    <div id="codeagent" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-with-beta-testing" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#codeagent" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>You finally get a working system in front of real users, and start getting real feedback.</p>
-<ul>
-<li><strong>Change Fear</strong>: You want to fix something a user has called out, or handle a new case, but you&rsquo;re afraid to make a change (see prompt churn). It feels like a house of cards &ndash;too fragile to touch.</li>
-<li><strong>Cost Control</strong>: Now that you have real users you&rsquo;re shocked at how much tokens are costing you. You wish you could decrease the context size of your prompts but you don&rsquo;t know if that&rsquo;s safe. Maybe you could use a smaller cheaper model or an open-source model, but again you don&rsquo;t know if that&rsquo;s safe. This is the difference between having a profitable business and being out of business. Looking at your budget, your new airplane is <em>outta-runway</em>, and you probably have to move forward, burning through investor money to prove your product-market-fit.</li>
-<li><strong>Tooling</strong>: You likely have tool-calling (tool-use) and maybe MCPs but since you didn&rsquo;t develop these, you discover their short comings as you go. Now you realize your <code>WebFetchTool</code> only grabs the first 8k of a web site, etc. This is another issue you discover but have to table until your startup has income.</li>
-<li><strong>Timeliness</strong>: Because the development process takes time, staleness creeps in. For example, you built based on web pages that got updated, or other data that are growing. Now you realize you need to re-test with newer data but have to go through that manually. Maybe you even used a model that was trained half a year ago so you absolutely need to add a web tool to get up-to-date news, or you need to switch to the latest greatest frontier model. Neither of which feels safe. Your product is in danger of being past its <em>sell-by-date</em>.</li>
-<li><strong>Focus</strong>: The map is not the territory. You had a theory about what&rsquo;s valuable to your users. Putting it in front of people changes all that, plus you learn about a lot of problems you hadn&rsquo;t considered. Now your prompt is trying to juggle too much, so you&rsquo;re wondering if you can safely update it to handle the new use cases in one agent, or if you need to split the work up into separate prompts or agents.</li>
-</ul>
-<p><strong>How Agentic Evals Help:</strong></p>
-<ul>
-<li>Change Fear: Handling new cases, you&rsquo;re sure you haven&rsquo;t hurt old cases.</li>
-<li>Focus: Splitting a prompt in two becomes safe. The tests are the same, it&rsquo;s just the implementation that changes.</li>
-<li>Timeliness: Testing with a new model is easy, so you can safely upgrade to one of the latest frontier models.</li>
-<li>Cost Control: You have tests to let you try out smaller cheaper models, or understand where they fall down and need better prompts.</li>
-<li>Tooling: You will naturally catch shifts in tool calls that impact your quality, as well as having a way to try different tools safely.</li>
-</ul>
+<p>The next level is to generate code to get an answer. This is much better for a math question.</p>
 
-<h2 class="relative group">Problems in Production
-    <div id="problems-in-production" class="anchor"></div>
+<h2 class="relative group">Tools
+    <div id="tools" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#problems-in-production" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tools" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>You&rsquo;ve ironed out a lot of issues by this stage and you&rsquo;re finally going GA with a full launch. Now it&rsquo;s hard to respond to folks individually and understand how all your users are doing.</p>
-<ul>
-<li><strong>Flying Blind</strong>: Things go well and you grow like crazy. But with alerts and logs you only investigate the most severe issues. Things feel fragile, like the next update could accidentally trigger a surprising amount of user churn. You find you&rsquo;re randomly digging into your trace spans to figure out how little problems are causing error amplification.</li>
-</ul>
-<p>Then <strong>Context-Debt</strong>: As real user data builds up, which is great, it creates more context to manage going into your prompts. It feels like tech-debt, where you have a nagging demon on your shoulder that you don&rsquo;t have time to banish. The data build up has lots of negative side effects, and it&rsquo;s time for some serious context engineering:</p>
-<ul>
-<li><strong>Latency Hit</strong>: In turn, this slows down answer latency and TTFT (time to first token). You&rsquo;re like a cooking frog, the slow down is getting gradually worse over time, so you don&rsquo;t notice you&rsquo;re boiling, until your CEO realizes too late that it&rsquo;s caused a big customer to leave.</li>
-<li><strong>Context Costs</strong>: The context window has a direct relationship to tokens and costs, which just keeps creeping up. Perhaps the worst part is it affects the best and most loyal customers the most.</li>
-<li><strong>Context Rot</strong>: For the same reason (this context build-up), the context windows filling up cause the LLM to lose track of what it&rsquo;s doing and emit really poor results. Now you have to scramble to implement a better context compression scheme and a real memory sub-system for your use-cases.</li>
-</ul>
-<p><strong>How Agentic Evals Help:</strong></p>
-<ul>
-<li>Latency Hit: In addition to quality scores, measuring timing is something you get easily. Now you can detect latency changes and make smart trade-offs.</li>
-<li>Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem, for example.</li>
-<li>Context Costs: The same is true for tokens (and input and output length); they&rsquo;re all easy to track with agentic evals.</li>
-</ul>
+<p>Smolagents gives you some useful tools out of the box that we can play with: web fetch, user input, python.</p>
 
-<h2 class="relative group">From Newbie to Prod-Ready
-    <div id="from-newbie-to-prod-ready" class="anchor"></div>
+<h2 class="relative group">What&rsquo;s Happening
+    <div id="whats-happening" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#from-newbie-to-prod-ready" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#whats-happening" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>When building a project or managing one in production, you want a lot of safety nets. But take just this one critical step first.</p>
-<p>These agentic evals are lightweight compared to ML evals, which are a big scary thing (unless you&rsquo;re accustomed to ML research). If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
-<p>The key is just to start. Once you have something, every bug fix or PR can check the score, and your tests will naturally evolve.</p>
-<p><em>How to start and what to build</em></p>
+<p>Here&rsquo;s what a tool call does (phoenix)</p>
+<p>diagram</p>
+
+<h2 class="relative group">Tasks, Goals, Chatting
+    <div id="tasks-goals-chatting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tasks-goals-chatting" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The difference between calling a completion and an agent</p>
+<p>It&rsquo;s not hard to be interactive</p>
+<p>Game of Nim (guess 1-100)</p>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>It&rsquo;s may be easier than you think. We&rsquo;ve covered a ton of ground. Using LLMs and agent is good for certain things, and terrible at others. When to try this stuff out:</p>
 <ul>
-<li>A way to score your output.</li>
-<li>A set of inputs to test, and optionally outputs</li>
-<li>A fast and simple way to run these, like a benchmark.</li>
+<li>NLP</li>
+<li>adhoc inputs</li>
+<li>fuzzy problems</li>
+<li>classifying, ranking, traditional ML stuff</li>
 </ul>
-<p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury. To start, it may help to keep thinking binary and have the judge fail when there&rsquo;s some clearly bad output.</p>
-<p>Inputs: Although you may hard code these initially, often these grow into either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the <em>whole</em> team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
-<p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs that cause any regressions are nicely called out.</p>
-<p><em>Your First Agentic Eval</em></p>
+<p>Future:</p>
 <ul>
-<li>5-10 inputs in a CSV file.</li>
-<li>A judge prompt that catches one problem.</li>
-<li>A script to run it.</li>
+<li>getting structured answers in JSON</li>
+<li>accessing message history</li>
+<li>memory</li>
+<li>multiple agents talking to each other</li>
+<li>mcp</li>
+<li>feeding agents the right context (context engineering and rag)</li>
 </ul>
-<p>Lots more to say, but I&rsquo;ll stop here so you can let me know what you&rsquo;d like to talk about next.</p>
-<p>Thanks!</p>
-<p>Thanks: Kent Beck, Tomislav Čar</p>
 
           
           
@@ -864,42 +841,14 @@ Those of us who write AI applications fall into two categories: the nervous and 
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/real-ai-engineer-differentiator.md"
-          data-oid-likes="likes_posts/real-ai-engineer-differentiator.md"></script>
+          data-oid="views_drafts/001-AI-First-Agent.md"
+          data-oid-likes="likes_drafts/001-AI-First-Agent.md"></script>
       
     </section>
 
     
     <footer class="pt-8 max-w-prose print:hidden">
       
-  
-    
-    
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
-      <div class="flex justify-between pt-3">
-        <span class="flex flex-col">
-          
-            <a
-              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/play-with-embeddings/">
-              <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs
-              </span>
-            </a>
-            
-              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time>
-              </span>
-            
-          
-        </span>
-        <span class="flex flex-col items-end">
-          
-        </span>
-      </div>
-    </div>
   
 
 
@@ -974,7 +923,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="https://thayer-blog.b2si.com/">
+  data-url="http://localhost:1313/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
