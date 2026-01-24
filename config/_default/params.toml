@@ -22,9 +22,9 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "page"
-  showRecent = false
+  showRecent = true
   showRecentItems = 20
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "/posts"
   cardView = false
   cardViewScreenWidth = false

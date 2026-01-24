@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Learn Tinker Share Blog</title>
-    <link>https://blog.learntinkershare.ai/tags/</link>
+    <link>https://thayer-blog.b2si.com/tags/</link>
     <description>Recent content in Tags on Learn Tinker Share Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Charles Thayer</copyright>
-    <atom:link href="https://blog.learntinkershare.ai/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thayer-blog.b2si.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

@@ -60,6 +60,86 @@ hugo new content/posts/my-post.md
 
 Edit the post and set `draft: false` when ready to publish.
 
+### Draft Management with Private Repo
+
+To keep drafts private while maintaining backups and version control, this blog uses a symlinked private repository approach.
+
+#### Initial Setup (One Time)
+
+1. Create a private repository for drafts:
+   ```bash
+   cd ~/work
+   git clone git@github.com:cgthayer/blog-drafts.git  # Create this as a private repo
+   cd blog-drafts
+   mkdir posts
+   git add posts
+   git commit -m "Initial commit"
+   git push
+   ```
+
+2. Create symlink in your blog repo:
+   ```bash
+   cd ~/work/blog/content
+   ln -s ~/work/blog-drafts/posts drafts
+   ```
+
+3. Commit the symlink to your public blog repo:
+   ```bash
+   git add drafts
+   git commit -m "Add symlink to private drafts"
+   git push
+   ```
+
+**Note:** The symlink will be broken on GitHub (since the target is in a private repo), so drafts remain completely hidden from the public repository.
+
+#### Writing Drafts
+
+1. Create and edit drafts in the private repo:
+   ```bash
+   cd ~/work/blog-drafts/posts
+   vim my-draft-post.md
+   ```
+
+2. Commit and push to backup your drafts:
+   ```bash
+   git add my-draft-post.md
+   git commit -m "WIP: my draft post"
+   git push
+   ```
+
+3. Preview locally (Hugo sees drafts via symlink):
+   ```bash
+   cd ~/work/blog
+   hugo server -D
+   ```
+
+#### Publishing a Draft
+
+When ready to publish, move the file from drafts to posts:
+
+```bash
+# Move the file
+mv ~/work/blog-drafts/posts/my-draft-post.md content/posts/
+
+# Commit to public blog repo
+git add content/posts/my-draft-post.md
+git commit -m "Publish: my draft post"
+git push
+
+# Clean up from private drafts repo
+cd ~/work/blog-drafts
+git add -A
+git commit -m "Published: my draft post"
+git push
+```
+
+**Benefits:**
+- ✓ Drafts are version controlled and backed up to GitHub
+- ✓ Drafts remain completely private (in separate private repo)
+- ✓ Local preview works seamlessly
+- ✓ No risk of losing drafts if local disk fails
+- ✓ Public repo never exposes draft content
+
 ## Directory Structure
 
 - `content/posts/` - Blog posts
