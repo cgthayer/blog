@@ -1,5 +1,5 @@
 ---
-title: What Separates the Real AI SW Engineers
+title: "AI SW Engineers: First Step to Prod-Ready is Tests"
 date: 2026-01-09T13:34:01-08:00
 draft: false
 tags: []
