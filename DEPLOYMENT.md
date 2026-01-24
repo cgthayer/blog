@@ -2,6 +2,29 @@
 
 Simple manual deployment for your Hugo blog to GitHub Pages with custom domain `thayer-blog.b2si.com`.
 
+## Goals and Constraints
+
+**Goals:**
+- Deploy Hugo blog to GitHub Pages with custom domain `thayer-blog.b2si.com`
+- Keep blog repository public (free GitHub Pages)
+- Keep draft posts private and backed up
+- Build and preview site locally (full control over Hugo version and build process)
+- Simple, repeatable deployment workflow
+
+**Constraints:**
+- GitHub Pages on free accounts only works with public repositories
+- Don't want draft content exposed in public repository, so placing them in writing repo.
+- Need version control and backup for drafts
+- Want to preview drafts locally before publishing
+
+**Solution:**
+- **Public repo** (`cgthayer/blog`) - Contains published content and Hugo configuration
+- **Private repo** (`cgthayer/writing/article`) - Contains draft posts, symlinked locally for preview
+- **Local builds** - Run `hugo` locally, push built site to `gh-pages` branch using `git subtree`
+- **Manual deployment** - No GitHub Actions needed since we build locally
+
+This approach gives us free hosting, private drafts with backups, and local previewing.
+
 ## Prerequisites
 
 - Repository at `https://github.com/cgthayer/blog`
@@ -10,42 +33,62 @@ Simple manual deployment for your Hugo blog to GitHub Pages with custom domain `
 
 ## Deployment Workflow
 
-### 1. Build Locally
+### 1. Preview Locally
 
 ```bash
-# Build the static site
-hugo --gc --minify
+# Start Hugo development server
+hugo server
 
-# This generates the site in the ./public directory
+# Site available at http://localhost:1313/
+# Includes both published posts (content/posts/) and drafts (content/drafts/)
+# Live reload on file changes
 ```
 
-### 2. Deploy to GitHub Pages
+**Note:** Use `hugo server` instead of file:// URLs - Hugo requires a web server for proper routing and asset loading.
 
-**Option A: Use gh-pages branch (Recommended)**
+### 2. Build and Deploy
+
+**Option A: Deploy to gh-pages branch (Recommended)**
 
 ```bash
 # Build the site
 hugo --gc --minify
 
 # Deploy to gh-pages branch
-git add public -f  # Force add public/ (usually gitignored)
+git add public -f
 git commit -m "Build site $(date)"
 git subtree push --prefix public origin gh-pages
 ```
 
-**Note:** This uses `git subtree` to push only the `public/` directory contents to the `gh-pages` branch.
+Configure GitHub Pages to serve from `gh-pages` branch, `/ (root)` folder.
 
-**Option B: Push public/ folder to main branch**
+**Why gh-pages?** GitHub Pages only supports `/ (root)` or `/docs` folders. Using `gh-pages` branch keeps your source code clean on `main` and deploys only the built site.
 
-Add `public/` to your main branch and configure GitHub Pages to serve from `/public` folder.
+**Option B: Deploy to /docs folder on main branch**
+
+```bash
+# Build to /docs instead of /public
+hugo --gc --minify --destination docs
+
+# Deploy to main branch
+git add docs
+git commit -m "Build site $(date)"
+git push origin main
+```
+
+Configure GitHub Pages to serve from `main` branch, `/docs` folder.
+
+**Note:** You'll need to update `config/_default/hugo.toml` to set `publishDir = "docs"` if using Option B.
 
 ### 3. Configure GitHub Pages
 
 1. Go to `https://github.com/cgthayer/blog/settings/pages`
 2. Under **Source**, select:
    - **Branch**: `gh-pages` (or `main` if using Option B)
-   - **Folder**: `/root` (or `/public` if using Option B)
+   - **Folder**: `/ (root)` (or `/docs` if using Option B)
 3. Click **Save**
+
+**Important:** GitHub Pages only supports `/ (root)` or `/docs` folders - `/public` is not an option.
 
 ### 4. Configure DNS
 
@@ -59,21 +102,7 @@ Value: cgthayer.github.io
 
 **Alternative: A Records**
 ```
-Type: A
-Name: thayer-blog
-Value: 185.199.108.153
-
-Type: A
-Name: thayer-blog
-Value: 185.199.109.153
-
-Type: A
-Name: thayer-blog
-Value: 185.199.110.153
-
-Type: A
-Name: thayer-blog
-Value: 185.199.111.153
+Type: A, Name: thayer-blog, Values: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
 ```
 
 DNS propagation typically takes 1-2 hours (max 48 hours).
@@ -88,19 +117,28 @@ DNS propagation typically takes 1-2 hours (max 48 hours).
 
 ## Quick Deploy Script
 
-Create `deploy.sh` in your repo root:
+The `deploy.sh` script in your repo root automates the build and deploy process:
 
 ```bash
 #!/bin/bash
 echo "Building site..."
 hugo --gc --minify
 
-echo "Deploying to gh-pages..."
+echo "Deploying to gh-pages branch..."
 git add public -f
 git commit -m "Build site $(date)"
 git subtree push --prefix public origin gh-pages
 
 echo "Deployed! Site will be live at https://thayer-blog.b2si.com"
+```
+
+**Alternative for /docs folder:**
+```bash
+#!/bin/bash
+hugo --gc --minify --destination docs
+git add docs
+git commit -m "Build site $(date)"
+git push origin main
 ```
 
 Make executable: `chmod +x deploy.sh`

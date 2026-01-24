@@ -45,10 +45,12 @@ A Hugo blog for experienced software engineers starting to engage with AI and LL
 Start the Hugo development server:
 
 ```bash
-hugo server -D
+hugo server
 ```
 
 The blog will be available at `http://localhost:1313/`
+
+**Note:** This shows both published posts (`content/posts/`) and drafts (`content/drafts/`). No `-D` flag needed since drafts are in a separate directory, not marked with `draft: true` metadata.
 
 ### Creating New Posts
 
@@ -58,7 +60,7 @@ Create a new blog post:
 hugo new content/posts/my-post.md
 ```
 
-Edit the post and set `draft: false` when ready to publish.
+Edit the post - no need to set `draft: false` since we manage drafts via directory location, not frontmatter.
 
 ### Draft Management with Private Repo
 
@@ -66,21 +68,16 @@ To keep drafts private while maintaining backups and version control, this blog 
 
 #### Initial Setup (One Time)
 
-1. Create a private repository for drafts:
+1. Clone your private writing repository (if not already cloned):
    ```bash
    cd ~/work
-   git clone git@github.com:cgthayer/blog-drafts.git  # Create this as a private repo
-   cd blog-drafts
-   mkdir posts
-   git add posts
-   git commit -m "Initial commit"
-   git push
+   git clone git@github.com:cgthayer/writing.git  # Private repo
    ```
 
 2. Create symlink in your blog repo:
    ```bash
    cd ~/work/blog/content
-   ln -s ~/work/blog-drafts/posts drafts
+   ln -s ~/work/writing/article drafts
    ```
 
 3. Commit the symlink to your public blog repo:
@@ -96,7 +93,7 @@ To keep drafts private while maintaining backups and version control, this blog 
 
 1. Create and edit drafts in the private repo:
    ```bash
-   cd ~/work/blog-drafts/posts
+   cd ~/work/writing/article
    vim my-draft-post.md
    ```
 
@@ -110,7 +107,7 @@ To keep drafts private while maintaining backups and version control, this blog 
 3. Preview locally (Hugo sees drafts via symlink):
    ```bash
    cd ~/work/blog
-   hugo server -D
+   hugo server
    ```
 
 #### Publishing a Draft
@@ -119,15 +116,15 @@ When ready to publish, move the file from drafts to posts:
 
 ```bash
 # Move the file
-mv ~/work/blog-drafts/posts/my-draft-post.md content/posts/
+mv ~/work/writing/article/my-draft-post.md content/posts/
 
 # Commit to public blog repo
 git add content/posts/my-draft-post.md
 git commit -m "Publish: my draft post"
 git push
 
-# Clean up from private drafts repo
-cd ~/work/blog-drafts
+# Clean up from private writing repo
+cd ~/work/writing
 git add -A
 git commit -m "Published: my draft post"
 git push
