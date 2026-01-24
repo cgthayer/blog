@@ -2,7 +2,7 @@ baseURL = 'https://thayer-blog.b2si.com/'
 languageCode = 'en-us'
 title = 'Learn Tinker Share Blog'
 theme = 'blowfish'
-publishDir = 'docs'
+publishDir = 'docs'  # GitHub Pages only supports / or /docs folders
 
 enableRobotsTXT = true
 enableEmoji = true

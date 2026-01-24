@@ -1,5 +1,7 @@
-# Hugo default output directory
-# /public/
+# Hugo legacy output directory (now using /docs for GitHub Pages)
+/public/
+# Skip drafts
+/docs/drafts/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json

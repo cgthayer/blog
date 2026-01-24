@@ -94,7 +94,7 @@ To keep drafts private while maintaining backups and version control, this blog 
 1. Create and edit drafts in the private repo:
    ```bash
    cd ~/work/writing/article
-   vim my-draft-post.md
+   edit my-draft-post.md
    ```
 
 2. Commit and push to backup your drafts:
@@ -115,19 +115,18 @@ To keep drafts private while maintaining backups and version control, this blog 
 When ready to publish, move the file from drafts to posts:
 
 ```bash
-# Move the file
-mv ~/work/writing/article/my-draft-post.md content/posts/
+cd ~/work/blog/content
 
-# Commit to public blog repo
-git add content/posts/my-draft-post.md
+mv drafts/my-draft-post.md posts/
+git add -A
 git commit -m "Publish: my draft post"
 git push
 
 # Clean up from private writing repo
-cd ~/work/writing
-git add -A
-git commit -m "Published: my draft post"
+pushd ~/work/writing
+git commit -am "Published: my draft post"
 git push
+popd
 ```
 
 **Benefits:**
