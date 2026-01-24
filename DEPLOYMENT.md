@@ -24,24 +24,16 @@ hugo --gc --minify
 **Option A: Use gh-pages branch (Recommended)**
 
 ```bash
-# First time setup - create orphan gh-pages branch
-git checkout --orphan gh-pages
-git rm -rf .
-git commit --allow-empty -m "Initialize gh-pages branch"
-git push origin gh-pages
-git checkout main
-
-# Deploy script (run from main branch)
+# Build the site
 hugo --gc --minify
-cd public
-git init
-git add -A
-git commit -m "Deploy $(date)"
-git branch -M gh-pages
-git remote add origin https://github.com/cgthayer/blog.git
-git push -f origin gh-pages
-cd ..
+
+# Deploy to gh-pages branch
+git add public -f  # Force add public/ (usually gitignored)
+git commit -m "Build site $(date)"
+git subtree push --prefix public origin gh-pages
 ```
+
+**Note:** This uses `git subtree` to push only the `public/` directory contents to the `gh-pages` branch.
 
 **Option B: Push public/ folder to main branch**
 
@@ -104,14 +96,9 @@ echo "Building site..."
 hugo --gc --minify
 
 echo "Deploying to gh-pages..."
-cd public
-git init
-git add -A
-git commit -m "Deploy $(date)"
-git branch -M gh-pages
-git remote add origin https://github.com/cgthayer/blog.git
-git push -f origin gh-pages
-cd ..
+git add public -f
+git commit -m "Build site $(date)"
+git subtree push --prefix public origin gh-pages
 
 echo "Deployed! Site will be live at https://thayer-blog.b2si.com"
 ```
