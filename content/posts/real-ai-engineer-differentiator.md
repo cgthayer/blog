@@ -28,7 +28,7 @@ When working on any system you need a way to answer "Does it work?" and with AI 
 
 So, I'm calling out something between TDD unittests and ML evals. If they got married today, their kid would be agentic evals --some of each. They're the blend of "Make it work" and "Make it right" for AI. (thanks Kent Beck).
 
-![agentic-eval-combo.excalidraw](images/agentic-eval-combo.excalidraw.png)
+![agentic-eval-combo.excalidraw](/images/agentic-eval-combo.excalidraw.png)
 
 When I say "*agentic evals*", I'm simply talking about these principles:
 1. A way to score your output.
