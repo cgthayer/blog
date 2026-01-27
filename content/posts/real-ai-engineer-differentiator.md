@@ -21,11 +21,14 @@ A year ago, I was working on several projects, and one needed a much higher degr
 
 We still need this safety net, but with AI systems, the results are far less binary, so we often need a score or a full rubric to know when we've reached our goals. Unittests that pass or fail is a start, but too brittle with AI work. Whether or not a project has agentic evals is a clear signal (like a code smell) about its production readiness. 
 
+![tdd-diagram.excalidraw](content/posts/tdd-diagram.excalidraw.png)
 When working on any system you need a way to answer "Does it work?" and with AI "Does it work well?", so the ***definition of done*** has shifted a little.
 
 **Evals**: ML work and agent system development are different enough that the existing tools don't quite fit. ML evals are the common tool today to achieve quality testing, and they're a natural fit for those coming out of ML research and engineering. If you've trained a classifier, model, or even a trivial neural net, you've probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you're starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.
 
 So, I'm calling out something between TDD unittests and ML evals. If they got married today, their kid would be agentic evals --some of each. They're the blend of "Make it work" and "Make it right" for AI. (thanks Kent Beck).
+
+![agentic-eval-combo.excalidraw](public/posts/agentic-eval-combo.excalidraw.png)
 
 When I say "*agentic evals*", I'm simply talking about these principles:
 1. A way to score your output.
