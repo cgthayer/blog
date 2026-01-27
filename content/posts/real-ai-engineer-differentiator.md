@@ -91,6 +91,7 @@ Then **Context-Debt**: As real user data builds up, which is great, it creates m
 - Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem, for example.
 - Context Costs: The same is true for tokens (and input and output length); they're all easy to track with agentic evals.
 
+![ai-dev-phase-issues-evals.excalidraw](public/posts/ai-dev-phase-issues-evals.excalidraw.png)
 ## From Newbie to Prod-Ready
 
 When building a project or managing one in production, you want a lot of safety nets. But take just this one critical step first.
@@ -100,9 +101,9 @@ These agentic evals are lightweight compared to ML evals, which are a big scary 
 The key is just to start. Once you have something, every bug fix or PR can check the score, and your tests will naturally evolve.
 
 *How to start and what to build*
-- A way to score your output.
-- A set of inputs to test, and optionally outputs
-- A fast and simple way to run these, like a benchmark.
+1. A way to score your output.
+2. A set of inputs to test, and optionally outputs
+3. A fast and simple way to run these, like a benchmark.
 
 Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we'll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury. To start, it may help to keep thinking binary and have the judge fail when there's some clearly bad output.
 
