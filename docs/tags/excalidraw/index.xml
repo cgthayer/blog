@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Excalidraw on Learn Tinker Share Blog</title>
-    <link>https://thayer-blog.b2si.com/tags/excalidraw/</link>
+    <link>http://localhost:36001/tags/excalidraw/</link>
     <description>Recent content in Excalidraw on Learn Tinker Share Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Charles Thayer</copyright>
-    <atom:link href="https://thayer-blog.b2si.com/tags/excalidraw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:36001/tags/excalidraw/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>https://thayer-blog.b2si.com/posts/agentic-eval-combo.excalidraw/</link>
+      <link>http://localhost:36001/posts/agentic-eval-combo.excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thayer-blog.b2si.com/posts/agentic-eval-combo.excalidraw/</guid>
+      <guid>http://localhost:36001/posts/agentic-eval-combo.excalidraw/</guid>
       <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&#xA;&lt;h1 class=&#34;relative group&#34;&gt;Excalidraw Data&#xA;    &lt;div id=&#34;excalidraw-data&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#excalidraw-data&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Text Elements&#xA;    &lt;div id=&#34;text-elements&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#text-elements&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;TDD&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Small test sets&lt;/li&gt;&#xA;&lt;li&gt;Pass/Fail&lt;/li&gt;&#xA;&lt;li&gt;Part of process ^xOudnOh4&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ML Evals&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title></title>
-      <link>https://thayer-blog.b2si.com/posts/ai-dev-phase-issues-evals.excalidraw/</link>
+      <link>http://localhost:36001/posts/ai-dev-phase-issues-evals.excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thayer-blog.b2si.com/posts/ai-dev-phase-issues-evals.excalidraw/</guid>
+      <guid>http://localhost:36001/posts/ai-dev-phase-issues-evals.excalidraw/</guid>
       <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&#xA;&lt;h1 class=&#34;relative group&#34;&gt;Excalidraw Data&#xA;    &lt;div id=&#34;excalidraw-data&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#excalidraw-data&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Text Elements&#xA;    &lt;div id=&#34;text-elements&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#text-elements&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Dev Phase:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Prompt Churn&lt;/li&gt;&#xA;&lt;li&gt;Error Amplification&lt;/li&gt;&#xA;&lt;li&gt;Prompt Bloat ^JebYoR8B&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Beta Phase:&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title></title>
-      <link>https://thayer-blog.b2si.com/posts/tdd-diagram.excalidraw/</link>
+      <link>http://localhost:36001/posts/tdd-diagram.excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thayer-blog.b2si.com/posts/tdd-diagram.excalidraw/</guid>
+      <guid>http://localhost:36001/posts/tdd-diagram.excalidraw/</guid>
       <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&#xA;&lt;h1 class=&#34;relative group&#34;&gt;Excalidraw Data&#xA;    &lt;div id=&#34;excalidraw-data&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#excalidraw-data&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Text Elements&#xA;    &lt;div id=&#34;text-elements&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#text-elements&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;1/ Todo:&#xA;bug or feature ^NZNnxQtX&lt;/p&gt;</description>
       
     </item>

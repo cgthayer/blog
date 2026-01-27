@@ -9,15 +9,5 @@
     <copyright>© 2026 Charles Thayer</copyright>
     <atom:link href="https://thayer-blog.b2si.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Excalidraw</title>
-      <link>https://thayer-blog.b2si.com/tags/excalidraw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://thayer-blog.b2si.com/tags/excalidraw/</guid>
-      <description></description>
-      
-    </item>
-    
   </channel>
 </rss>
