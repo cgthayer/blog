@@ -824,6 +824,15 @@ When working on any system you need a way to answer &ldquo;Does it work?&rdquo; 
 <li>Context Rot: Likewise you can be very intentional about how you trim your context, and you have a basis for selecting a memory subsystem, for example.</li>
 <li>Context Costs: The same is true for tokens (and input and output length); they&rsquo;re all easy to track with agentic evals.</li>
 </ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="ai-dev-phase-issues-evals.excalidraw"
+    src="public/posts/ai-dev-phase-issues-evals.excalidraw.png"
+    ></figure>
+</p>
 
 <h2 class="relative group">From Newbie to Prod-Ready
     <div id="from-newbie-to-prod-ready" class="anchor"></div>
@@ -838,11 +847,11 @@ When working on any system you need a way to answer &ldquo;Does it work?&rdquo; 
 <p>These agentic evals are lightweight compared to ML evals, which are a big scary thing (unless you&rsquo;re accustomed to ML research). If you try out some of the tools you&rsquo;ll find them daunting. But there&rsquo;s an easier first step, that can naturally fall out of the process of writing and trying out the initial prompts. If you already have code, that&rsquo;s okay too, you may even have a CSV with a pile of inputs to try out, or just a spreadsheet of inputs and outputs.</p>
 <p>The key is just to start. Once you have something, every bug fix or PR can check the score, and your tests will naturally evolve.</p>
 <p><em>How to start and what to build</em></p>
-<ul>
+<ol>
 <li>A way to score your output.</li>
 <li>A set of inputs to test, and optionally outputs</li>
 <li>A fast and simple way to run these, like a benchmark.</li>
-</ul>
+</ol>
 <p>Scoring: This could be code that checks a regex, but it often becomes a single prompt with a clear rubric, which we&rsquo;ll call an LLM-judge, or it could be a panel of agents that review and score different aspects of the results, aka the LLM-jury. To start, it may help to keep thinking binary and have the judge fail when there&rsquo;s some clearly bad output.</p>
 <p>Inputs: Although you may hard code these initially, often these grow into either a CSV file, or a directory with a test input per file. This makes it trivial to add more cases, for the <em>whole</em> team. Later down the line, this can be a simple database or other data store so you can build better tooling and automation.</p>
 <p>Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a useful starting point.  Often these are easy enough to quickly vibe code, which can make the outputs help track timing and token costs. As you level up, you&rsquo;ll tie this into CI/CD so that PRs that cause any regressions are nicely called out.</p>
