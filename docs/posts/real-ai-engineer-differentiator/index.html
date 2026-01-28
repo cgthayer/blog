@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=36001&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -15,8 +15,8 @@
 
   
   
-    <title>AI SW Engineers: First Step to Prod-Ready is Tests &middot; Learn Tinker Share Blog</title>
-    <meta name="title" content="AI SW Engineers: First Step to Prod-Ready is Tests &middot; Learn Tinker Share Blog">
+    <title>AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This &middot; Learn Tinker Share Blog</title>
+    <meta name="title" content="AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This &middot; Learn Tinker Share Blog">
   
 
   
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:36001/posts/real-ai-engineer-differentiator/">
+  <link rel="canonical" href="https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/">
   
 
   
@@ -36,9 +36,9 @@
   
 
   
-  <meta property="og:url" content="http://localhost:36001/posts/real-ai-engineer-differentiator/">
+  <meta property="og:url" content="https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
-  <meta property="og:title" content="AI SW Engineers: First Step to Prod-Ready is Tests">
+  <meta property="og:title" content="AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This">
   <meta property="og:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
 Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
   <meta property="og:locale" content="en">
@@ -49,7 +49,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI SW Engineers: First Step to Prod-Ready is Tests">
+  <meta name="twitter:title" content="AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This">
   <meta name="twitter:description" content="tl;dr become prod-ready and bullet-proof using agentic evals testing.
 Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It’s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is “evals”, but not specifically traditional ML evals. Simply put, it’s whether you have an automated way to test and score the quality of your systems.">
 
@@ -205,11 +205,11 @@ Those of us who write AI applications fall into two categories: the nervous and 
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "AI SW Engineers: First Step to Prod-Ready is Tests",
-    "headline": "AI SW Engineers: First Step to Prod-Ready is Tests",
+    "name": "AI SW Engineers: You\u0027re Not Prod-Ready Until You Have This",
+    "headline": "AI SW Engineers: You\u0027re Not Prod-Ready Until You Have This",
     
     "inLanguage": "en",
-    "url" : "http://localhost:36001/posts/real-ai-engineer-differentiator/",
+    "url" : "https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/",
     "author" : {
       "@type": "Person",
       "name": "Charles Thayer"
@@ -223,13 +223,19 @@ Those of us who write AI applications fall into two categories: the nervous and 
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2084"
+    "wordCount": "2239"
   }]
   </script>
 
 
 
   
+  
+    
+
+
+
+
   
 
   
@@ -384,7 +390,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        AI SW Engineers: First Step to Prod-Ready is Tests
+        AI SW Engineers: You're Not Prod-Ready Until You Have This
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -436,7 +442,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2084 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="2026-01-09T13:34:01-08:00">9 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2239 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
     
 
     
@@ -540,7 +546,11 @@ Those of us who write AI applications fall into two categories: the nervous and 
     <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
     <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
     <li><a href="#problems-in-production">Problems in Production</a></li>
-    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a>
+      <ul>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -561,7 +571,11 @@ Those of us who write AI applications fall into two categories: the nervous and 
     <li><a href="#problems-you-hit-in-dev">Problems you hit in Dev</a></li>
     <li><a href="#problems-with-beta-testing">Problems with Beta Testing</a></li>
     <li><a href="#problems-in-production">Problems in Production</a></li>
-    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a></li>
+    <li><a href="#from-newbie-to-prod-ready">From Newbie to Prod-Ready</a>
+      <ul>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -680,7 +694,7 @@ Those of us who write AI applications fall into two categories: the nervous and 
         <div class="article-content max-w-prose mb-20">
           <p><strong>tl;dr</strong> become prod-ready and bullet-proof using <strong>agentic evals</strong> testing.</p>
 <p>Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It&rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &ldquo;evals&rdquo;, but not specifically traditional ML evals. Simply put, it&rsquo;s whether you have an automated way to test and score the <em><strong>quality</strong></em> of your systems.</p>
-<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.</p>
+<p>A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. Until you do, it can feel like a house of cards. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.</p>
 
 <h2 class="relative group">Fundamentals
     <div id="fundamentals" class="anchor"></div>
@@ -704,8 +718,8 @@ Those of us who write AI applications fall into two categories: the nervous and 
     alt="tdd-diagram.excalidraw"
     src="/images/tdd-diagram.excalidraw.png"
     ></figure>
-
-When working on any system you need a way to answer &ldquo;Does it work?&rdquo; and with AI &ldquo;Does it work well?&rdquo;, so the <em><strong>definition of done</strong></em> has shifted a little.</p>
+</p>
+<p>When working on any system you need a way to answer &ldquo;Does it work?&rdquo; and with AI &ldquo;Does it work well?&rdquo;, so the <em><strong>definition of done</strong></em> has shifted a little.</p>
 <p><strong>Evals</strong>: ML work and agent system development are different enough that the existing tools don&rsquo;t quite fit. ML evals are the common tool today to achieve quality testing, and they&rsquo;re a natural fit for those coming out of ML research and engineering. If you&rsquo;ve trained a classifier, model, or even a trivial neural net, you&rsquo;ve probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you&rsquo;re starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.</p>
 <p>So, I&rsquo;m calling out something between TDD unittests and ML evals. If they got married today, their kid would be agentic evals &ndash;some of each. They&rsquo;re the blend of &ldquo;Make it work&rdquo; and &ldquo;Make it right&rdquo; for AI. (thanks Kent Beck).</p>
 <p><figure><img
@@ -856,7 +870,25 @@ When working on any system you need a way to answer &ldquo;Does it work?&rdquo; 
 <li>A script to run it.</li>
 </ul>
 <p>Lots more to say, but I&rsquo;ll stop here so you can let me know what you&rsquo;d like to talk about next.</p>
-<p>Thanks!</p>
+<p>Thanks!
+Please tell me what you&rsquo;d like to hear about next, and feel free to leave comments and questions.</p>
+
+<h3 class="relative group">See Also
+    <div id="see-also" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#see-also" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>2026-01-09: <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"  target="_blank" rel="noreferrer">Anthropic: Demystifying evals for AI agents</a> - longer and more in-depth</li>
+<li>2025-06-25: <a href="https://tidyfirst.substack.com/p/augmented-coding-beyond-the-vibes"  target="_blank" rel="noreferrer">Kent Beck: Augmented Coding: Beyond the Vibes</a> - discussion about using TDD with AI coding tools.</li>
+<li>2025-04-08: <a href="https://pub.towardsai.net/evaluating-agentic-llm-applications-metrics-and-testing-strategies-2cd2356f4a4c"  target="_blank" rel="noreferrer">Mehdi Zare: Evaludating Agentic LLM Applications: Metrics and Testing Strategies</a> - a good look at other aspects of testing, though a bit specific to LangChain and LangSmith.</li>
+<li>2024-04: <a href="https://arxiv.org/abs/2404.18796"  target="_blank" rel="noreferrer">Pat Verga et al. Replacing Judges with Juries</a> - more advanced material about testing models, but looking at juries vs judges</li>
+<li>2023-03: <a href="https://platform.openai.com/docs/guides/evals"  target="_blank" rel="noreferrer">OpenAI Working with Evals</a>- as a point of history, OpenAI provided tools to help assess their models but at a &ldquo;task&rdquo; (prompt) level. This is the earliest agentic eval tool I&rsquo;m aware of, but many in the industry went in a similar direction.</li>
+</ul>
 <p>Thanks: Kent Beck, Tomislav Čar</p>
 
           
@@ -995,7 +1027,7 @@ When working on any system you need a way to answer &ldquo;Does it work?&rdquo; 
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="http://localhost:36001/">
+  data-url="https://thayer-blog.b2si.com/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

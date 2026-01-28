@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/real-ai-engineer-differentiator.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -35,8 +35,7 @@
               "title": "welcome"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -190,13 +189,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/welcome.md",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of real-ai-engineer-differentiator"
             }
           },
           {
@@ -236,15 +235,16 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1e4821ea068b44a1",
+  "active": "b092d0f5d01394fc",
   "lastOpenFiles": [
+    "Excalidraw/tdd-diagram.excalidraw.md",
+    "content/posts/real-ai-engineer-differentiator.md",
+    "content/posts/welcome.md",
     "public/posts/welcome/index.html",
     "public/posts/welcome",
     "public/posts/ai-testing-overview/index.html",
     "public/posts/ai-testing-overview",
     "public/404.html",
-    "content/posts/real-ai-engineer-differentiator.md",
-    "content/posts/welcome.md",
     "docs/images/thayer-head-2026-purple.jpg",
     "static/images/thayer-head-2026-purple.jpg",
     "static/images/tdd-diagram.excalidraw.png",
@@ -258,7 +258,6 @@
     "public/index.json",
     "public/posts/page/1/index.html",
     "public/posts/page/1",
-    "public/posts/page",
     "docs/images/agentic-eval-combo.excalidraw.png",
     "public-old2/posts/tdd-diagram.excalidraw.png",
     "public-old2/posts/ai-dev-phase-issues-evals.excalidraw.png",
@@ -266,7 +265,6 @@
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
-    "Excalidraw/tdd-diagram.excalidraw.md",
     "content/drafts/excalidraw-in-5-10-15/excalidraw-intro-in-5-10-15.md",
     "content/drafts/service-mesh.md",
     "content/drafts/service-mesh 1.md",

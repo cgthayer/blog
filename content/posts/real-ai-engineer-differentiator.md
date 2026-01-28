@@ -1,5 +1,5 @@
 ---
-title: "AI SW Engineers: First Step to Prod-Ready is Tests"
+title: "AI SW Engineers: You're Not Prod-Ready Until You Have This"
 date: 2026-01-09T13:34:01-08:00
 draft: false
 tags: []
@@ -11,7 +11,7 @@ featureimage: /images/ai-pitfalls-dev.png
 
 Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It's usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is "evals", but not specifically traditional ML evals. Simply put, it's whether you have an automated way to test and score the ***quality*** of your systems.
 
-A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.
+A year ago, I was working on several projects, and one needed a much higher degree of quality and attention because it was medical. The project was 100% about trust. Not only did it need to be highly accurate, but it had many moving parts including over a dozen agents. My fellow developer did an amazing job of making it accurate, thorough, and consistent. There were a few key tricks to make this coordination work well, but what really taught me was how important having agentic evals are for making a high quality system. Until you do, it can feel like a house of cards. In fact, your agentic evals are more valuable IP than your prompts because they capture the true intent whereas prompts are changeable implementation details.
 
 ## Fundamentals
 
@@ -22,6 +22,7 @@ A year ago, I was working on several projects, and one needed a much higher degr
 We still need this safety net, but with AI systems, the results are far less binary, so we often need a score or a full rubric to know when we've reached our goals. Unittests that pass or fail is a start, but too brittle with AI work. Whether or not a project has agentic evals is a clear signal (like a code smell) about its production readiness. 
 
 ![tdd-diagram.excalidraw](/images/tdd-diagram.excalidraw.png)
+
 When working on any system you need a way to answer "Does it work?" and with AI "Does it work well?", so the ***definition of done*** has shifted a little.
 
 **Evals**: ML work and agent system development are different enough that the existing tools don't quite fit. ML evals are the common tool today to achieve quality testing, and they're a natural fit for those coming out of ML research and engineering. If you've trained a classifier, model, or even a trivial neural net, you've probably used ML evals. But these are designed for a different problem where you have lots of input data. When writing a prompt, agent, or workflow of agents, you're starting with a bit of test data and growing it over time. Current eval tools often feel heavyweight for this situation.
@@ -119,5 +120,13 @@ Benchmarking: Just a test runner, so even pytest (pytest-benchmark) can be a use
 Lots more to say, but I'll stop here so you can let me know what you'd like to talk about next.
 
 Thanks!
+Please tell me what you'd like to hear about next, and feel free to leave comments and questions.
+
+### See Also
+* 2026-01-09: [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) - longer and more in-depth
+* 2025-06-25: [Kent Beck: Augmented Coding: Beyond the Vibes](https://tidyfirst.substack.com/p/augmented-coding-beyond-the-vibes) - discussion about using TDD with AI coding tools.
+* 2025-04-08: [Mehdi Zare: Evaludating Agentic LLM Applications: Metrics and Testing Strategies](https://pub.towardsai.net/evaluating-agentic-llm-applications-metrics-and-testing-strategies-2cd2356f4a4c) - a good look at other aspects of testing, though a bit specific to LangChain and LangSmith.
+* 2024-04: [Pat Verga et al. Replacing Judges with Juries](https://arxiv.org/abs/2404.18796) - more advanced material about testing models, but looking at juries vs judges
+* 2023-03: [OpenAI Working with Evals](https://platform.openai.com/docs/guides/evals)- as a point of history, OpenAI provided tools to help assess their models but at a "task" (prompt) level. This is the earliest agentic eval tool I'm aware of, but many in the industry went in a similar direction.
 
 Thanks: Kent Beck, Tomislav Čar
