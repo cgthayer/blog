@@ -25,14 +25,12 @@
             "id": "1e4821ea068b44a1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "content/posts/welcome.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/agentic-eval-combo.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "welcome"
+              "icon": "excalidraw-icon",
+              "title": "agentic-eval-combo.excalidraw"
             }
           }
         ],
@@ -190,13 +188,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/welcome.md",
+                "file": "Excalidraw/agentic-eval-combo.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of agentic-eval-combo.excalidraw"
             }
           },
           {
@@ -238,6 +236,7 @@
   },
   "active": "1e4821ea068b44a1",
   "lastOpenFiles": [
+    "content/posts/welcome.md",
     "content/posts/real-ai-engineer-differentiator.md",
     "public/tags/index.xml",
     "public/categories/index.xml",
@@ -259,7 +258,6 @@
     "public/images/thayer-head-2026-purple.jpg",
     "public/images/tdd-diagram.excalidraw.png",
     "public/images/ai-test-types.png",
-    "content/posts/welcome.md",
     "content/posts/play-with-embeddings.md",
     "Excalidraw/tdd-diagram.excalidraw.md",
     "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",

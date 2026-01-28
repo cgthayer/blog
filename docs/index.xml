@@ -2,40 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learn Tinker Share Blog</title>
-    <link>http://localhost:36001/</link>
+    <link>https://thayer-blog.b2si.com/</link>
     <description>Recent content on Learn Tinker Share Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Charles Thayer</copyright>
-    <lastBuildDate>Fri, 09 Jan 2026 13:34:01 -0800</lastBuildDate><atom:link href="http://localhost:36001/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jan 2026 13:34:01 -0800</lastBuildDate><atom:link href="https://thayer-blog.b2si.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This</title>
-      <link>http://localhost:36001/posts/real-ai-engineer-differentiator/</link>
+      <link>https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/</link>
       <pubDate>Fri, 09 Jan 2026 13:34:01 -0800</pubDate>
       
-      <guid>http://localhost:36001/posts/real-ai-engineer-differentiator/</guid>
+      <guid>https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/</guid>
       <description>&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; become prod-ready and bullet-proof using &lt;strong&gt;agentic evals&lt;/strong&gt; testing.&lt;/p&gt;&#xA;&lt;p&gt;Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It&amp;rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. Simply put, it&amp;rsquo;s whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs</title>
-      <link>http://localhost:36001/posts/play-with-embeddings/</link>
+      <link>https://thayer-blog.b2si.com/posts/play-with-embeddings/</link>
       <pubDate>Fri, 12 Dec 2025 11:53:10 -0800</pubDate>
       
-      <guid>http://localhost:36001/posts/play-with-embeddings/</guid>
+      <guid>https://thayer-blog.b2si.com/posts/play-with-embeddings/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships&#xA;    &lt;div id=&#34;from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors&lt;/p&gt;&#xA;&lt;p&gt;I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&amp;rsquo;re looking for people to go on a walk with, it&amp;rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&amp;rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Welcome</title>
-      <link>http://localhost:36001/posts/welcome/</link>
+      <link>https://thayer-blog.b2si.com/posts/welcome/</link>
       <pubDate>Sat, 22 Nov 2025 11:53:10 -0800</pubDate>
       
-      <guid>http://localhost:36001/posts/welcome/</guid>
+      <guid>https://thayer-blog.b2si.com/posts/welcome/</guid>
       <description>&lt;p&gt;This is a personal blog for Charles Thayer (see also &lt;a href=&#34;https://thayer.b2si.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://thayer.b2si.com&lt;/a&gt;). I practice writing here, and capture ideas which sometimes evolve into articles on &lt;a href=&#34;https://medium.com/@charles-thayer&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Medium&lt;/a&gt;, &lt;a href=&#34;https://substack.com/@charlesthayer/posts&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Substack&lt;/a&gt;, &lt;a href=&#34;https://www.reddit.com/user/charlesthayer/submitted/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Reddit&lt;/a&gt;, etc.. It&amp;rsquo;s in Hugo, with editing in Obsidian.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;About Me&#xA;    &lt;div id=&#34;about-me&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#about-me&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m an AI software engineer, and sometimes founder. I like to tinkerer, build, think about thinking, and generally play with The Internet and related technologies.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>AI Testing Overview</title>
+      <link>https://thayer-blog.b2si.com/posts/ai-testing-overview/</link>
+      <pubDate>Mon, 09 Jun 2025 13:34:01 -0800</pubDate>
+      
+      <guid>https://thayer-blog.b2si.com/posts/ai-testing-overview/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Types of Tests for AI Systems&#xA;    &lt;div id=&#34;types-of-tests-for-ai-systems&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#types-of-tests-for-ai-systems&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;At a simple level, evals are how we test AI systems, but the term &amp;ldquo;evals&amp;rdquo; covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there&amp;rsquo;s online vs offline, then there&amp;rsquo;s human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there&amp;rsquo;s RAG which looks more like search bench-marking with it&amp;rsquo;s accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.&lt;/p&gt;</description>
       
     </item>
     
