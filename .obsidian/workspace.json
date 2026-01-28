@@ -32,9 +32,21 @@
               "icon": "excalidraw-icon",
               "title": "agentic-eval-combo.excalidraw"
             }
+          },
+          {
+            "id": "87140879335d1835",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "static/images/agentic-eval-combo.excalidraw.png"
+              },
+              "icon": "lucide-image",
+              "title": "agentic-eval-combo.excalidraw"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -188,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/agentic-eval-combo.excalidraw.md",
+                "file": "static/images/agentic-eval-combo.excalidraw.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -234,9 +246,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1e4821ea068b44a1",
+  "active": "87140879335d1835",
   "lastOpenFiles": [
+    "Excalidraw/agentic-eval-combo.excalidraw.md",
+    "static/images/agentic-eval-combo.excalidraw.png",
     "content/posts/welcome.md",
+    "docs/images/agentic-eval-combo.excalidraw 1.png",
+    "public/images/agentic-eval-combo.excalidraw 1.png",
+    "static/images/agentic-eval-combo.excalidraw.png",
     "content/posts/real-ai-engineer-differentiator.md",
     "public/tags/index.xml",
     "public/categories/index.xml",
@@ -254,14 +271,9 @@
     "public/apple-touch-icon.png",
     "public/android-chrome-192x192.png",
     "public/images/agentic-eval-combo.excalidraw.png",
-    "public/images/ai-dev-phase-issues-evals.excalidraw.png",
-    "public/images/thayer-head-2026-purple.jpg",
-    "public/images/tdd-diagram.excalidraw.png",
-    "public/images/ai-test-types.png",
     "content/posts/play-with-embeddings.md",
     "Excalidraw/tdd-diagram.excalidraw.md",
     "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
-    "Excalidraw/agentic-eval-combo.excalidraw.md",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
