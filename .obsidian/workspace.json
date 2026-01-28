@@ -25,14 +25,12 @@
             "id": "1e4821ea068b44a1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "content/posts/real-ai-engineer-differentiator.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "real-ai-engineer-differentiator"
+              "icon": "excalidraw-icon",
+              "title": "ai-dev-phase-issues-evals.excalidraw"
             }
           }
         ],
@@ -190,13 +188,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/real-ai-engineer-differentiator.md",
+                "file": "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of real-ai-engineer-differentiator"
+              "title": "Outline of ai-dev-phase-issues-evals.excalidraw"
             }
           },
           {
@@ -236,14 +234,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1e4821ea068b44a1",
+  "active": "f9daa462c110364a",
   "lastOpenFiles": [
-    "static/images/agentic-eval-combo.excalidraw.png",
+    "static/images/ai-dev-phase-issues-evals.excalidraw.png",
+    "static/images/ai-dev-phase-issues-evals.excalidraw.png",
+    "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
     "Excalidraw/agentic-eval-combo.excalidraw.md",
+    "content/posts/real-ai-engineer-differentiator.md",
+    "static/images/agentic-eval-combo.excalidraw.png",
     "content/posts/welcome.md",
     "docs/images/agentic-eval-combo.excalidraw 1.png",
     "public/images/agentic-eval-combo.excalidraw 1.png",
-    "content/posts/real-ai-engineer-differentiator.md",
     "public/tags/index.xml",
     "public/categories/index.xml",
     "public/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js",
@@ -262,7 +263,6 @@
     "public/images/agentic-eval-combo.excalidraw.png",
     "content/posts/play-with-embeddings.md",
     "Excalidraw/tdd-diagram.excalidraw.md",
-    "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
