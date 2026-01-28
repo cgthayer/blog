@@ -25,28 +25,18 @@
             "id": "1e4821ea068b44a1",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/agentic-eval-combo.excalidraw.md"
+                "file": "content/posts/real-ai-engineer-differentiator.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "agentic-eval-combo.excalidraw"
-            }
-          },
-          {
-            "id": "87140879335d1835",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "static/images/agentic-eval-combo.excalidraw.png"
-              },
-              "icon": "lucide-image",
-              "title": "agentic-eval-combo.excalidraw"
+              "icon": "lucide-file",
+              "title": "real-ai-engineer-differentiator"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,13 +190,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "static/images/agentic-eval-combo.excalidraw.png",
+                "file": "content/posts/real-ai-engineer-differentiator.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of agentic-eval-combo.excalidraw"
+              "title": "Outline of real-ai-engineer-differentiator"
             }
           },
           {
@@ -246,14 +236,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "87140879335d1835",
+  "active": "1e4821ea068b44a1",
   "lastOpenFiles": [
-    "Excalidraw/agentic-eval-combo.excalidraw.md",
     "static/images/agentic-eval-combo.excalidraw.png",
+    "Excalidraw/agentic-eval-combo.excalidraw.md",
     "content/posts/welcome.md",
     "docs/images/agentic-eval-combo.excalidraw 1.png",
     "public/images/agentic-eval-combo.excalidraw 1.png",
-    "static/images/agentic-eval-combo.excalidraw.png",
     "content/posts/real-ai-engineer-differentiator.md",
     "public/tags/index.xml",
     "public/categories/index.xml",
