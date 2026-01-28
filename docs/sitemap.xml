@@ -3,27 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/</loc>
+    <loc>http://localhost:36001/posts/real-ai-engineer-differentiator/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>https://thayer-blog.b2si.com/</loc>
+    <loc>http://localhost:36001/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>https://thayer-blog.b2si.com/posts/</loc>
+    <loc>http://localhost:36001/posts/</loc>
     <lastmod>2026-01-09T13:34:01-08:00</lastmod>
   </url>
   <url>
-    <loc>https://thayer-blog.b2si.com/posts/play-with-embeddings/</loc>
+    <loc>http://localhost:36001/posts/play-with-embeddings/</loc>
     <lastmod>2025-12-12T11:53:10-08:00</lastmod>
   </url>
   <url>
-    <loc>https://thayer-blog.b2si.com/posts/welcome/</loc>
+    <loc>http://localhost:36001/posts/welcome/</loc>
     <lastmod>2025-11-22T11:53:10-08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://thayer-blog.b2si.com/posts/ai-testing-overview/</loc>
-    <lastmod>2025-06-09T13:34:01-08:00</lastmod>
   </url>
 </urlset>

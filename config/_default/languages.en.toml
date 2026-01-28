@@ -13,5 +13,7 @@ title = "Learn Tinker Share Blog"
 
 [params.author]
   name = "Charles Thayer"
-  headline = "AI Engineer & Developer"
-  bio = "Software engineer exploring AI, development, and best practices"
+  headline = "AI Engineer & Founder"
+  bio = "Software engineer exploring AI, and best practices"
+  # image = "/images/thayer-head-2026-purple.jpg"
+  social = ["https://thayer.b2si.com", "https://linkedin.com/in/cgthayer"]

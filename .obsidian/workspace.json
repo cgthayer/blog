@@ -35,7 +35,8 @@
               "title": "welcome"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,13 +190,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/real-ai-engineer-differentiator.md",
+                "file": "content/posts/welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of real-ai-engineer-differentiator"
+              "title": "Outline of welcome"
             }
           },
           {
@@ -235,32 +236,33 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b092d0f5d01394fc",
+  "active": "1e4821ea068b44a1",
   "lastOpenFiles": [
-    "Excalidraw/tdd-diagram.excalidraw.md",
     "content/posts/real-ai-engineer-differentiator.md",
+    "public/tags/index.xml",
+    "public/categories/index.xml",
+    "public/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js",
+    "public/tags/index.html",
+    "public/tags",
+    "public/categories/index.html",
+    "public/categories",
+    "public/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js",
+    "public/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js",
+    "public/lib/jquery",
+    "public/favicon-32x32.png",
+    "public/favicon-16x16.png",
+    "public/android-chrome-512x512.png",
+    "public/apple-touch-icon.png",
+    "public/android-chrome-192x192.png",
+    "public/images/agentic-eval-combo.excalidraw.png",
+    "public/images/ai-dev-phase-issues-evals.excalidraw.png",
+    "public/images/thayer-head-2026-purple.jpg",
+    "public/images/tdd-diagram.excalidraw.png",
+    "public/images/ai-test-types.png",
     "content/posts/welcome.md",
-    "public/posts/welcome/index.html",
-    "public/posts/welcome",
-    "public/posts/ai-testing-overview/index.html",
-    "public/posts/ai-testing-overview",
-    "public/404.html",
-    "docs/images/thayer-head-2026-purple.jpg",
-    "static/images/thayer-head-2026-purple.jpg",
-    "static/images/tdd-diagram.excalidraw.png",
-    "docs/images/tdd-diagram.excalidraw.png",
+    "content/posts/play-with-embeddings.md",
+    "Excalidraw/tdd-diagram.excalidraw.md",
     "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
-    "static/images/ai-dev-phase-issues-evals.excalidraw.png",
-    "static/images/ai-dev-phase-issues-evals.excalidraw.png",
-    "docs/images/ai-dev-phase-issues-evals.excalidraw 1.png",
-    "public/posts/index.xml",
-    "public/index.xml",
-    "public/index.json",
-    "public/posts/page/1/index.html",
-    "public/posts/page/1",
-    "docs/images/agentic-eval-combo.excalidraw.png",
-    "public-old2/posts/tdd-diagram.excalidraw.png",
-    "public-old2/posts/ai-dev-phase-issues-evals.excalidraw.png",
     "Excalidraw/agentic-eval-combo.excalidraw.md",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
@@ -281,7 +283,6 @@
     "content/drafts/AI-advanced-study.md",
     "content/drafts/004-RAG-start.md",
     "content/drafts/003-AI-evals.md",
-    "content/drafts/002-AI-tracing.md",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]
