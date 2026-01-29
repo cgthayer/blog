@@ -130,6 +130,6 @@ Please tell me what you'd like to hear about next, and feel free to leave commen
 * 2025-04-08: [Mehdi Zare: Evaludating Agentic LLM Applications: Metrics and Testing Strategies](https://pub.towardsai.net/evaluating-agentic-llm-applications-metrics-and-testing-strategies-2cd2356f4a4c) - a good look at other aspects of testing, though a bit specific to LangChain and LangSmith.
 * 2024-04: [Pat Verga et al. Replacing Judges with Juries](https://arxiv.org/abs/2404.18796) - more advanced material about testing models, but looking at juries vs judges
 * 2023-03: [OpenAI Working with Evals](https://platform.openai.com/docs/guides/evals)- as a point of history, OpenAI provided tools to help assess their models but at a "task" (prompt) level. This is the earliest agentic eval tool I'm aware of, but many in the industry went in a similar direction.
-* 2023-05-10: [Rohit Agarwal: Decoding OpenAI Evals](https://portkey.ai/blog/decoding-openai-evals/) - programmer's guide to using OpenAI Evals.
+* 2023-05-10: [Rohit Agarwal: Decoding OpenAI Evals](https://portkey.ai/blog/decoding-openai-evals/) - programmer's guide to using OpenAI Evals (mostly python).
 
 Thanks: Kent Beck, Tomislav Čar
