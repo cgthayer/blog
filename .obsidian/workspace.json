@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ui-debugging.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ui-debugging"
+              "title": "README"
             }
           }
         ]
@@ -190,13 +190,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ui-debugging.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ui-debugging"
+              "title": "Outline of README"
             }
           }
         ],
@@ -223,6 +223,8 @@
   },
   "active": "b092d0f5d01394fc",
   "lastOpenFiles": [
+    "ui-debugging.md",
+    "templates",
     "content/posts/welcome.md",
     "content/posts/real-ai-engineer-differentiator.md",
     "content/posts/play-with-embeddings.md",
@@ -243,7 +245,6 @@
     "public/categories",
     "public/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js",
     "public/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js",
-    "public/lib/jquery",
     "public/favicon-32x32.png",
     "public/favicon-16x16.png",
     "public/android-chrome-512x512.png",
