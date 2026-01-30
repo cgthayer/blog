@@ -1,11 +1,11 @@
 ---
 title: Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs
 date: 2025-12-12T11:53:10-08:00
-draft: false
+draft: true
 tags: []
 categories: []
 createddate: 2025-12-12
-featureimage: "/images/graphdb-thoughts.excalidraw.png"
+featureimage: /images/graphdb-thoughts.excalidraw.png
 ---
 
 # From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
