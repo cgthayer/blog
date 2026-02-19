@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/posts/welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "welcome"
             }
           }
         ]
@@ -190,13 +190,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "content/posts/welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of welcome"
             }
           }
         ],
@@ -223,6 +223,7 @@
   },
   "active": "b092d0f5d01394fc",
   "lastOpenFiles": [
+    "README.md",
     "ui-debugging.md",
     "templates",
     "content/posts/welcome.md",
@@ -268,7 +269,6 @@
     "content/drafts/AI-learners-dynamics-article.md",
     "content/drafts/AI-advanced-study.md",
     "content/drafts/004-RAG-start.md",
-    "content/drafts/003-AI-evals.md",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]
