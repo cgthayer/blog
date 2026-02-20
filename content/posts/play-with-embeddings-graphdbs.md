@@ -17,7 +17,7 @@ I was talking to a friend who uses a graphDB in their AI app and has run into an
 One approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there's an 80% chance I'll like walking (even though I didn't say so), and if I like hiking perhaps there's a 90% chance I'll like walking. Plus, in the other direction, if I like walking I'm also 90% likely to like hiking.
 
 
-[IMG-SOURCE](graphdb-thoughts.excalidraw.md)
+[Thinking about Trust Graphs](graphdb-thoughts.excalidraw.md)
 ![Diagram 1](/images/graphdb-thoughts.excalidraw.png)
 
 But wait, if I like hiking, am I likely to like running? There's no arrow between those, and our graph implies there's a relationship there, but we don't know that we can safely infer such things. Plus, should we be conservative and say it's 80% likely or should we be optimistic and say 90%, or average the two at 85%? We might even be more conservative and "walk the graph" and multiply .8 * .9 to get 72% likelihood (See picture 3 and 4). Plus, we know that this isn't purely bidirectional, so someone who said they like "outdoor activities" might also like walking 70% of the time, but someone who likes walking may be 91% likely to like "outdoor activities"...

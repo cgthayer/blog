@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/play-with-embeddings.md",
+                "file": "content/posts/play-with-embeddings-graphdbs.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "play-with-embeddings"
+              "title": "play-with-embeddings-graphdbs"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ai-getting-started-2026.md",
+                "file": "content/posts/play-with-embeddings-graphdbs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ai-getting-started-2026"
+              "title": "play-with-embeddings-graphdbs"
             }
           }
         ],
@@ -205,13 +205,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ai-getting-started-2026.md",
+                "file": "content/posts/play-with-embeddings-graphdbs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ai-getting-started-2026"
+              "title": "Outline of play-with-embeddings-graphdbs"
             }
           }
         ],
@@ -219,7 +219,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -238,9 +239,12 @@
   },
   "active": "0622ddac9894e455",
   "lastOpenFiles": [
-    "content/posts/play-with-embeddings.md",
-    "content/posts/welcome.md",
+    "Excalidraw/graphdb-thoughts.excalidraw.md",
+    "content/posts/play-with-embeddings-graphdbs.md",
+    "docs/posts/play-with-embeddings-graphdbs/index.html",
+    "docs/posts/play-with-embeddings-graphdbs",
     "ai-getting-started-2026.md",
+    "content/posts/welcome.md",
     "README.md",
     "ui-debugging.md",
     "templates",
@@ -260,14 +264,11 @@
     "public/tags",
     "public/categories/index.html",
     "public/categories",
-    "public/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js",
-    "public/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js",
     "public/favicon-32x32.png",
     "public/favicon-16x16.png",
     "public/android-chrome-512x512.png",
     "public/apple-touch-icon.png",
     "Excalidraw/tdd-diagram.excalidraw.md",
-    "Excalidraw/graphdb-thoughts.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
     "content/drafts/excalidraw-in-5-10-15/excalidraw-intro-in-5-10-15.md",
@@ -283,7 +284,6 @@
     "content/drafts/AI-prompt-manager-article.md",
     "content/drafts/AI-learners-terminology-article.md",
     "content/drafts/AI-learners-dynamics-article.md",
-    "content/drafts/AI-advanced-study.md",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]

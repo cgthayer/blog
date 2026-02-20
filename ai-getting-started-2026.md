@@ -7,7 +7,7 @@ categories: []
 createddate: 2025-12-12
 featureimage: /images/
 ---
-In 2026, everyone uses AI to create code, but as a software engineer (or founder), it’s super tough to fit in learning when you have a full-time job, so here are some ideas to help you get started and dip a toe in the AI waters.
+In 2026, everyone uses AI to create code, but you may not have dug into learning about and building AI yourself. As a software engineer (or founder), it’s super tough to fit in learning when you have a full-time job, so here are some ideas to help you get started and dip a toe in the AI waters.
 
 Pick just **one** that feels doable, and come back later.
 
