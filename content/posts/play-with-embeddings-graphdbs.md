@@ -12,15 +12,19 @@ featureimage: /images/graphdb-thoughts.excalidraw.png
 
 Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 
-tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system's quality, and tinker with embeddings for fun.
+tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system's quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
 
 A friend has the classic ontology problem: they have lots of vague data that doesn't match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There's a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).
+
+## The GraphDB Approach
 
 The common approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there's an 80% chance I'll like walking (even though I didn't say so), and if I like hiking perhaps there's a 90% chance I'll like walking. Plus, in the other direction, if I like walking I'm also 90% likely to like hiking.
 
 
 [Thinking about Trust Graphs](graphdb-thoughts.excalidraw.md)
 ![Diagram 1](/images/graphdb-thoughts.excalidraw.png)
+
+### Challenges
 
 But wait, if I like hiking, am I likely to like running? There's no arrow between those, and our graph implies there's a relationship there, but we don't know that we can safely infer such things. Plus, should we be conservative and say it's 80% likely or should we be optimistic and say 90%, or average the two at 85%? We might even be more conservative and "walk the graph" and multiply .8 * .9 to get 72% likelihood (See picture 3 and 4). Plus, we know that this isn't purely bidirectional, so someone who said they like "outdoor activities" might also like walking 70% of the time, but someone who likes walking may be 91% likely to like "outdoor activities"...
 
@@ -55,6 +59,8 @@ running → hiking: ('one-hop', '0.7200')
 
 
 Of course, it's great if we can enumerate the nodes we need in the graph, but often there are too many terms we might not know. Consider that someone may say "I like running" or "I'm a runner" or "I go for runs" and simply searching for "running" as an interest will miss 2 terms out of three of these. Stemming and other tricks might help but they're brittle. We always come across data we didn't expect, e.g. we might read "I was a sprinter on the track team" or "I like sprinting" and miss that they have an interest in "running". 
+
+## Embeddings: A Different Approach
 
 A newer way to look at this problem is to leverage ML. LLMs are great at exactly this kind of problem. For an application we may not want to use a full prompt and LLM API call, but luckily we can use embeddings and vectorDBs to help. Let's quickly look at the word embeddings for walk, run, hike and see what we get in terms of cosine distances:
 
@@ -99,7 +105,9 @@ Pairwise cosine similarities (0-1, 1.0=same):
 
 Interesting:. This model finds `walk` and `run` to be the most similar, `walk` and `hike` the next, and `hike` and `run` the least similar
 
-Today, we have embeddings, which give us a nice calculation of "conceptual distance". What this means is we can get these "relationship" numbers "for free" without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that's probably good enough for a lot of use cases.
+Today, we have embeddings, which give us a nice calculation of "conceptual distance". What this means is we can get these "relationship" numbers "for free" without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that's good enough for a lot of use cases.
+
+### Challenges
 
 There's a caveat here, which is to say that words without context can be dangerous. I worked in web search and we used to say "Fencing can be a sport, the stuff that borders your house, or what you do with stolen goods". So, depending on your embedding model, you may want to calculate from full sentences such as "I like the activity walking" and "I like the activity running" as opposed to using the bare words.
 
@@ -125,11 +133,13 @@ Interesting. This model has a different perspective, which could be the model **
 
 The most powerful and robust feature here is that we can handle almost any input without the need to pre-calculate our graph and weights. If we have an enumeration of categories of people's favorite activities, and we see an event category that's new to us, we can make an educated guess about how to map them, or use the embedding as input to our ranking. Meaning, if we put event descriptions into our vectorDB, then search for "I like to walk", then a hiking event should score well.
 
+## Closing Thoughts
+
 Of course, a combination of the two concepts would be needed in a real system since "interests" isn't the same as "semantic meaning". Here we controlled the sentence, but if you put in "I hate to walk" it turns out that sentence scores 0.7697 from "I like to walk" because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.
 
 My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there's always more to explore.
 
-What's your experience on these topics?  Feel free to ask questions in the comments, or let me know what other topics you'd like to know about. I always monitor them for awhile after publishing.
+Closing: Tell me what you'd like to talk about. What's your experience on these topics? Feel free to ask questions in the comments.
 
 ---
 ### End Notes: 
@@ -139,3 +149,6 @@ What's your experience on these topics?  Feel free to ask questions in the comme
 - We used a couple models, so beware that the embedding vectors between them are not compatible. e.g. never compare vectors from a word model against a sentence model.
 
 Thanks Richard King for the fencing examples  ;-)
+
+
+

@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="Learn Tinker Share Blog">
   <meta property="og:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
   <meta property="og:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships # Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
-tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system’s quality, and tinker with embeddings for fun.
+tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system’s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
 A friend has the classic ontology problem: they have lots of vague data that doesn’t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -52,7 +52,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
   <meta name="twitter:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships # Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
-tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system’s quality, and tinker with embeddings for fun.
+tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system’s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
 A friend has the classic ontology problem: they have lots of vague data that doesn’t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
 
   
@@ -225,7 +225,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1391"
+    "wordCount": "1398"
   }]
   </script>
 
@@ -438,7 +438,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1391 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1398 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -543,7 +543,17 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#the-graphdb-approach">The GraphDB Approach</a>
+      <ul>
+        <li><a href="#challenges">Challenges</a></li>
+      </ul>
+    </li>
+    <li><a href="#embeddings-a-different-approach">Embeddings: A Different Approach</a>
+      <ul>
+        <li><a href="#challenges-1">Challenges</a></li>
+      </ul>
+    </li>
+    <li><a href="#closing-thoughts">Closing Thoughts</a>
       <ul>
         <li><a href="#end-notes">End Notes:</a></li>
       </ul>
@@ -561,7 +571,17 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#the-graphdb-approach">The GraphDB Approach</a>
+      <ul>
+        <li><a href="#challenges">Challenges</a></li>
+      </ul>
+    </li>
+    <li><a href="#embeddings-a-different-approach">Embeddings: A Different Approach</a>
+      <ul>
+        <li><a href="#challenges-1">Challenges</a></li>
+      </ul>
+    </li>
+    <li><a href="#closing-thoughts">Closing Thoughts</a>
       <ul>
         <li><a href="#end-notes">End Notes:</a></li>
       </ul>
@@ -693,8 +713,18 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     
 </h1>
 <p>Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.</p>
-<p>tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system&rsquo;s quality, and tinker with embeddings for fun.</p>
+<p>tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system&rsquo;s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.</p>
 <p>A friend has the classic ontology problem: they have lots of vague data that doesn&rsquo;t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).</p>
+
+<h2 class="relative group">The GraphDB Approach
+    <div id="the-graphdb-approach" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-graphdb-approach" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>The common approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there&rsquo;s an 80% chance I&rsquo;ll like walking (even though I didn&rsquo;t say so), and if I like hiking perhaps there&rsquo;s a 90% chance I&rsquo;ll like walking. Plus, in the other direction, if I like walking I&rsquo;m also 90% likely to like hiking.</p>
 <p><a href="graphdb-thoughts.excalidraw.md" >Thinking about Trust Graphs</a>
 <figure><img
@@ -706,6 +736,16 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     src="/images/graphdb-thoughts.excalidraw.png"
     ></figure>
 </p>
+
+<h3 class="relative group">Challenges
+    <div id="challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>But wait, if I like hiking, am I likely to like running? There&rsquo;s no arrow between those, and our graph implies there&rsquo;s a relationship there, but we don&rsquo;t know that we can safely infer such things. Plus, should we be conservative and say it&rsquo;s 80% likely or should we be optimistic and say 90%, or average the two at 85%? We might even be more conservative and &ldquo;walk the graph&rdquo; and multiply .8 * .9 to get 72% likelihood (See picture 3 and 4). Plus, we know that this isn&rsquo;t purely bidirectional, so someone who said they like &ldquo;outdoor activities&rdquo; might also like walking 70% of the time, but someone who likes walking may be 91% likely to like &ldquo;outdoor activities&rdquo;&hellip;</p>
 <p>For fun here&rsquo;s some naive code. We can imagine inferring a few hops, reviewing dijkstra&rsquo;s algo, etc.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
@@ -730,6 +770,16 @@ A friend has the classic ontology problem: they have lots of vague data that doe
 </span></span><span style="display:flex;"><span>hiking → walking: (&#39;direct&#39;, &#39;0.9000&#39;)
 </span></span><span style="display:flex;"><span>running → hiking: (&#39;one-hop&#39;, &#39;0.7200&#39;)</span></span></code></pre></div></div>
 <p>Of course, it&rsquo;s great if we can enumerate the nodes we need in the graph, but often there are too many terms we might not know. Consider that someone may say &ldquo;I like running&rdquo; or &ldquo;I&rsquo;m a runner&rdquo; or &ldquo;I go for runs&rdquo; and simply searching for &ldquo;running&rdquo; as an interest will miss 2 terms out of three of these. Stemming and other tricks might help but they&rsquo;re brittle. We always come across data we didn&rsquo;t expect, e.g. we might read &ldquo;I was a sprinter on the track team&rdquo; or &ldquo;I like sprinting&rdquo; and miss that they have an interest in &ldquo;running&rdquo;.</p>
+
+<h2 class="relative group">Embeddings: A Different Approach
+    <div id="embeddings-a-different-approach" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#embeddings-a-different-approach" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>A newer way to look at this problem is to leverage ML. LLMs are great at exactly this kind of problem. For an application we may not want to use a full prompt and LLM API call, but luckily we can use embeddings and vectorDBs to help. Let&rsquo;s quickly look at the word embeddings for walk, run, hike and see what we get in terms of cosine distances:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> chromadb
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> chromadb.utils <span style="color:#f92672">import</span> embedding_functions
@@ -764,7 +814,17 @@ A friend has the classic ontology problem: they have lots of vague data that doe
 </span></span><span style="display:flex;"><span>*   walk &lt;-&gt; hike  : 0.3058
 </span></span><span style="display:flex;"><span>*    run &lt;-&gt; hike  : 0.2077</span></span></code></pre></div></div>
 <p>Interesting:. This model finds <code>walk</code> and <code>run</code> to be the most similar, <code>walk</code> and <code>hike</code> the next, and <code>hike</code> and <code>run</code> the least similar</p>
-<p>Today, we have embeddings, which give us a nice calculation of &ldquo;conceptual distance&rdquo;. What this means is we can get these &ldquo;relationship&rdquo; numbers &ldquo;for free&rdquo; without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that&rsquo;s probably good enough for a lot of use cases.</p>
+<p>Today, we have embeddings, which give us a nice calculation of &ldquo;conceptual distance&rdquo;. What this means is we can get these &ldquo;relationship&rdquo; numbers &ldquo;for free&rdquo; without necessarily building this graph out. Plus vectorDBs are amazing at quickly giving us the top-K of similar items. Embedding models have done the work of figuring out, across huge corpuses of text, what these words and concepts mean, especially in relation to each other. And that&rsquo;s good enough for a lot of use cases.</p>
+
+<h3 class="relative group">Challenges
+    <div id="challenges-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#challenges-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>There&rsquo;s a caveat here, which is to say that words without context can be dangerous. I worked in web search and we used to say &ldquo;Fencing can be a sport, the stuff that borders your house, or what you do with stolen goods&rdquo;. So, depending on your embedding model, you may want to calculate from full sentences such as &ldquo;I like the activity walking&rdquo; and &ldquo;I like the activity running&rdquo; as opposed to using the bare words.</p>
 <p>A quick change to the more popular Sentence model &ldquo;all-MiniLLM-L6-v2&rdquo;:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
@@ -779,9 +839,19 @@ A friend has the classic ontology problem: they have lots of vague data that doe
 </span></span><span style="display:flex;"><span>* I like to run &lt;-&gt; I like to hike: 0.5118</span></span></code></pre></div></div>
 <p>Interesting. This model has a different perspective, which could be the model <strong>or</strong> the context of interests and preferences (or both).</p>
 <p>The most powerful and robust feature here is that we can handle almost any input without the need to pre-calculate our graph and weights. If we have an enumeration of categories of people&rsquo;s favorite activities, and we see an event category that&rsquo;s new to us, we can make an educated guess about how to map them, or use the embedding as input to our ranking. Meaning, if we put event descriptions into our vectorDB, then search for &ldquo;I like to walk&rdquo;, then a hiking event should score well.</p>
+
+<h2 class="relative group">Closing Thoughts
+    <div id="closing-thoughts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#closing-thoughts" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>Of course, a combination of the two concepts would be needed in a real system since &ldquo;interests&rdquo; isn&rsquo;t the same as &ldquo;semantic meaning&rdquo;. Here we controlled the sentence, but if you put in &ldquo;I hate to walk&rdquo; it turns out that sentence scores 0.7697 from &ldquo;I like to walk&rdquo; because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.</p>
 <p>My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there&rsquo;s always more to explore.</p>
-<p>What&rsquo;s your experience on these topics?  Feel free to ask questions in the comments, or let me know what other topics you&rsquo;d like to know about. I always monitor them for awhile after publishing.</p>
+<p>Closing: Tell me what you&rsquo;d like to talk about. What&rsquo;s your experience on these topics? Feel free to ask questions in the comments.</p>
 <hr>
 
 <h3 class="relative group">End Notes:
