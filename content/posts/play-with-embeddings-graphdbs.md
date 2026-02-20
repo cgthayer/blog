@@ -10,11 +10,13 @@ featureimage: /images/graphdb-thoughts.excalidraw.png
 
 # From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
 
-Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors
+Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 
-I was talking to a friend who uses a graphDB in their AI app and has run into an interesting problem. The quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There's a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).
+tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system's quality, and tinker with embeddings for fun.
 
-One approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there's an 80% chance I'll like walking (even though I didn't say so), and if I like hiking perhaps there's a 90% chance I'll like walking. Plus, in the other direction, if I like walking I'm also 90% likely to like hiking.
+A friend has the classic ontology problem: they have lots of vague data that doesn't match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There's a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).
+
+The common approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there's an 80% chance I'll like walking (even though I didn't say so), and if I like hiking perhaps there's a 90% chance I'll like walking. Plus, in the other direction, if I like walking I'm also 90% likely to like hiking.
 
 
 [Thinking about Trust Graphs](graphdb-thoughts.excalidraw.md)
