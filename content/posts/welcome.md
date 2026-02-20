@@ -6,6 +6,8 @@ tags: []
 categories: []
 featureimage: /images/thayer-head-2026-purple.jpg
 ---
+This is for experienced software engineers and founders trying to make AI systems that are high quality and production ready. It's geared toward small startups, especially in the Bay Area and SF.
+
 I'm Charles, and I've done lots of fun engineering, and worked on a number of startups. I started working on AI projects in 2024 and the pace has been amazing. I've started to share my work and thoughts more intentionally here, for feedback, learning, and to build community.
 
 I'm looking to build the right tools for AI startups, and AI software engineers, and I'm based in the Bay Area.
