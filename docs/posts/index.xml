@@ -20,32 +20,12 @@
     </item>
     
     <item>
-      <title>Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs</title>
-      <link>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</link>
-      <pubDate>Fri, 12 Dec 2025 11:53:10 -0800</pubDate>
-      
-      <guid>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</guid>
-      <description>&lt;h1 class=&#34;relative group&#34;&gt;From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships&#xA;    &lt;div id=&#34;from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.&lt;/p&gt;&#xA;&lt;p&gt;tldr; To be a successful AI software engineer, understanding embeddings is foundational. Here I talk about one common use case for graphDBs which can elevate your system&amp;rsquo;s quality, and tinker with embeddings for fun.&lt;/p&gt;&#xA;&lt;p&gt;A friend has the classic ontology problem: they have lots of vague data that doesn&amp;rsquo;t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&amp;rsquo;re looking for people to go on a walk with, it&amp;rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&amp;rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Welcome</title>
       <link>https://thayer-blog.b2si.com/posts/welcome/</link>
       <pubDate>Sat, 22 Nov 2025 11:53:10 -0800</pubDate>
       
       <guid>https://thayer-blog.b2si.com/posts/welcome/</guid>
       <description>&lt;p&gt;This is for experienced software engineers and founders trying to make AI systems that are high quality and production ready. It&amp;rsquo;s geared toward small startups, especially in the Bay Area and SF.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m Charles, and I&amp;rsquo;ve done lots of fun engineering, and worked on a number of startups. I started working on AI projects in 2024 and the pace has been amazing. I&amp;rsquo;ve started to share my work and thoughts more intentionally here, for feedback, learning, and to build community.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>AI Testing Overview</title>
-      <link>https://thayer-blog.b2si.com/posts/ai-testing-overview/</link>
-      <pubDate>Mon, 09 Jun 2025 13:34:01 -0800</pubDate>
-      
-      <guid>https://thayer-blog.b2si.com/posts/ai-testing-overview/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Types of Tests for AI Systems&#xA;    &lt;div id=&#34;types-of-tests-for-ai-systems&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#types-of-tests-for-ai-systems&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;At a simple level, evals are how we test AI systems, but the term &amp;ldquo;evals&amp;rdquo; covers a lot of ground. In reality there are lots of types of tests mainly grounded in an ML background. Let me explain. First there&amp;rsquo;s online vs offline, then there&amp;rsquo;s human vs LLM-as-a-judge, so that gives us 4 flavors off the bat. Plus there&amp;rsquo;s RAG which looks more like search bench-marking with it&amp;rsquo;s accuracy, precision, and recall. On top of these there are a variety of standard testing approaches and styles.&lt;/p&gt;</description>
       
     </item>
     
