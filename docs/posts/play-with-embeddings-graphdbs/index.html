@@ -41,7 +41,7 @@
   <meta property="og:title" content="When GraphDB Ontologies Break: Exploring Embeddings">
   <meta property="og:description" content="Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 tl;dr Your GraphDB ontology works perfectly in dev, but then production users write “jogging” and it can’t match “running!” Can embeddings fix this? Let’s explore.
-An interesting problem that keeps popping up is with ontology quality: vague input data often doesn’t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.">
+You’re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you’re excited that it passes all the tests and it looks done and ready to launch.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -53,7 +53,7 @@ An interesting problem that keeps popping up is with ontology quality: vague inp
   <meta name="twitter:title" content="When GraphDB Ontologies Break: Exploring Embeddings">
   <meta name="twitter:description" content="Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 tl;dr Your GraphDB ontology works perfectly in dev, but then production users write “jogging” and it can’t match “running!” Can embeddings fix this? Let’s explore.
-An interesting problem that keeps popping up is with ontology quality: vague input data often doesn’t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.">
+You’re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you’re excited that it passes all the tests and it looks done and ready to launch.">
 
   
   
@@ -225,7 +225,7 @@ An interesting problem that keeps popping up is with ontology quality: vague inp
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1454"
+    "wordCount": "1359"
   }]
   </script>
 
@@ -438,7 +438,7 @@ An interesting problem that keeps popping up is with ontology quality: vague inp
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1454 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1359 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -705,7 +705,6 @@ An interesting problem that keeps popping up is with ontology quality: vague inp
           <p>Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.</p>
 <p><strong>tl;dr</strong> Your GraphDB ontology works perfectly in dev, but then production users write
 &ldquo;jogging&rdquo; and it can&rsquo;t match &ldquo;running!&rdquo; Can embeddings fix this? Let&rsquo;s explore.</p>
-<p>An interesting problem that keeps popping up is with ontology quality: vague input data often doesn&rsquo;t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.</p>
 <p>You&rsquo;re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you&rsquo;re excited that it passes all the tests and it looks done and ready to launch.</p>
 <p>You try it out on a couple of people and quickly find it falls flat on its face. It knows about walking, hiking, and running but when someone says they like &ldquo;jogging&rdquo; it&rsquo;s totally useless.</p>
 <p>Let&rsquo;s dive into code. We&rsquo;ll start with a basic graph then explore embedding-based approaches using vectorDBs like Weaviate, or ChromaDB.</p>

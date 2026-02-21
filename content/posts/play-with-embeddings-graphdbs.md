@@ -12,8 +12,6 @@ Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 **tl;dr** Your GraphDB ontology works perfectly in dev, but then production users write 
 "jogging" and it can't match "running!" Can embeddings fix this? Let's explore.
 
-An interesting problem that keeps popping up is with ontology quality: vague input data often doesn't match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. 
-
 You're building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you're excited that it passes all the tests and it looks done and ready to launch.
 
 You try it out on a couple of people and quickly find it falls flat on its face. It knows about walking, hiking, and running but when someone says they like "jogging" it's totally useless.
