@@ -5,7 +5,7 @@ draft: false
 tags: []
 categories: []
 createddate: 2026-02-04
-featureimage: /images/graphdb-thoughts.excalidraw.png
+featureimage: /images/ontology-problems.excalidraw.png
 ---
 Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 
@@ -23,7 +23,7 @@ Let's dive into code. We'll start with a basic graph then explore embedding-base
 The common approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there's an 80% chance I'll like walking (even though I didn't say so), and if I like hiking perhaps there's a 90% chance I'll like walking. Plus, in the other direction, if I like walking I'm also 90% likely to like hiking.
 
 
-[Thinking about Trust Graphs](graphdb-thoughts.excalidraw.md)
+[Thinking about Graphs](graphdb-thoughts.excalidraw.md)
 ![Diagram 1](/images/graphdb-thoughts.excalidraw.png)
 
 ### Challenges
@@ -146,7 +146,7 @@ Matching, recommendation systems, and ranking are always interesting to play wit
 Where have you seen GraphDB ontologies break down? How did you resolve the problems?
 
 ---
-### End Notes: 
+## End Notes: 
 
 - Production quality is all about the details, so you should always test and benchmark. A vectorDB search is fast, but if you need accuracy and control then the right approach may be building a graph and calculating these weights yourself (doing several queries to get answers).
 - At the time of writing, Weaviate was the only vectorDB I found that directly supports graphDB features.

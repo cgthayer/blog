@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/">
+  <link rel="canonical" href="http://localhost:1313/posts/play-with-embeddings-graphdbs/">
   
 
   
@@ -36,7 +36,7 @@
   
 
   
-  <meta property="og:url" content="https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/">
+  <meta property="og:url" content="http://localhost:1313/posts/play-with-embeddings-graphdbs/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
   <meta property="og:title" content="When GraphDB Ontologies Break: Exploring Embeddings">
   <meta property="og:description" content="Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
@@ -211,7 +211,7 @@ You’re building a recommender system that matches events and people based on i
     "headline": "When GraphDB Ontologies Break: Exploring Embeddings",
     
     "inLanguage": "en",
-    "url" : "https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/",
+    "url" : "http://localhost:1313/posts/play-with-embeddings-graphdbs/",
     "author" : {
       "@type": "Person",
       "name": "Charles Thayer"
@@ -225,19 +225,13 @@ You’re building a recommender system that matches events and people based on i
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1361"
+    "wordCount": "1360"
   }]
   </script>
 
 
 
   
-  
-    
-
-
-
-
   
 
   
@@ -444,7 +438,7 @@ You’re building a recommender system that matches events and people based on i
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-04T00:00:00&#43;00:00">4 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1361 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+      <time datetime="2026-02-04T00:00:00&#43;00:00">4 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1360 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -551,11 +545,8 @@ You’re building a recommender system that matches events and people based on i
         <li><a href="#challenges-1">Challenges</a></li>
       </ul>
     </li>
-    <li><a href="#closing-thoughts">Closing Thoughts</a>
-      <ul>
-        <li><a href="#end-notes">End Notes:</a></li>
-      </ul>
-    </li>
+    <li><a href="#closing-thoughts">Closing Thoughts</a></li>
+    <li><a href="#end-notes">End Notes:</a></li>
   </ul>
 </nav>
   </div>
@@ -579,11 +570,8 @@ You’re building a recommender system that matches events and people based on i
         <li><a href="#challenges-1">Challenges</a></li>
       </ul>
     </li>
-    <li><a href="#closing-thoughts">Closing Thoughts</a>
-      <ul>
-        <li><a href="#end-notes">End Notes:</a></li>
-      </ul>
-    </li>
+    <li><a href="#closing-thoughts">Closing Thoughts</a></li>
+    <li><a href="#end-notes">End Notes:</a></li>
   </ul>
 </nav>
   </div>
@@ -717,7 +705,7 @@ You’re building a recommender system that matches events and people based on i
     
 </h2>
 <p>The common approach is to create an ontology around this idea of activities and encode how related they are as a number. For example, if I like running maybe that means there&rsquo;s an 80% chance I&rsquo;ll like walking (even though I didn&rsquo;t say so), and if I like hiking perhaps there&rsquo;s a 90% chance I&rsquo;ll like walking. Plus, in the other direction, if I like walking I&rsquo;m also 90% likely to like hiking.</p>
-<p><a href="graphdb-thoughts.excalidraw.md" >Thinking about Trust Graphs</a>
+<p><a href="graphdb-thoughts.excalidraw.md" >Thinking about Graphs</a>
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -846,7 +834,7 @@ You’re building a recommender system that matches events and people based on i
 <p>Where have you seen GraphDB ontologies break down? How did you resolve the problems?</p>
 <hr>
 
-<h3 class="relative group">End Notes:
+<h2 class="relative group">End Notes:
     <div id="end-notes" class="anchor"></div>
     
     <span
@@ -854,7 +842,7 @@ You’re building a recommender system that matches events and people based on i
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#end-notes" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h2>
 <ul>
 <li>Production quality is all about the details, so you should always test and benchmark. A vectorDB search is fast, but if you need accuracy and control then the right approach may be building a graph and calculating these weights yourself (doing several queries to get answers).</li>
 <li>At the time of writing, Weaviate was the only vectorDB I found that directly supports graphDB features.</li>
@@ -998,7 +986,7 @@ You’re building a recommender system that matches events and people based on i
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="https://thayer-blog.b2si.com/">
+  data-url="http://localhost:1313/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
