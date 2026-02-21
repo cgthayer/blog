@@ -1,7 +1,7 @@
 ---
 title: "When GraphDB Ontologies Break: Exploring Embeddings"
 date: 2025-12-12T11:53:10-08:00
-draft: true
+draft: false
 tags: []
 categories: []
 createddate: 2025-12-12
@@ -143,7 +143,7 @@ For the example discussed, "interests" isn't the same as "semantic meaning". Her
 
 Matching, recommendation systems, and ranking are always interesting to play with and there's always more to explore; but never blindly trust code without measuring.
 
-Have you hit issues where vectorDBs or graphDBs failed with low quality?
+Where have you seen GraphDB ontologies break down? How did you resolve the problems?
 
 ---
 ### End Notes: 
