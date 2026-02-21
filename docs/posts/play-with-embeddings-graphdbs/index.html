@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -15,8 +15,8 @@
 
   
   
-    <title>Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs &middot; Learn Tinker Share Blog</title>
-    <meta name="title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs &middot; Learn Tinker Share Blog">
+    <title>When GraphDB Ontologies Break: Exploring Embeddings &middot; Learn Tinker Share Blog</title>
+    <meta name="title" content="When GraphDB Ontologies Break: Exploring Embeddings &middot; Learn Tinker Share Blog">
   
 
   
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/">
+  <link rel="canonical" href="http://localhost:1313/posts/play-with-embeddings-graphdbs/">
   
 
   
@@ -36,12 +36,12 @@
   
 
   
-  <meta property="og:url" content="https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/">
+  <meta property="og:url" content="http://localhost:1313/posts/play-with-embeddings-graphdbs/">
   <meta property="og:site_name" content="Learn Tinker Share Blog">
-  <meta property="og:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
-  <meta property="og:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships # Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
-tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system’s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
-A friend has the classic ontology problem: they have lots of vague data that doesn’t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
+  <meta property="og:title" content="When GraphDB Ontologies Break: Exploring Embeddings">
+  <meta property="og:description" content="Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
+tl;dr Your GraphDB ontology works perfectly in dev, but then production users write “jogging” and it can’t match “running!” Can embeddings fix this? Let’s explore.
+An interesting problem that keeps popping up is with ontology quality: vague input data often doesn’t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -50,10 +50,10 @@ A friend has the classic ontology problem: they have lots of vague data that doe
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs">
-  <meta name="twitter:description" content="From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships # Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
-tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system’s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
-A friend has the classic ontology problem: they have lots of vague data that doesn’t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There’s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).">
+  <meta name="twitter:title" content="When GraphDB Ontologies Break: Exploring Embeddings">
+  <meta name="twitter:description" content="Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
+tl;dr Your GraphDB ontology works perfectly in dev, but then production users write “jogging” and it can’t match “running!” Can embeddings fix this? Let’s explore.
+An interesting problem that keeps popping up is with ontology quality: vague input data often doesn’t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you’re looking for people to go on a walk with, it’s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.">
 
   
   
@@ -207,11 +207,11 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs",
-    "headline": "Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs",
+    "name": "When GraphDB Ontologies Break: Exploring Embeddings",
+    "headline": "When GraphDB Ontologies Break: Exploring Embeddings",
     
     "inLanguage": "en",
-    "url" : "https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/",
+    "url" : "http://localhost:1313/posts/play-with-embeddings-graphdbs/",
     "author" : {
       "@type": "Person",
       "name": "Charles Thayer"
@@ -225,19 +225,13 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1398"
+    "wordCount": "1454"
   }]
   </script>
 
 
 
   
-  
-    
-
-
-
-
   
 
   
@@ -392,7 +386,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs
+        When GraphDB Ontologies Break: Exploring Embeddings
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -444,7 +438,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1398 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+      <time datetime="2025-12-12T11:53:10-08:00">12 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1454 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -708,19 +702,13 @@ A friend has the classic ontology problem: they have lots of vague data that doe
         
 
         <div class="article-content max-w-prose mb-20">
-          
-<h1 class="relative group">From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
-    <div id="from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#from-graphdb-ontologies-to-embeddings-modeling-fuzzy-relationships" aria-label="Anchor">#</a>
-    </span>
-    
-</h1>
-<p>Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.</p>
-<p>tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system&rsquo;s quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.</p>
-<p>A friend has the classic ontology problem: they have lots of vague data that doesn&rsquo;t match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There&rsquo;s a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).</p>
+          <p>Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.</p>
+<p><strong>tl;dr</strong> Your GraphDB ontology works perfectly in dev, but then production users write
+&ldquo;jogging&rdquo; and it can&rsquo;t match &ldquo;running!&rdquo; Can embeddings fix this? Let&rsquo;s explore.</p>
+<p>An interesting problem that keeps popping up is with ontology quality: vague input data often doesn&rsquo;t match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you&rsquo;re looking for people to go on a walk with, it&rsquo;s likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB.</p>
+<p>You&rsquo;re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you&rsquo;re excited that it passes all the tests and it looks done and ready to launch.</p>
+<p>You try it out on a couple of people and quickly find it falls flat on its face. It knows about walking, hiking, and running but when someone says they like &ldquo;jogging&rdquo; it&rsquo;s totally useless.</p>
+<p>Let&rsquo;s dive into code. We&rsquo;ll start with a basic graph then explore embedding-based approaches using vectorDBs like Weaviate, or ChromaDB.</p>
 
 <h2 class="relative group">The GraphDB Approach
     <div id="the-graphdb-approach" class="anchor"></div>
@@ -855,9 +843,10 @@ A friend has the classic ontology problem: they have lots of vague data that doe
     </span>
     
 </h2>
-<p>Of course, a combination of the two concepts would be needed in a real system since &ldquo;interests&rdquo; isn&rsquo;t the same as &ldquo;semantic meaning&rdquo;. Here we controlled the sentence, but if you put in &ldquo;I hate to walk&rdquo; it turns out that sentence scores 0.7697 from &ldquo;I like to walk&rdquo; because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.</p>
-<p>My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there&rsquo;s always more to explore.</p>
-<p>Closing: Tell me what you&rsquo;d like to talk about. What&rsquo;s your experience on these topics? Feel free to ask questions in the comments.</p>
+<p>Of course, a combination of the two concepts would be needed in a real system! GraphDBs are great for fixed taxonomies and clear relationships, whereas vectorDBs are a life saver for problems that are fuzzy, natural language, or inherently semantic.</p>
+<p>For the example discussed, &ldquo;interests&rdquo; isn&rsquo;t the same as &ldquo;semantic meaning&rdquo;. Here we controlled the sentence, but if you put in &ldquo;I hate to walk&rdquo; it turns out that sentence scores 0.7697 similarity with &ldquo;I like to walk&rdquo; because these are close in latent space <em>although</em> one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.</p>
+<p>Matching, recommendation systems, and ranking are always interesting to play with and there&rsquo;s always more to explore; but never blindly trust code without measuring.</p>
+<p>Have you hit issues where vectorDBs or graphDBs failed with low quality?</p>
 <hr>
 
 <h3 class="relative group">End Notes:
@@ -1025,7 +1014,7 @@ A friend has the classic ontology problem: they have lots of vague data that doe
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="https://thayer-blog.b2si.com/">
+  data-url="http://localhost:1313/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

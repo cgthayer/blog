@@ -1,5 +1,5 @@
 ---
-title: Modeling The Fuzzy - from GraphDBs to Embeddings to VectorDBs
+title: "When GraphDB Ontologies Break: Exploring Embeddings"
 date: 2025-12-12T11:53:10-08:00
 draft: true
 tags: []
@@ -7,14 +7,18 @@ categories: []
 createddate: 2025-12-12
 featureimage: /images/graphdb-thoughts.excalidraw.png
 ---
-
-# From GraphDB Ontologies to Embeddings: Modeling Fuzzy Relationships
-
 Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
 
-tldr; To be a successful AI software engineer, understanding embeddings is foundational, and graphDBs can greatly elevate your system's quality. To tinker with both and to have a little fun, I explore one common use case, ontologies.
+**tl;dr** Your GraphDB ontology works perfectly in dev, but then production users write 
+"jogging" and it can't match "running!" Can embeddings fix this? Let's explore.
 
-A friend has the classic ontology problem: they have lots of vague data that doesn't match their static graph of entities. They use a graphDB in their AI app, which is great when the data is clean, but the quality is low because there are often many terms for the same thing, and many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. There's a traditional way to solve this and more modern one using a vectorDB (weaviate, postgres with pgvector, etc.).
+An interesting problem that keeps popping up is with ontology quality: vague input data often doesn't match up with a static graph of entities. Using a graphDB in AI systems (which is great when the data is clean), has terrible quality (precision) when there are many terms for the same thing, or many terms with multiple meanings depending on context. For example, if you're looking for people to go on a walk with, it's likely that people who like running or hiking are good candidates, but this may not be well represented in your graphDB. 
+
+You're building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you're excited that it passes all the tests and it looks done and ready to launch.
+
+You try it out on a couple of people and quickly find it falls flat on its face. It knows about walking, hiking, and running but when someone says they like "jogging" it's totally useless.
+
+Let's dive into code. We'll start with a basic graph then explore embedding-based approaches using vectorDBs like Weaviate, or ChromaDB.
 
 ## The GraphDB Approach
 
@@ -135,11 +139,13 @@ The most powerful and robust feature here is that we can handle almost any input
 
 ## Closing Thoughts
 
-Of course, a combination of the two concepts would be needed in a real system since "interests" isn't the same as "semantic meaning". Here we controlled the sentence, but if you put in "I hate to walk" it turns out that sentence scores 0.7697 from "I like to walk" because these are close in latent space although one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.
+Of course, a combination of the two concepts would be needed in a real system! GraphDBs are great for fixed taxonomies and clear relationships, whereas vectorDBs are a life saver for problems that are fuzzy, natural language, or inherently semantic.
 
-My friend is still playing around with his code, but running through these ideas gave him some fun approaches to think about. Matching, recommendation systems, and ranking are always interesting to play with and there's always more to explore.
+For the example discussed, "interests" isn't the same as "semantic meaning". Here we controlled the sentence, but if you put in "I hate to walk" it turns out that sentence scores 0.7697 similarity with "I like to walk" because these are close in latent space *although* one part of the vector is pointing in the opposite direction. If you can afford the latency of calling a foundational LLM with a prompt, it would handle such a case nicely.
 
-Closing: Tell me what you'd like to talk about. What's your experience on these topics? Feel free to ask questions in the comments.
+Matching, recommendation systems, and ranking are always interesting to play with and there's always more to explore; but never blindly trust code without measuring.
+
+Have you hit issues where vectorDBs or graphDBs failed with low quality?
 
 ---
 ### End Notes: 
