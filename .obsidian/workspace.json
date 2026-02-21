@@ -33,8 +33,7 @@
               "title": "play-with-embeddings-graphdbs"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,13 +202,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/play-with-embeddings-graphdbs.md",
+                "file": "Excalidraw/graphdb-thoughts.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of play-with-embeddings-graphdbs"
+              "title": "Outline of graphdb-thoughts.excalidraw"
             }
           }
         ],
@@ -235,14 +234,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "0622ddac9894e455",
+  "active": "b092d0f5d01394fc",
   "lastOpenFiles": [
+    "Excalidraw/graphdb-thoughts.excalidraw.md",
+    "content/posts/play-with-embeddings-graphdbs.md",
     "Excalidraw/agentic-eval-combo.excalidraw.md",
     "content/posts/real-ai-engineer-differentiator.md",
-    "Excalidraw/graphdb-thoughts.excalidraw.md",
     "docs/images/ontology-problems.excalidraw.png",
     "static/images/ontology-problems.excalidraw.png",
-    "content/posts/play-with-embeddings-graphdbs.md",
     "static/images/graphdb-thoughts.excalidraw.png",
     "docs/posts/play-with-embeddings-graphdbs/index.html",
     "docs/posts/play-with-embeddings-graphdbs",
