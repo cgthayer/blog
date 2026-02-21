@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Charles Thayer</copyright>
-    <lastBuildDate>Fri, 09 Jan 2026 13:34:01 -0800</lastBuildDate><atom:link href="https://thayer-blog.b2si.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://thayer-blog.b2si.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>When GraphDB Ontologies Break: Exploring Embeddings</title>
+      <link>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</link>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</guid>
+      <description>&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; Your GraphDB ontology works perfectly in dev, but then production users write&#xA;&amp;ldquo;jogging&amp;rdquo; and it can&amp;rsquo;t match &amp;ldquo;running!&amp;rdquo; Can embeddings fix this? Let&amp;rsquo;s explore.&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you&amp;rsquo;re excited that it passes all the tests and it looks done and ready to launch.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>AI SW Engineers: You&#39;re Not Prod-Ready Until You Have This</title>
@@ -16,16 +26,6 @@
       
       <guid>https://thayer-blog.b2si.com/posts/real-ai-engineer-differentiator/</guid>
       <description>&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; become prod-ready and bullet-proof using &lt;strong&gt;agentic evals&lt;/strong&gt; testing.&lt;/p&gt;&#xA;&lt;p&gt;Those of us who write AI applications fall into two categories: the nervous and the prod-ready. It&amp;rsquo;s usually based on whether you have run a production system, with real users, over time. When you have, you learn the first key differentiator is &amp;ldquo;evals&amp;rdquo;, but not specifically traditional ML evals. Simply put, it&amp;rsquo;s whether you have an automated way to test and score the &lt;em&gt;&lt;strong&gt;quality&lt;/strong&gt;&lt;/em&gt; of your systems.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>When GraphDB Ontologies Break: Exploring Embeddings</title>
-      <link>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</link>
-      <pubDate>Fri, 12 Dec 2025 11:53:10 -0800</pubDate>
-      
-      <guid>https://thayer-blog.b2si.com/posts/play-with-embeddings-graphdbs/</guid>
-      <description>&lt;p&gt;Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; Your GraphDB ontology works perfectly in dev, but then production users write&#xA;&amp;ldquo;jogging&amp;rdquo; and it can&amp;rsquo;t match &amp;ldquo;running!&amp;rdquo; Can embeddings fix this? Let&amp;rsquo;s explore.&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;re building a recommender system that matches events and people based on interests. You built out a graphDB to help with matching, and you&amp;rsquo;re excited that it passes all the tests and it looks done and ready to launch.&lt;/p&gt;</description>
       
     </item>
     
