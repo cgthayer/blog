@@ -251,6 +251,8 @@
   },
   "active": "1025de04034c65da",
   "lastOpenFiles": [
+    "docs/images/thayer-cafe.png",
+    "static/images/thayer-cafe.png",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
     "content/posts/play-with-embeddings-graphdbs.md",
     "Excalidraw/agentic-eval-combo.excalidraw.md",
@@ -279,7 +281,6 @@
     "public/tags",
     "public/categories/index.html",
     "public/categories",
-    "public/favicon-32x32.png",
     "Excalidraw/tdd-diagram.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
