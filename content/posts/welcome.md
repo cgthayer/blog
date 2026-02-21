@@ -4,7 +4,7 @@ date: 2025-11-22T11:53:10-08:00
 draft: false
 tags: []
 categories: []
-featureimage: /images/thayer-head-2026-purple.jpg
+featureimage: /images/thayer-cafe.png
 ---
 This is for experienced software engineers and founders trying to make AI systems that are high quality and production ready. It's geared toward small startups, especially in the Bay Area and SF.
 
