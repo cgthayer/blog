@@ -1,10 +1,10 @@
 ---
 title: "When GraphDB Ontologies Break: Exploring Embeddings"
-date: 2025-12-12T11:53:10-08:00
+date: 2026-02-04
 draft: false
 tags: []
 categories: []
-createddate: 2025-12-12
+createddate: 2026-02-04
 featureimage: /images/graphdb-thoughts.excalidraw.png
 ---
 Keywords: GraphDB, VectorDB, Ontology, Embedding Vectors.
