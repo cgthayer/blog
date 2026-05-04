@@ -29,6 +29,16 @@ These are the underlying motivations that shape every content and style decision
 - **Middle:** what was tried, what was learned, where it got interesting or broke
 - **Closing:** the finding, stated plainly — plus a standing invitation to the reader to share their own experience
 
+### Code & Examples
+
+Code snippets are copy-paste runnable as-is — no pseudocode, no placeholders that require assembly. Use as much code as the article warrants; a post about embeddings might have several snippets, a conceptual post might have one or none. Link generously to repos, papers, and tools referenced — credit is part of the community ethos.
+
+### What LTS Is Not
+
+- Not a tutorial site — posts share findings, not step-by-step courses
+- Not a news or commentary feed — model releases and AI headlines aren't the subject matter unless there's something worth tinkering with
+- Not thought-leadership for its own sake — every post should leave the reader with something they can use or try
+
 ### Catchphrase & CTA
 
 *Want to Learn? Let's Tinker and Share.*
