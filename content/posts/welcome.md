@@ -24,7 +24,9 @@ Technical Interests
 
 ## This Blog
 
-This is a personal blog for Charles Thayer (see also https://thayer.b2si.com). I practice writing here, and capture ideas which sometimes evolve into articles on [Medium](https://medium.com/@charles-thayer), [Substack](https://substack.com/@charlesthayer/posts), [Reddit](https://www.reddit.com/user/charlesthayer/submitted/), etc.. It's in Hugo, with editing in Obsidian.
+This is a **Learn, Tinker, Share (LTS)** blog — the format follows that loop. I find something interesting, experiment with it, then write up what I found. Posts are honest about what worked and what didn't, and the goal is always to leave you with techniques, insights, tips, or learnings about the latest in AI engineering.
+
+This is a personal blog for Charles Thayer (see also https://thayer.b2si.com). I capture ideas here which sometimes evolve into articles on [Medium](https://medium.com/@charles-thayer), [Substack](https://substack.com/@charlesthayer/posts), [Reddit](https://www.reddit.com/user/charlesthayer/submitted/), etc.. It's in Hugo, with editing in Obsidian.
 
 * Articles, long-form:  [Medium](https://medium.com/@charles-thayer)
 * Musings short-form: [Substack](https://substack.com/@charlesthayer/posts)
@@ -32,3 +34,5 @@ This is a personal blog for Charles Thayer (see also https://thayer.b2si.com). I
 I'm an AI software engineer, and sometimes founder. I like to tinkerer, build, think about thinking, and generally play with The Internet and related technologies. I've worked at Roblox, Facebook, and Yahoo Search Technology (YST). I've also been a CTO a few times.
 
 **Welcome!** 🌞☕𝛗
+
+*Want to Learn? Let's Tinker and Share.* — reach out if something here clicks or if you've found a better way.
