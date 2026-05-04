@@ -53,16 +53,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/play-with-embeddings-graphdbs.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "play-with-embeddings-graphdbs"
+              "title": "README"
+            }
+          },
+          {
+            "id": "6267590d9672df6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "STYLE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "STYLE"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -263,23 +277,24 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1f85081fb627849c",
+  "active": "6267590d9672df6d",
   "lastOpenFiles": [
-    "docs/tags/llm/page/1/index.html",
-    "docs/tags/llm/page/1",
-    "docs/tags/llm/page",
-    "docs/tags/llm/index.xml",
-    "docs/tags/llm/index.html",
-    "docs/tags/llm",
-    "docs/tags/ai/page/1/index.html",
-    "docs/tags/ai/page/1",
-    "docs/tags/ai/page",
-    "docs/tags/ai/index.xml",
-    "docs/tags/ai/index.html",
-    "content/posts/ai-engineers-saving-llm-costs.md",
-    "content/posts/play-with-embeddings-graphdbs.md",
-    "content/posts/real-ai-engineer-differentiator.md",
     "content/posts/welcome.md",
+    "STYLE.md.tmp.19218.1777862482311",
+    "content/posts/welcome.md.tmp.19218.1777861983788",
+    "content/posts/welcome.md.tmp.19218.1777861887119",
+    "content/posts/welcome.md.tmp.19218.1777861571098",
+    "content/posts/welcome.md.tmp.19218.1777861567463",
+    "STYLE.md",
+    "STYLE.md.tmp.19218.1777861244832",
+    "STYLE.md.tmp.19218.1777861241904",
+    "STYLE.md.tmp.19218.1777861236172",
+    "STYLE.md.tmp.19218.1777861232748",
+    "STYLE.md.tmp.19218.1777860858364",
+    "README.md",
+    "content/posts/play-with-embeddings-graphdbs.md",
+    "content/posts/ai-engineers-saving-llm-costs.md",
+    "content/posts/real-ai-engineer-differentiator.md",
     "docs/images/thayer-cafe.png",
     "static/images/thayer-cafe.png",
     "Excalidraw/graphdb-thoughts.excalidraw.md",
@@ -288,7 +303,6 @@
     "static/images/ontology-problems.excalidraw.png",
     "static/images/graphdb-thoughts.excalidraw.png",
     "ai-getting-started-2026.md",
-    "README.md",
     "ui-debugging.md",
     "static/images/ai-dev-phase-issues-evals.excalidraw.png",
     "static/images/ai-dev-phase-issues-evals.excalidraw.png",
@@ -310,7 +324,6 @@
     "content/drafts/dumb-neural-net.excalidraw.md",
     "content/drafts/README.md",
     "content/drafts/AI-prompt-manager-article.md",
-    "content/drafts/AI-learners-terminology-article.md",
     "00-HOME.canvas",
     "Untitled.canvas"
   ]
