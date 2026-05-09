@@ -12,7 +12,7 @@ categories: []
 featureimage: /images/llm-costs-dam-picture.png
 ---
 
-# AI Engineers: Saving LLM Costs, A Quick Start Guide
+![LLM costs: tokens rising, drowning in costs](/images/llm-costs-dam-picture.png)
 
 See also: [What do you do about LLM token costs?](https://www.reddit.com/r/LLMDevs/comments/1njmjsn/what_do_you_do_about_llm_token_costs/) for some great discussions.
 

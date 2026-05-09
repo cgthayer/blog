@@ -60,7 +60,7 @@ Create a new blog post:
 hugo new content/posts/my-post.md
 ```
 
-Edit the post - no need to set `draft: false` since we manage drafts via directory location, not frontmatter.
+Edit the post - no need to set `draft: false` since we manage drafts via directory location, not front matter.
 
 ### Draft Management with Private Repo
 
