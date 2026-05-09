@@ -65,14 +65,12 @@
             "id": "6267590d9672df6d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "STYLE.md",
-                "mode": "source",
-                "source": false
+                "file": "static/images/llm-costs-dam-picture.excalidraw"
               },
-              "icon": "lucide-file",
-              "title": "STYLE"
+              "icon": "excalidraw-icon",
+              "title": "llm-costs-dam-picture"
             }
           }
         ],
@@ -279,18 +277,18 @@
   },
   "active": "6267590d9672df6d",
   "lastOpenFiles": [
+    "STYLE.md",
+    "content/llm-costs-dam-picture.excalidraw.crswap",
+    "static/images/llm-costs-dam-picture.excalidraw",
     "content/posts/welcome.md",
     "STYLE.md.tmp.19218.1777862482311",
     "content/posts/welcome.md.tmp.19218.1777861983788",
     "content/posts/welcome.md.tmp.19218.1777861887119",
     "content/posts/welcome.md.tmp.19218.1777861571098",
     "content/posts/welcome.md.tmp.19218.1777861567463",
-    "STYLE.md",
     "STYLE.md.tmp.19218.1777861244832",
     "STYLE.md.tmp.19218.1777861241904",
     "STYLE.md.tmp.19218.1777861236172",
-    "STYLE.md.tmp.19218.1777861232748",
-    "STYLE.md.tmp.19218.1777860858364",
     "README.md",
     "content/posts/play-with-embeddings-graphdbs.md",
     "content/posts/ai-engineers-saving-llm-costs.md",
