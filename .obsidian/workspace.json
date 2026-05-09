@@ -65,12 +65,14 @@
             "id": "6267590d9672df6d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "static/images/llm-costs-dam-picture.excalidraw"
+                "file": "content/posts/ai-engineers-saving-llm-costs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "llm-costs-dam-picture"
+              "icon": "lucide-file",
+              "title": "ai-engineers-saving-llm-costs"
             }
           }
         ],
@@ -275,11 +277,12 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "6267590d9672df6d",
+  "active": "f9daa462c110364a",
   "lastOpenFiles": [
+    "Excalidraw/llm-costs-dam-picture.excalidraw",
+    "static/images/llm-costs-dam-picture.png",
     "STYLE.md",
     "content/llm-costs-dam-picture.excalidraw.crswap",
-    "static/images/llm-costs-dam-picture.excalidraw",
     "content/posts/welcome.md",
     "STYLE.md.tmp.19218.1777862482311",
     "content/posts/welcome.md.tmp.19218.1777861983788",
@@ -307,7 +310,6 @@
     "static/images/ai-dev-phase-issues-evals.excalidraw.png",
     "Excalidraw/ai-dev-phase-issues-evals.excalidraw.md",
     "static/images/agentic-eval-combo.excalidraw.png",
-    "docs/images/agentic-eval-combo.excalidraw 1.png",
     "Excalidraw/tdd-diagram.excalidraw.md",
     "Excalidraw/ai-test-types.excalidraw.md",
     "Excalidraw/ai-pitfalls.excalidraw.md",
